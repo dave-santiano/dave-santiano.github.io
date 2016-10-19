@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.clear-fix:after {
+    display: block;
+    clear: both;
+    /* ensure some older compatability */
+    height: 0;
+    font-size: 0;
+    content: " ";
+    /* extra backup */
+    visibility: hidden;
+}
+
+
+#wrapper{
+    width: 100%;
+    padding: 0px;
+}
+
+#main_container{
+    width: 960px;
+    padding:0px;
+    margin:0px;
+    height:auto;
+    margin: 0 auto;
+}
+
+html{
+
+}
+
+body{
+    padding: 100px 300px 100px 300px;
+}
+
+
+header{
+    /*display:block;*/
+    margin-bottom: 20px;
+}
+
+div.thumbnail{
+    /*float left so that it remains in order*/
+    float:left;
+    /*displaying it as an inline block allows it to 
+    correctly display as a floating box, giving way when the browser resizes*/
+    display: inline-block;
+    margin:10px;
+    
+}
