@@ -68,7 +68,7 @@ header nav div.categories div.thumbnail{
     correctly display as a floating box, giving way when the browser resizes*/
     display: inline-block;
     /*they sit next to each other so yeh*/
-    margin:10px;
+    margin:0px;
     /*don't let them get too close now cause things might get sweaty*/
 }
 
@@ -82,4 +82,9 @@ div.content{
 article.projects{
     margin-bottom: 40px;
     display: block;
+}
+
+/*Post titles*/
+h1{
+    margin-bottom: 10px;
 }
