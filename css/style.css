@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Abel|Bungee+Hairline|Chathura|Inconsolata|Pompiere|Quicksand|Roboto+Mono|Share+Tech+Mono|Source+Code+Pro|VT323|Taviraj|Work+Sans|');
 *{
     margin: 0;
     padding: 0;
@@ -36,6 +37,10 @@
 
 body{
     padding: 50px 300px 100px 300px;
+}
+html{
+    
+    font-weight: bold;
 }
 
 header{
@@ -86,5 +91,15 @@ article.projects{
 
 /*Post titles*/
 h1{
+/*    font-family: 'Inconsolata', monospace;*/
+    /*font-family: 'Quicksand', sans-serif;*/
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
     margin-bottom: 10px;
+}
+
+p.postcontent{
+/*    font-family: 'Inconsolata', monospace;*/
+    font-family: 'Quicksand', sans-serif;
+    /*font-family: 'Roboto Mono', monospace;*/
 }
