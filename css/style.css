@@ -90,6 +90,11 @@ div.postinfo{
     font-size:15px;
 }
 
+div.landing{
+    width:1000px;
+    height:auto;
+}
+
 article.projects{
     margin-bottom: 40px;
     display: block;
