@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Abel|Bungee+Hairline|Chathura|Inconsolata|Pompiere|Quicksand|Roboto+Mono|Share+Tech+Mono|Source+Code+Pro|VT323|Taviraj|Work+Sans|');
+
 *{
     margin: 0;
     padding: 0;
@@ -32,6 +33,8 @@
     /*let that shit sit with the other doods*/
     display: inline-block;
     float: left;
+    bottom:0px;
+    left:0px;
     /*float it to the left because aesthetics*/
 }
 
@@ -98,7 +101,6 @@ div.landing{
 article.projects{
     margin-bottom: 40px;
     display: block;
-
 }
 
 /*Post titles*/
@@ -122,4 +124,60 @@ p.postcontent{
 img.photopost{
     width:1000px;
     height:auto;
+}
+
+div.text_info{
+    z-index: -1;
+}
+
+img.about{
+    z-index: -1;
+    float:right;
+    position:absolute;
+    bottom:0px;
+    right:0px;
+}
+
+img.projects{
+    z-index: -1;
+    float:right;
+    position:absolute;
+    bottom:0px;
+    right:0px;
+}
+
+img.animation{
+    z-index: -1;
+    float:right;
+    position:absolute;
+    bottom:0px;
+    right:0px;
+}
+
+img.photo{
+    z-index: -1;
+    float:right;
+    position:absolute;
+    bottom:0px;
+    right:0px;
+}
+
+img.blog{
+    z-index: -1;
+    float:right;
+    position:absolute;
+    bottom:0px;
+    right:0px;
+}
+
+img.misc{
+    z-index: -1;
+    float:right;
+    position:absolute;
+    bottom:0px;
+    right:0px;
+}
+
+.hide{
+    display:none;
 }
