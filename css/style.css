@@ -41,6 +41,7 @@
 body{
     padding: 50px 300px 100px 300px;
 }
+
 html{
     
     font-weight: bold;
@@ -99,7 +100,7 @@ div.landing{
 }
 
 article.projects{
-    margin-bottom: 40px;
+    margin-bottom: 80px;
     display: block;
 }
 
@@ -125,6 +126,7 @@ img.photopost{
     width:1000px;
     height:auto;
 }
+
 
 div.text_info{
     z-index: -1;
