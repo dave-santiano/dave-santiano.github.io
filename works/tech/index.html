@@ -44,9 +44,6 @@
 							<img class = "hoverimg" data-animation="blog" src="../../img/blog_icon.gif"/>
 						</a>
 					</div>
-
-
-
 					<div class="thumbnail">
 						<a href= "../misc/">
 							<img class = "hoverimg" data-animation="misc" src="../../img/misc_icon.gif"/>
@@ -64,38 +61,97 @@
 			</nav>
 		</header>
 
-
 		<div class = "content">
 			<article class = "projects">
 				<h1>stack.</h1>
 				<div class = "postinfo">2016</div>
 				<div>
 					<p class = "postcontent">
-						<iframe src="https://player.vimeo.com/video/188582518" width="912" height="513" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+						<iframe src="https://player.vimeo.com/video/188582518" width="1000" height="558" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 					</p>
 					<p class = "postcontent">
-						Won in the accesibility track at HackNYU. This is a piece of tech that allows people with a visual disability to design and create simple 3D models with their sense of touch! My laptop is using Processing's OpenCV library and a webcam to detect where legos are being placed on a board. Processing's osc library then sends some data over to Unity3D where blocks are placed down on a virtual field. 
+						Won in the accessibility track at HackNYU. This is a piece of tech that allows people with a visual disability to design and create simple 3D models with their sense of touch! My laptop is using Processing's OpenCV library and a webcam to detect where Legos are being placed on a board. Processing's osc library then sends some data over to Unity where blocks are placed down on a virtual field. 
 					</p>
+					<p class ="postcontent">
+						<h2>The Ingredients!</h2>
+						<ul class = "grocerylist">
+							<li>Processing 3.0</li>
+							<li>osc library (for communication)</li>
+							<li>OpenCV library (for vision)</li>
+							<li>Unity3D</li>
+							<li>Legos</li>
+							<li>Webcam</li>
+						</ul>
+					</p>
+					<h2>Photos and details!</h2>
+					<p class = "postcontent">
+					    So this tool is something that evolved from a final I had to do for a class called interaction lab. Early versions of it stemmed from exploring Arduino to Unity interaction, but then I decided to scrap the Arduino aspect and play around with how computer vision could be integrated with Unity. I was inspired by <a href ="https://www.youtube.com/watch?v=NYW763HaLQE">TRANSFORM: Nature and Machine</a>, a project from the Tangible Media group at the MIT Media Lab. I thought that going from the virtual to the physical was amazing, but then I thought reversing the process, physical to virtual, would be a fun exercise in interactivity.
+					</p>
+					<img src = "techimg/stack_1.jpg" class="photopost"/>
+					<p class = "postcontent">
+						Like with a lot of work, new ideas tend to appear post-creation, and it wasn't until HackNYU that me and my team thought of a new way to implement this piece of tech. Reimplementing and modifying the code, we managed to muster up a way for it to be used for people with visual impairments!
+					</p>
+					<img src = "techimg/stack_2.jpg" class="photopost"/>
 				</div>
 			</article>
+
+<!-- 
+	 %%%%%%%%%%%%%%
+     %    %%%%    %
+     %%%%%%%%%%%%%%
+     %%%%%%%%%%%%%%
+     %%          %%
+     %%%%%%%%%%%%%%
+     
+	     Hello.
+-->
 
 			<article class = "projects">
 				<h1>One Summer's Assistive Robotic Arm Research Project</h1>
 				<div class = "postinfo">2016</div>
 				<div>
 					<p class = "postcontent">
-						<iframe width="912" height="513" src="https://www.youtube.com/embed/5o_wRxq5hjc" frameborder="0" allowfullscreen></iframe>
+						<iframe width="1000" height="558" src="https://www.youtube.com/embed/5o_wRxq5hjc" frameborder="0" allowfullscreen></iframe>
 					</p>
-
 					<p class = "postcontent">
-						Summer research project funded by the marvelous people at NYU Shanghai. Continuing with my interest of making computers see this beautiful world, I teamed up with my fellow classmates to prototype a seeing assistive robotic arm. This one combined a Python flavor of OpenCV with a lot of hardware to produce a seeing and helpful robotic arm. Currently not at full functionality, but will be revisited soon when I return to Shanghai in the Spring. Long distance relationships suck.
+						Summer research project funded by the marvelous people at NYU Shanghai. Continuing with my interest of making computers see this beautiful world, I teamed up with my fellow classmates to prototype a seeing assistive robotic arm. This one combined a Python flavor of OpenCV with a lot of hardware to produce a seeing and helpful robotic arm. Currently not at full functionality, but will be revisited soon when I return to Shanghai in the Spring.
+					</p>
+					<p class ="postcontent">
+						<h2>The Ingredients!</h2>
+						<ul class = "grocerylist">
+							<li>Joe Young's Robotic Arm, so graciously lent to us for the Summer</li>
+							<li>Portable USB Webcam, with extra long cable</li>
+							<li>Python flavored OpenCV library (for vision)</li>
+							<li>Arduino</li>
+							<li>Wooden chassis + chicken wire</li>
+						</ul>
+					</p>
+					<h2> Photographs and more detail</h2>
+					<p class="postcontent">
+						Here's the little bugger, got to give him the gift of vision so that he can see this beautiful world. We tried using a Logitech webcam to maximize quality, but turns it out image quality doesn't matter too much when it comes to color detection. The Logitech webcam was also too large, so we opted for a smaller and lighter webcam. The only advantage that would have been great from using the Logitech webcam would have been more video stream control. Contrast and white balance control are really useful when trying to optimize the way the webcam detects color. 
+					</p>
+					<img src = "techimg/durf_photo_5.jpg" class = "photopost"/>
+					<p class = "postcontent">
+						Like Prometheus tending the flame.
+					</p>
+					<img src = "techimg/durf_photo_2.jpg" class = "photopost"/>
+					<img src = "techimg/durf_photo_1.jpg" class = "photopost"/>
+					<p class = "postcontent">
+						The credit to the wooden chassis should all go to Nicholas, Sevi, and Jennifer. While I was working on the head control they were tirelessly assembling the chassis from wood bought from a small shop near the school. Really amazing job! Super steady and secure.
+					</p>
+					<img src = "techimg/durf_photo_6.jpg" class = "photopost"/>
+					<p class = "postcontent">
+						Look through the eyes of the computer, as it blinks and beeps at its creator.
+					</p>
+					<img src = "techimg/durf_photo_3.jpg" class = "photopost"/>
+					<p class = "postcontent">
+						A bit of a peek into how the computer was processing the video feed. We drew a small crosshair type of overlay in order to visualize what areas of the feed were being detected. If the color it was looking for was not fully centered, the OpenCV python code would send instructions to the Arduino side of things to move and center accordingly.
 					</p>
 				</div>
 			</article>
 		</div>
 		<div class= "clear-fix"></div>
 		</div> <!-- main container -->
-
 	</div> <!-- wrapper -->
 </body>
 </html>
