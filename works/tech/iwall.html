@@ -66,43 +66,44 @@
 		<h2 class = "selector">
 			<a href = "index.html">stack.</a>
 			/
-			<a href = ".">A Seeing Assistive Robotic Arm</a>
+			<a href = "roboarm.html">A Seeing Assistive Robotic Arm</a>
 			/
 			<a href = "feeling.html">"How are you feeling?" Wearable</a>
 			/
-			<a href = "iwall.html">Interactive Wall (WIP)</a>
+			<a href = ".">Interactive Wall (WIP)</a>
 			/
 		</h2>
 			<article class = "projects">
-				<h1>stack.</h1>
+				<h1>An Interactive Wall, a tribute to ITP's Firewall</h1>
 				<div class = "postinfo">2016</div>
 				<div>
 					<p class = "postcontent">
-						<iframe src="https://player.vimeo.com/video/188582518" width="1000" height="558" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+						<iframe width="1000" height="558" src="https://www.youtube.com/embed/EWi2zTl6n5Y" frameborder="0" allowfullscreen></iframe>
 					</p>
 					<p class = "postcontent">
-						Won in the accessibility track at HackNYU. This is a piece of tech that allows people with a visual disability to design and create simple 3D models with their sense of touch! My laptop is using Processing's OpenCV library and a webcam to detect where Legos are being placed on a board. Processing's osc library then sends some data over to Unity where blocks are placed down on a virtual field. 
+						This was something that I cooked up for a midterm for a class called Talking Fabrics, taught by the great Antonius Wiriadjaja. I wanted to imitate the <a href ="https://itp.nyu.edu/shows/winter2012/firewall/">Firewall</a> at ITP, and try to find out how the whole thing worked conceptually. I figured that all you would need is a projector, some spandex, and a Kinect to grab elevation data from the spandex being depressed. It turns out it really was that straightforward! A lot of help and guidance also came from ITP assistant <a href="http://moqn.net/">Moon!</a>
 					</p>
 					<p class ="postcontent">
 						<h2>The Ingredients!</h2>
 						<ul class = "grocerylist">
 							<li>Processing 3.0</li>
-							<li>osc library (for communication)</li>
+							<li>Kinect for Windows</li>
 							<li>OpenCV library (for vision)</li>
-							<li>Unity3D</li>
+							<li>Spandex</li>
 							<li>Legos</li>
 							<li>Webcam</li>
+							<li>A Projector</li>
+							<li>A mighty hammer for hammering Legos</li>
 						</ul>
 					</p>
-					<h2>Photos and details!</h2>
+					<h2>More Details!</h2>
 					<p class = "postcontent">
-					    So this tool is something that evolved from a final I had to do for a class called interaction lab. Early versions of it stemmed from exploring Arduino to Unity interaction, but then I decided to scrap the Arduino aspect and play around with how computer vision could be integrated with Unity. I was inspired by <a href ="https://www.youtube.com/watch?v=NYW763HaLQE">TRANSFORM: Nature and Machine</a>, a project from the Tangible Media group at the MIT Media Lab. I thought that going from the virtual to the physical was amazing, but then I thought reversing the process, physical to virtual, would be a fun exercise in interactivity.
+						The original Firewall was obviously much more refined, much bigger than mine, and better (didn't have Legos though), but I got the basic functionality behind it done. Drawing on it is pretty straightforward, when you press lightly the color splotch is small, and when you press harder and pass more of the distance threshold you'll make a bigger color splotch. 
 					</p>
-					<img src = "techimg/stack_1.jpg" class="photopost"/>
 					<p class = "postcontent">
-						Like with a lot of work, new ideas tend to appear post-creation, and it wasn't until HackNYU that me and my team thought of a new way to implement this piece of tech. Reimplementing and modifying the code, we managed to muster up a way for it to be used for people with visual impairments!
+						I'm planning on doing a lot of things with this now that I have the basic framework of the interactive wall done. I've always been interested in maps and such, and I want to make an interactive map maker with this when I find the time! And also when I get back to Shanghai and can get my hands on a Kinect again AND my Legos. You can find the code for my project<a href ="https://github.com/dave-santiano/kinect_living_wall">here</a>. Make sure you have a Kinect and some Legos! Also some spandex ;)
 					</p>
-					<img src = "techimg/stack_2.jpg" class="photopost"/>
+
 				</div>
 			</article>
 

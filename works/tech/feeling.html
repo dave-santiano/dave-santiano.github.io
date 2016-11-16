@@ -74,35 +74,48 @@
 			/
 		</h2>
 			<article class = "projects">
-				<h1>stack.</h1>
+				<h1>"How Are You Feeling?"</h1>
 				<div class = "postinfo">2016</div>
 				<div>
 					<p class = "postcontent">
-						<iframe src="https://player.vimeo.com/video/188582518" width="1000" height="558" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+						<iframe width="1000" height="558" src="https://www.youtube.com/embed/OM4IqONDH2I" frameborder="0" allowfullscreen></iframe>
 					</p>
 					<p class = "postcontent">
-						Won in the accessibility track at HackNYU. This is a piece of tech that allows people with a visual disability to design and create simple 3D models with their sense of touch! My laptop is using Processing's OpenCV library and a webcam to detect where Legos are being placed on a board. Processing's osc library then sends some data over to Unity where blocks are placed down on a virtual field. 
+						This is a prototype wearable + mobile app pairing that my teammate, Shuang Bright, and I made that tells the world how you are feeling! One of the big topics, in light of school shootings and other atrocities, is the quality of modern day mental health care and also mental health awareness. I as a person who identifies as a male, sometimes have trouble with showing emotion and telling people how I feel, resulting in me not really treating my mind the way I treat my body, with care and attention. We were hoping that if people would be more explicit with their emotions, then maybe we can get rid of some of the taboos associated with mental health and help each other out and seek the care we all deserve.
 					</p>
 					<p class ="postcontent">
 						<h2>The Ingredients!</h2>
 						<ul class = "grocerylist">
-							<li>Processing 3.0</li>
-							<li>osc library (for communication)</li>
-							<li>OpenCV library (for vision)</li>
-							<li>Unity3D</li>
-							<li>Legos</li>
-							<li>Webcam</li>
+							<li>2x Arduinos (one regular and one Rainbowduino)</li>
+							<li>BLE Dongle(for communication)</li>
+							<li>Arduino SUPER BRIGHT LED Matrix</li>
+							<li>iPhone!(iOS device that supports apps and has bluetooth)</li>
+							<li>HTML,CSS,Javascript</li>
 						</ul>
 					</p>
 					<h2>Photos and details!</h2>
 					<p class = "postcontent">
-					    So this tool is something that evolved from a final I had to do for a class called interaction lab. Early versions of it stemmed from exploring Arduino to Unity interaction, but then I decided to scrap the Arduino aspect and play around with how computer vision could be integrated with Unity. I was inspired by <a href ="https://www.youtube.com/watch?v=NYW763HaLQE">TRANSFORM: Nature and Machine</a>, a project from the Tangible Media group at the MIT Media Lab. I thought that going from the virtual to the physical was amazing, but then I thought reversing the process, physical to virtual, would be a fun exercise in interactivity.
+						So right off the bat I'd like to say to you, dear reader, that dealing with BLE and sending and receiving bytes from the Phonegap app to the BLE dongle to the LED Matrix Arduino is one of the most frustrating things to deal with. Otherwise, it ended up being pretty straightforward after all the different frustrations with specific codes and MAC addresses and whole lot of other business.
 					</p>
-					<img src = "techimg/stack_1.jpg" class="photopost"/>
+					<img src = "techimg/hyf-1.jpg" class="photopost"/>
 					<p class = "postcontent">
-						Like with a lot of work, new ideas tend to appear post-creation, and it wasn't until HackNYU that me and my team thought of a new way to implement this piece of tech. Reimplementing and modifying the code, we managed to muster up a way for it to be used for people with visual impairments!
+						See that angry face? That was me while I was dealing with BLE.
 					</p>
-					<img src = "techimg/stack_2.jpg" class="photopost"/>
+					<img src = "techimg/hyf-2.jpg" class="photopost"/>
+					<p class = "postcontent">
+						Angry D:<
+					</p>
+					<img src = "techimg/hyf-3.jpg" class="photopost"/>
+					<p class = "postcontent">
+						Happy :D
+					</p>
+					<img src = "techimg/hyf-4.jpg" class="photopost"/>
+					<p class = "postcontent">
+						Sad D:
+					</p>
+					<p class = "postcontent">
+						By the end of the project we managed to get it all working, and my laptop basically became a souped up glorified battery for the BLE dongle. How it worked specifically was we had 3 buttons in a simple Phonegap app designed with HTML and CSS, and when a button was pressed we had some javascript code that would send a byte over to the BLE dongle, which then sent some bytes over via software serial communication to the Rainbowduino. Depending on what button was pressed the Rainbowduino would turn on certain LEDs and turn off others in order to display a happy, sad, or angry face!
+					</p>
 				</div>
 			</article>
 
