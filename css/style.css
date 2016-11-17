@@ -28,8 +28,6 @@
     padding:0;
     height:auto;
     margin: 0 auto;
-
-
 }
 
 #logo{
@@ -42,7 +40,7 @@
 }
 
 body{
-    padding: 50px 300px 100px 300px;
+    /*padding: 50px 300px 100px 300px;*/
     margin: 0 auto;
 }
 
