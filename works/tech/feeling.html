@@ -7,7 +7,6 @@
 	<script type = "text/javascript"></script>
 	<script src = "../../js/page.js"></script>
 	<link rel="icon" href="img/logo_icon.gif">
-
 </head>
 <body>
 	<div id= "wrapper">
@@ -68,15 +67,15 @@
 		<h2 class = "selector">
 			<a href = "index.html">stack.</a>
 			/
-			<a href = ".">A Seeing Assistive Robotic Arm</a>
+			<a href = "roboarm.html">A Seeing Assistive Robotic Arm</a>
 			/
-			<a href = "feeling.html">"How are you feeling?" Wearable</a>
+			<a href = ".">"How are you feeling?" MoodLight!</a>
 			/
 			<a href = "iwall.html">Interactive Wall (WIP)</a>
 			/
 		</h2>
 			<article class = "projects">
-				<h1>"How Are You Feeling?"</h1>
+				<h1>"How Are You Feeling?" MoodLight!</h1>
 				<div class = "postinfo">2016</div>
 				<div>
 					<p class = "postcontent">
@@ -85,6 +84,8 @@
 					<p class = "postcontent">
 						This is a prototype wearable + mobile app pairing that my teammate, Shuang Bright, and I made that tells the world how you are feeling! One of the big topics, in light of school shootings and other atrocities, is the quality of modern day mental health care and also mental health awareness. I as a person who identifies as a male, sometimes have trouble with showing emotion and telling people how I feel, resulting in me not really treating my mind the way I treat my body, with care and attention. We were hoping that if people would be more explicit with their emotions, then maybe we can get rid of some of the taboos associated with mental health and help each other out and seek the care we all deserve.
 					</p>
+					<img src = "techimg/hyf-6.png" class = "photopost"/>
+
 					<p class ="postcontent">
 						<h2>The Ingredients!</h2>
 						<ul class = "grocerylist">
@@ -99,6 +100,10 @@
 					<h2>Photos and details!</h2>
 					<p class = "postcontent">
 						So right off the bat I'd like to say to you, dear reader, that dealing with BLE and sending and receiving bytes from the Phonegap app to the BLE dongle to the LED Matrix Arduino is one of the most frustrating things to deal with. Otherwise, it ended up being pretty straightforward after all the different frustrations with specific codes and MAC addresses and whole lot of other business.
+					</p>
+					<img src = "techimg/hyf-5.png" class = "photopost"/>
+					<p class = "postcontent">
+						Finding out the correct codes for this was a gigantic struggle for me, once I figured it out though the rest of the process was straightforward!
 					</p>
 					<img src = "techimg/hyf-1.jpg" class="photopost"/>
 					<p class = "postcontent">
@@ -119,6 +124,7 @@
 					<p class = "postcontent">
 						By the end of the project we managed to get it all working, and my laptop basically became a souped up glorified battery for the BLE dongle. How it worked specifically was we had 3 buttons in a simple Phonegap app designed with HTML and CSS, and when a button was pressed we had some javascript code that would send a byte over to the BLE dongle, which then sent some bytes over via software serial communication to the Rainbowduino. Depending on what button was pressed the Rainbowduino would turn on certain LEDs and turn off others in order to display a happy, sad, or angry face!
 					</p>
+
 				</div>
 			</article>
 
