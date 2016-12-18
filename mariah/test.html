@@ -3,7 +3,7 @@
 		<meta charset="utf-8">
 		<style>
 			body {
-				background-color: #00ff00;
+				background-color: #ffffff;
 				margin: 0;
 				overflow: hidden;
 			}
@@ -30,7 +30,7 @@
 			
 					var camera, scene, renderer;
 					var geometry, material, mesh;
-					var start_view_count = 241583734;
+					var start_view_count = 200000000;
 					function setup() {
 
 						var W = window.innerWidth, H = window.innerHeight;
@@ -42,10 +42,12 @@
 						camera.position.z = 500;
 						scene = new THREE.Scene();
 
-						planet_count = view_count - start_view_count / 1000000;
-						for ( var i = 0; i < 100; i ++ ) {
+						Math.floor(planet_count = ((view_count - start_view_count) / 100000));
+						floored_planet_count = Math.floor(planet_count);
+						console.log(floored_planet_count);
+						for ( var i = 0; i < floored_planet_count; i ++ ) {
 							map = THREE.ImageUtils.loadTexture("mariah.jpg");
-							geometry = new THREE.SphereGeometry(15, 20, 20);
+							geometry = new THREE.SphereGeometry(20, 15, 15);
 							material = new THREE.MeshBasicMaterial({shading: THREE.FlatShading, color: 0xdcdcdc, map: map});
 							mesh = new THREE.Mesh(geometry, material);
 							map.wrapS = map.wrapT = THREE.RepeatWrapping;
@@ -74,8 +76,6 @@
 					setup();
 					draw();
 					$("#carey").get(0).play();
-
-
 								})
 							}
 					);
