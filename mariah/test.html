@@ -3,12 +3,13 @@
 		<meta charset="utf-8">
 		<style>
 			body {
-				background-color: #ffffff;
+				background-color: #00ff00;
 				margin: 0;
 				overflow: hidden;
 			}
 		</style>
 	</head>
+	<audio id="carey" src="alliwant.mp3" loop="loop"></audio>
 	<body>
 		<script src = "../js/jquery-3.1.1.min.js"></script>
 		<script src="http://brangerbriz.net/labs/threejs_playGnd/js/three.min.js"></script>
@@ -29,7 +30,7 @@
 			
 					var camera, scene, renderer;
 					var geometry, material, mesh;
-
+					var start_view_count = 241583734;
 					function setup() {
 
 						var W = window.innerWidth, H = window.innerHeight;
@@ -39,30 +40,41 @@
 
 						camera = new THREE.PerspectiveCamera( 50, W/H, 1, 10000 );
 						camera.position.z = 500;
-
 						scene = new THREE.Scene();
-						
-						
-						// paste your code from the geometryGUI here
-						map = THREE.ImageUtils.loadTexture("mariah.jpg");
-						console.log(view_count);
-						geometry = new THREE.SphereGeometry((view_count/2000000), 100, 100);
-						material = new THREE.MeshBasicMaterial({shading: THREE.FlatShading, color: 0xdcdcdc, map: map, side: THREE.BackSide});
-						mesh = new THREE.Mesh(geometry, material);
-						map.wrapS = map.wrapT = THREE.RepeatWrapping;
-						map.repeat.set( 1, 1 );
-						scene.add(mesh);
+
+						planet_count = view_count - start_view_count / 1000000;
+						for ( var i = 0; i < 100; i ++ ) {
+							map = THREE.ImageUtils.loadTexture("mariah.jpg");
+							geometry = new THREE.SphereGeometry(15, 20, 20);
+							material = new THREE.MeshBasicMaterial({shading: THREE.FlatShading, color: 0xdcdcdc, map: map});
+							mesh = new THREE.Mesh(geometry, material);
+							map.wrapS = map.wrapT = THREE.RepeatWrapping;
+							map.repeat.set( 1, 1 );
+							mesh.position.x = Math.random() * 1000 - 500;
+							mesh.position.y = Math.random() * 1000 - 500;
+							mesh.position.z = Math.random() * 1000 - 500;
+							mesh.rotation.x = Math.random() * 2 * Math.PI;
+							mesh.rotation.y = Math.random() * 2 * Math.PI;
+							mesh.rotation.z = Math.random() * 2 * Math.PI;
+							scene.add( mesh );
+						}
 					}
+
+
+
 					function draw() {
 						requestAnimationFrame( draw );
 						// experiment with code from the snippets menu here
-						mesh.rotation.x = Date.now() * 0.0005;	
-						mesh.rotation.y = Date.now() * 0.0002;	
-						mesh.rotation.z = Date.now() * 0.001;
+						camera.position.x = Math.sin( Date.now() * 0.002 ) * 50;
+						// mesh.rotation.x = Date.now() * 0.0005;	
+						// mesh.rotation.y = Date.now() * 0.0002;	
+						// mesh.rotation.z = Date.now() * 0.001;
 						renderer.render( scene, camera );
 					}
 					setup();
 					draw();
+					$("#carey").get(0).play();
+
 
 								})
 							}
