@@ -53,17 +53,14 @@
 						map.repeat.set( 1, 1 );
 						scene.add(mesh);
 					}
-
 					function draw() {
-
 						requestAnimationFrame( draw );
-						
 						// experiment with code from the snippets menu here
-
+						mesh.rotation.x = Date.now() * 0.0005;	
+						mesh.rotation.y = Date.now() * 0.0002;	
+						mesh.rotation.z = Date.now() * 0.001;
 						renderer.render( scene, camera );
-
 					}
-
 					setup();
 					draw();
 
@@ -71,8 +68,6 @@
 							}
 					);
 				});
-
-
 		</script>
 		
 	</body>
