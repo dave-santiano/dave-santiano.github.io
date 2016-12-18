@@ -1,0 +1,79 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<style>
+			body {
+				background-color: #ffffff;
+				margin: 0;
+				overflow: hidden;
+			}
+		</style>
+	</head>
+	<body>
+		<script src = "../js/jquery-3.1.1.min.js"></script>
+		<script src="http://brangerbriz.net/labs/threejs_playGnd/js/three.min.js"></script>
+		<script src="http://brangerbriz.net/labs/threejs_playGnd/js/Detector.js"></script>
+		<script>
+
+		$(document).ready(function(){
+			$.get(
+				"https://www.googleapis.com/youtube/v3/videos",{
+					part: "statistics",
+					id: "yXQViqx6GMY",
+					key: "AIzaSyA1HjQvKtwtSoOLP5It9y2eYQQoHPW73Qg"},
+					function(data){
+						$.each(data.items, function(i,item){
+							window.view_count = item.statistics.viewCount;
+							console.log("All I Want For Christmas view count = " + view_count);
+										if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
+			
+					var camera, scene, renderer;
+					var geometry, material, mesh;
+
+					function setup() {
+
+						var W = window.innerWidth, H = window.innerHeight;
+						renderer = new THREE.WebGLRenderer();
+						renderer.setSize( W, H );
+						document.body.appendChild( renderer.domElement );
+
+						camera = new THREE.PerspectiveCamera( 50, W/H, 1, 10000 );
+						camera.position.z = 500;
+
+						scene = new THREE.Scene();
+						
+						
+						// paste your code from the geometryGUI here
+						map = THREE.ImageUtils.loadTexture("mariah.jpg");
+						console.log(view_count);
+						geometry = new THREE.SphereGeometry((view_count/2000000), 100, 100);
+						material = new THREE.MeshBasicMaterial({shading: THREE.FlatShading, color: 0xdcdcdc, map: map, side: THREE.BackSide});
+						mesh = new THREE.Mesh(geometry, material);
+						map.wrapS = map.wrapT = THREE.RepeatWrapping;
+						map.repeat.set( 1, 1 );
+						scene.add(mesh);
+					}
+
+					function draw() {
+
+						requestAnimationFrame( draw );
+						
+						// experiment with code from the snippets menu here
+
+						renderer.render( scene, camera );
+
+					}
+
+					setup();
+					draw();
+
+								})
+							}
+					);
+				});
+
+
+		</script>
+		
+	</body>
+</html>
