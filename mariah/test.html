@@ -47,7 +47,7 @@
 						console.log(floored_planet_count);
 						for ( var i = 0; i < floored_planet_count; i ++ ) {
 							map = THREE.ImageUtils.loadTexture("mariah.jpg");
-							geometry = new THREE.SphereGeometry(20, 15, 15);
+							geometry = new THREE.SphereGeometry((Math.random() * 40)+10, 15, 15);
 							material = new THREE.MeshBasicMaterial({shading: THREE.FlatShading, color: 0xdcdcdc, map: map});
 							mesh = new THREE.Mesh(geometry, material);
 							map.wrapS = map.wrapT = THREE.RepeatWrapping;
