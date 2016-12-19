@@ -58,9 +58,6 @@
 							mesh.rotation.x = Math.random() * 2 * Math.PI;
 							mesh.rotation.y = Math.random() * 2 * Math.PI;
 							mesh.rotation.z = Math.random() * 2 * Math.PI;
-							mesh.rotation.x = Date.now() * 0.0005;	
-							mesh.rotation.y = Date.now() * 0.0002;	
-							mesh.rotation.z = Date.now() * 0.001;
 							scene.add( mesh );
 						}
 					}
@@ -71,7 +68,6 @@
 						requestAnimationFrame( draw );
 						// experiment with code from the snippets menu here
 						camera.position.x = Math.sin( Date.now() * 0.002 ) * 50;
-
 						renderer.render( scene, camera );
 					}
 					setup();
