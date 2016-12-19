@@ -68,19 +68,18 @@
 						requestAnimationFrame( draw );
 						// experiment with code from the snippets menu here
 						camera.position.x = Math.sin( Date.now() * 0.002 ) * 50;
-						// mesh.rotation.x = Date.now() * 0.0005;	
-						// mesh.rotation.y = Date.now() * 0.0002;	
-						// mesh.rotation.z = Date.now() * 0.001;
+						mesh.rotation.x = Date.now() * 0.0005;	
+						mesh.rotation.y = Date.now() * 0.0002;	
+						mesh.rotation.z = Date.now() * 0.001;
 						renderer.render( scene, camera );
 					}
 					setup();
 					draw();
 					$("#carey").get(0).play();
-								})
-							}
+						})
+					}
 					);
 				});
 		</script>
-		
 	</body>
 </html>
