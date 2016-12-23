@@ -3,14 +3,22 @@
 		<meta charset="utf-8">
 		<style>
 			body {
-				background-color: #ffffff;
+				background-color: #5eff00;
 				margin: 0;
 				overflow: hidden;
+			}
+			#count{
+				width:100%;
+				padding: 0;
+				margin: 0 auto;
+				background-color: transparent;
+				display: block;
 			}
 		</style>
 	</head>
 	<audio id="carey" src="alliwant.mp3" loop="loop"></audio>
 	<body>
+		<div id = "count">Count</div>
 		<script src = "../js/jquery-3.1.1.min.js"></script>
 		<script src="http://brangerbriz.net/labs/threejs_playGnd/js/three.min.js"></script>
 		<script src="http://brangerbriz.net/labs/threejs_playGnd/js/Detector.js"></script>
@@ -41,10 +49,9 @@
 						camera = new THREE.PerspectiveCamera( 50, W/H, 1, 10000 );
 						camera.position.z = 500;
 						scene = new THREE.Scene();
-
+						
 						Math.floor(planet_count = ((view_count - start_view_count) / 100000));
 						floored_planet_count = Math.floor(planet_count);
-						console.log(floored_planet_count);
 						for ( var i = 0; i < floored_planet_count; i ++ ) {
 							map = THREE.ImageUtils.loadTexture("mariah.jpg");
 							geometry = new THREE.SphereGeometry((Math.random() * 40)+10, 15, 15);
@@ -59,10 +66,11 @@
 							mesh.rotation.y = Math.random() * 2 * Math.PI;
 							mesh.rotation.z = Math.random() * 2 * Math.PI;
 							scene.add( mesh );
+
+
+
 						}
 					}
-
-
 
 					function draw() {
 						requestAnimationFrame( draw );
@@ -70,6 +78,7 @@
 						camera.position.x = Math.sin( Date.now() * 0.002 ) * 50;
 						renderer.render( scene, camera );
 					}
+					
 					setup();
 					draw();
 					$("#carey").get(0).play();
