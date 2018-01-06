@@ -4,7 +4,6 @@
     margin: 0;
     padding: 0;
 }
-
 .clear-fix:after {
     display: block;
     clear: both;
@@ -48,13 +47,13 @@ body{
 html{
     font-weight: bold;
 }
-
 /*
 nav{
     margin: 0 auto;
 }*/
 
 header{
+    /*display:block;*/
     width: 1000px;
     display: block;
     /*makes sense since nothing can go to the left and right of the header*/
@@ -65,6 +64,7 @@ header{
     position: relative;
     left:auto;
     right:auto;
+
 }
 
 header nav div.categories{
@@ -134,7 +134,7 @@ h2.selector{
 }
 
 h1.joke{
-    padding:10000px 0px 0px 0px;
+    padding:1000px 0px 0px 0px;
 }
 
 h2{
