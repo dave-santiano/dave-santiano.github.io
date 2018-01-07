@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="icon" href="../techimg/logo_icon.gif">
+	<title>David Santiano</title>
+</head>
+
+<body>
+	<nav class="sidebar">
+		<header>David Santiano</header>
+		<a href="../about/index.html" id="about">About</a>
+		<a href="../index.html" id="projects">Projects</a>
+	</nav>
+	<article class="content">
+		<h1>Trump Tweet Trasher</h1>
+		2017/Art
+		<img class="project_image" src="../techimg/trumpo.gif">
+		<p>
+			The Trump Twitter Trasher is a photograph of Donald Trump that has been modified by me to spit out his inane tweets into
+			the trash(which will then be recycled). It works by a server utilizing the Twitter API to grab tweets from Donald Trump’s
+			twitter stream and then storing them into memory in an array, where the tweets are used to populate an html page served
+			by the website and to also be selected to put into the trash. Here's a quick video demo:
+		</p>
+		<iframe width="1000" height="558" src="https://www.youtube.com/embed/qhkuF6bx9tE" frameborder="0" gesture="media" allow="encrypted-media"
+			allowfullscreen></iframe>
+			<h1>How it works</h1>
+		<p>
+		The technology used was a node.js server running on the back-end, which served up an html page and also communicated with
+		an Arduino via serial communication for the purposes of printing the tweets. The basic flow of information was: Twitter
+		—> node.js server —> html page with buttons for selection —> back to node.js server —> Arduino —> Receipt Printer —> Trash
+		</p>
+	</article>
+</body>
+
+</html>

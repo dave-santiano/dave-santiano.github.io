@@ -1,223 +1,90 @@
-@import url('https://fonts.googleapis.com/css?family=Abel|Bungee+Hairline|Chathura|Inconsolata|Pompiere|Quicksand|Roboto+Mono|Share+Tech+Mono|Source+Code+Pro|VT323|Taviraj|Work+Sans|');
+@import url('https://fonts.googleapis.com/css?family=Inconsolata|Libre+Barcode+39+Text|Quicksand|');
 
-*{
+* {
     margin: 0;
     padding: 0;
 }
-.clear-fix:after {
-    display: block;
-    clear: both;
-    /* ensure some older compatability */
-    height: 0;
-    font-size: 0;
-    content: " ";
-    /* extra backup */
-    visibility: hidden;
-}
 
-#wrapper{
-    width: 100%;
-    margin:0 auto;
-    padding:0;
-    zoom: 0.75;
-
-}
-
-#main_container{
-    width: 1000px;
-    padding:0;
-    height:auto;
+body {
+    width: 1200px;
+    padding: 100px 0 0 0;
+    /* height: auto; */
     margin: 0 auto;
+    font-family: 'Roboto Mono', monospace;
 }
 
-#logo{
-    /*let that shit sit with the other doods*/
+header {
+    font-size: 22px;
+}
+
+img.project_image {
+    margin: 0 auto;
+    width: 850px;
+    padding: 15px;
+    display: block;
+}
+
+img.thumbnail {
+    width: 250px;
     display: inline-block;
-    float: left;
-    bottom:0px;
-    left:0px;
-    /*float it to the left because aesthetics*/
+    opacity: 1;
+    transition: .3s ease-in-out;
 }
 
-body{
-    padding: 50px 0px 100px 0px;
-    margin: 0 auto;
+img.thumbnail:hover {
+    opacity: 0.5;
+    transition: .3s ease-in-out;
 }
 
-html{
-    font-weight: bold;
-}
-/*
-nav{
-    margin: 0 auto;
-}*/
-
-header{
-    /*display:block;*/
-    width: 1000px;
-    display: block;
-    /*makes sense since nothing can go to the left and right of the header*/
-    float: left;
-    /*float that shit to the left*/
-    margin-bottom: 50px;
-    /*make sure enemies don't get too close*/
-    position: relative;
-    left:auto;
-    right:auto;
-
+h1 {
+    font-family: "Inconsolata";
+    padding: 40px 0 20px 0;
 }
 
-header nav div.categories{
-    /*let it get cozy with that logo*/
-    display:inline-block;
-    /*float it to the right because that's where it belongs*/
-    float:right;
-    position:absolute;
-    right:0;
-    bottom:0;
-    margin: 0px;
+a {
+    text-decoration: none;
+    color: black;
 }
 
-header nav div.categories div.thumbnail{
-    /*float left so that it remains in order*/
-    float:left;
-    /*displaying it as an inline block allows it to
-    correctly display as a floating box, giving way when the browser resizes*/
+iframe{
+    padding: 10px;
+}
+
+.sidebar {
     display: inline-block;
-    /*they sit next to each other so yeh*/
-    margin:0px;
-    /*don't let them get too close now cause things might get sweaty*/
+    font-family: "Input";
+    position: fixed;
+    width: 150px;
+    height: 100vh;
 }
 
-div.content{
-    float: left;
-    display:block;
-    margin: auto;
+.project {
+    width: 250px;
+    padding: 15px;
+    display: inline-block;
+}
+
+.content {
+    float: right;
     width: 1000px;
+    padding: 0 0 150px 0;
 }
 
-div.postinfo{
-    font-family: 'Roboto Mono', monospace;
-    margin:3px 0px 3px 0px;
-    font-size:15px;
+.project_name {
+    text-align: center;
 }
 
-div.landing{
-    width:1000px;
-    height:auto;
-}
 
-article.projects{
-    margin-bottom: 80px;
+/* sidebar links */
+
+#projects {
     display: block;
+    text-decoration: underline;
+    font-size: 18px;
 }
 
-/*Post titles*/
-h1{
-/*    font-family: 'Inconsolata', monospace;*/
-    /*font-family: 'Quicksand', sans-serif;*/
-    font-family: 'Roboto Mono', monospace;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-h1.pageHeader{
-    font-family: 'Roboto Mono', monospace;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-h2.selector{
-    font-family: 'Roboto Mono', monospace;
-    font-weight: bold;
-    margin:0px 0px 30px 0px;
-}
-
-h1.joke{
-    padding:1000px 0px 0px 0px;
-}
-
-h2{
-    font-family: 'Roboto Mono', monospace;
-    font-weight: bold;
-    margin:10px 0px 10px 0px;
-}
-
-p.postcontent{
-    /*font-family: 'Inconsolata', monospace;*/
-    margin-top:10px;
-    margin-bottom: 10px;
-    font-family: 'Quicksand', sans-serif;
-    font-size: 20px;
-    /*font-family: 'Roboto Mono', monospace;*/
-}
-
-ul.grocerylist{
-    margin-top:10px;
-    font-family: 'Quicksand', sans-serif;
-    font-size: 20px;
-    padding-left:20px;
-}
-
-img.photopost{
-    max-width:100%;
-    height:auto;
-    margin:10px 0px 10px 0px;
-}
-
-
-div.text_info{
-    z-index: -1;
-}
-
-img.about{
-    z-index: -1;
-    float:right;
-    position:absolute;
-    bottom:0px;
-    right:0px;
-}
-
-img.projects{
-    z-index: -1;
-    float:right;
-    position:absolute;
-    bottom:0px;
-    right:0px;
-}
-
-img.animation{
-    z-index: -1;
-    float:right;
-    position:absolute;
-    bottom:0px;
-    right:0px;
-}
-
-img.photo{
-    z-index: -1;
-    float:right;
-    position:absolute;
-    bottom:0px;
-    right:0px;
-}
-
-img.blog{
-    z-index: -1;
-    float:right;
-    position:absolute;
-    bottom:0px;
-    right:0px;
-}
-
-img.misc{
-    z-index: -1;
-    float:right;
-    position:absolute;
-    bottom:0px;
-    right:0px;
-}
-
-.hide{
-    display:none;
+#about {
+    display: block;
+    text-decoration: underline;
+    font-size: 18px;
 }
