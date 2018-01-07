@@ -50,6 +50,9 @@ iframe{
     padding: 10px;
 }
 
+p{
+    margin: 0 auto;
+}
 .sidebar {
     display: inline-block;
     font-family: "Input";

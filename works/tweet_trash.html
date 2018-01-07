@@ -20,17 +20,17 @@
 		<img class="project_image" src="../techimg/trumpo.gif">
 		<p>
 			The Trump Twitter Trasher is a photograph of Donald Trump that has been modified by me to spit out his inane tweets into
-			the trash(which will then be recycled). It works by a server utilizing the Twitter API to grab tweets from Donald Trump’s
-			twitter stream and then storing them into memory in an array, where the tweets are used to populate an html page served
-			by the website and to also be selected to put into the trash. Here's a quick video demo:
+			the trash(which will then be recycled). It works by a Node.js server utilizing the Twitter API to grab tweets from Donald Trump’s
+			twitter stream and then storing them, the stored tweets are then used to populate an HTML page served
+			by the website where they will be selected to be put into the trash. Here's a quick video demo:
 		</p>
 		<iframe width="1000" height="558" src="https://www.youtube.com/embed/qhkuF6bx9tE" frameborder="0" gesture="media" allow="encrypted-media"
 			allowfullscreen></iframe>
 			<h1>How it works</h1>
 		<p>
-		The technology used was a node.js server running on the back-end, which served up an html page and also communicated with
+		The technology used was a Node.js server running on the back-end, which served up an HTML page and also communicated with
 		an Arduino via serial communication for the purposes of printing the tweets. The basic flow of information was: Twitter
-		—> node.js server —> html page with buttons for selection —> back to node.js server —> Arduino —> Receipt Printer —> Trash
+		—> Node.js server —> HTML page with buttons for selection —> back to node.js server —> Arduino —> Receipt Printer —> Trash
 		</p>
 	</article>
 </body>
