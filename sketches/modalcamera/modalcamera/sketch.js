@@ -1,100 +1,205 @@
+
+/* This is needed after the new Chrome update, start the audio context manually*/
+if (Tone.context.state !== "running"){
+  Tone.context.resume();
+}
+
+document.documentElement.addEventListener(
+  "mousedown", function(){
+    mouse_IsDown = true;
+    if(Tone.context.state !== "running"){
+      Tone.context.resume();
+}})
+/* ----------------------------*/
+
+
 var video;
 var synth = new Tone.Synth().toMaster();
 
-var drum = new Tone.MembraneSynth().toMaster();
+var kick = new Tone.MembraneSynth({
+  "envelope" :   {
+    "sustain" : 0,
+    "attack" : 0.02,
+    "decay" : 0.3
+  },
+  "octaves" : 10
+}).toMaster();
+
+var snare = new Tone.NoiseSynth({
+  "envelope" : {
+    "attack" : 0.001,
+    "decay" : 0.2,
+    "sustain" : 0
+  },
+  "filterEnvelope" : {
+    "attack" : 0.001,
+    "decay" : 0.1,
+    "sustain" : 0
+  }
+}).toMaster();
+
+var bass =  new Tone.MonoSynth({
+  "volume" : -10,
+  "envelope" : {
+    "attack" : 0.1,
+    "decay" : 0.3,
+    "release" :2,
+  },
+  "filterEnvelope" : {
+    "attack" : 0.001,
+    "decay" : 0.01,
+    "sustain" : 0.5,
+    "baseFrequency" : 200,
+    "octaves" : 2.6
+  }  
+}).toMaster();
+
+
+
+var snarePart = new Tone.Loop(function(time){
+  snare.triggerAttack(time);
+  notes.push(new Note("snare"));
+}, "2n").start("4n");
+
+
+
+var kickPart = new Tone.Loop(function(time){
+  kick.triggerAttack("C2", time);
+  notes.push(new Note("kick"));
+}, "2n").start();
+
+var bassPart = new Tone.Loop(function(time){
+  bass.triggerAttackRelease("C2", "8n", time);
+}, "2n").start();
+
+
 
 /* Modal Scales, in C*/
-var locrianScale = ['C4', 'Db4', 'Eb4', 'Gb4', 'Ab4', 'Bb4'];
-var phrygianScale = ['C4', 'Eb4', 'Gb4', 'Ab4', 'Bb4'];
-var aeolianScale = ['C4', 'Eb4', 'G4', 'Ab4', 'Bb4'];
-var dorianScale = ['C4', 'Eb4', 'G4', 'Bb4'];
-var mixolydianScale = ['C4', 'E4', 'G4', 'Bb4'];
-var ionianScale = ['C4', 'E4', 'G4', 'B4'];
-var lydianScale = ['C4', 'E4', 'D#4', 'G4', 'B4'];
+var locrianScale = ['C4', 'Db4', 'Eb4', 'Gb4', 'Ab4', 'Bb4', 'C5'];
+var phrygianScale = ['C4', 'D4', 'Eb4', 'F4', 'Gb4', 'Ab4', 'Bb4', 'C5'];
+var aeolianScale = ['C4', 'D4', 'Eb4', 'F4', 'G4', 'Ab4', 'Bb4', 'C5'];
+var dorianScale = ['C4', 'D4', 'F4',  'Eb4', 'G4', 'A4', 'Bb4', 'C5'];
+var mixolydianScale = ['C4', 'D4', 'E4', 'F4', 'G4', 'A4', 'Bb4', 'C5'];
+var ionianScale = ['C4', 'D4', 'E4', 'F4', 'G4', 'A4', 'B4', 'C5'];
+var lydianScale = ['C4', 'D4', 'E4', 'F#4', 'G4','A4', 'B4', 'C5'];
+
+
 
 /*  MODAL SEQUENCES */
 var locrianSeq = new Tone.Sequence(function(time, note){
   synth.triggerAttackRelease(note, "8n", time);
-  drum.triggerAttackRelease("C2", "4n", time);
-    Tone.Draw.schedule(function(){
+  Tone.Draw.schedule(function(){
       redValue = random(0,30);
       blueValue = random(0,30);
       greenValue = random(0,30);
+      notes.push(new Note("eighthNote"));
+
+      if (videoAmount <= 3){
+        videoAmount += 1;
+      }else{
+        videoAmount = 1;
+      }
   }, time);
 }, locrianScale, "8n").start(0);
 
 
 var phrygianSeq = new Tone.Sequence(function(time, note){
   synth.triggerAttackRelease(note, "8n", time);
-  drum.triggerAttackRelease("C2", "4n", time);
-    Tone.Draw.schedule(function(){
+  Tone.Draw.schedule(function(){
       redValue = random(30, 70);
       blueValue = random(30, 70);
       greenValue = random(30, 70);
+      notes.push(new Note("eighthNote"));
+      if (videoAmount <= 3){
+        videoAmount += 1;
+      }else{
+        videoAmount = 1;
+      }
   }, time);
 }, phrygianScale, "8n").start(0);
 
 
+
 var aeolianSeq = new Tone.Sequence(function(time, note){
   synth.triggerAttackRelease(note, "8n", time);
-  drum.triggerAttackRelease("C2", "4n", time);
-    Tone.Draw.schedule(function(){
+  Tone.Draw.schedule(function(){
       redValue = random(70,120);
       blueValue = random(70,120);
       greenValue = random(70,120);
+      notes.push(new Note("eighthNote"));
+      if (videoAmount <= 3){
+        videoAmount += 1;
+      }else{
+        videoAmount = 1;
+      }
   }, time);
 }, aeolianScale, "8n").start(0);
 
 
 var dorianSeq = new Tone.Sequence(function(time, note){
   synth.triggerAttackRelease(note, "8n", time);
-  drum.triggerAttackRelease("C2", "4n", time);
   Tone.Draw.schedule(function(){
       redValue = random(120,160);
       blueValue = random(120,160);
       greenValue = random(120,160);
-      videoAmount += 1;
+      notes.push(new Note("eighthNote"));
+      if (videoAmount <= 3){
+        videoAmount += 1;
+      }else{
+        videoAmount = 1;
+      }
   }, time);
 }, dorianScale, "8n").start(0);
 
 
 var mixolydianSeq = new Tone.Sequence(function(time, note){
   synth.triggerAttackRelease(note, "8n", time);
-  drum.triggerAttackRelease("C2", "4n", time);
-    Tone.Draw.schedule(function(){
+  Tone.Draw.schedule(function(){
       redValue = random(160,200);
       blueValue = random(160,200);
       greenValue = random(160,200);
+      notes.push(new Note("eighthNote"));
+      if (videoAmount <= 3){
+        videoAmount += 1;
+      }else{
+        videoAmount = 1;
+      }
   }, time);
 }, mixolydianScale, "8n").start(0);
 
 
 var ionianSeq = new Tone.Sequence(function(time, note){
   synth.triggerAttackRelease(note, "8n", time);
-  drum.triggerAttackRelease("C2", "4n", time);
-    Tone.Draw.schedule(function(){
+  Tone.Draw.schedule(function(){
       redValue = random(200,225);
       blueValue = random(200,225);
       greenValue = random(200,225);
+      notes.push(new Note("eighthNote"));
+      if (videoAmount <= 3){
+        videoAmount += 1;
+      }else{
+        videoAmount = 1;
+      }
   }, time);
-
 }, ionianScale, "8n").start(0);
 
 
 var lydianSeq = new Tone.Sequence(function(time, note){
   synth.triggerAttackRelease(note, "8n", time);
-  drum.triggerAttackRelease("C2", "4n", time);
-    Tone.Draw.schedule(function(){
+  Tone.Draw.schedule(function(){
       redValue = random(225,255);
       blueValue = random(225,255);
       greenValue = random(225,255);
+      notes.push(new Note("eighthNote"));
+      if (videoAmount <= 3){
+        videoAmount += 1;
+      }else{
+        videoAmount = 1;
+      }
   }, time);
-
 }, lydianScale, "8n").start(0);
 
-
 var modalSequences = [locrianSeq, phrygianSeq, aeolianSeq, dorianSeq, mixolydianSeq, ionianSeq, lydianSeq];
-
 
 locrianSeq.loop = true;
 phrygianSeq.loop = true;
@@ -103,8 +208,13 @@ dorianSeq.loop = true;
 mixolydianSeq.loop = true;
 ionianSeq.loop = true;
 lydianSeq.loop = true;
+/* End modal sequence shtuff*/
 
-var chordType = "SUBLEMON";
+for (var i = 0; i < modalSequences.length; i++){
+  modalSequences[i].probability = .5;
+}
+
+var chordType = "Wes Anderson";
 var averageBrightness = 0.0;
 var redValue;
 var greenValue;
@@ -120,17 +230,83 @@ var isPlaying;
 
 var videoAmount = 1;
 
+var numNotes = 1;
+var notes = [];
 
+var eighthNote;
+var tiedNote;
+var snareCharacter;
+var kickDrum;
+var eighthNoteCharacter;
+var noteName;
+
+function Note(noteName){
+  this.x = -10;
+  this.y = height/2;
+  this.noteChosen;
+  this.velocity = 1;
+  this.eighthNote = eighthNote;
+  this.eighthNoteCharacter = eighthNoteCharacter;
+  this.kickDrumCharacter = kickDrumCharacter;
+  this.snareDrumCharacter = snareDrumCharacter;
+  this.t = random(0,1);
+  this.tInc = TWO_PI/980;
+  this.modifier = 0;
+  
+
+  if (noteName == "snare"){
+    this.noteChosen = this.snareDrumCharacter;
+    this.modifier = 100;
+  }
+  if (noteName == "kick"){
+    this.noteChosen = this.kickDrumCharacter;
+    this.modifier = 100;
+  }
+  if (noteName == "eighthNote"){
+    var randomizedChoice = random(0,1);
+    if (randomizedChoice <= .50){
+      this.noteChosen = this.eighthNote;
+    }
+    else if(randomizedChoice > .50) {
+      this.noteChosen = this.eighthNoteCharacter;
+    }
+  }
+
+  this.move = function(){
+    this.x += 5;
+    for( var i = 0; i < 25; i++){
+      this.y = ((sin(this.t) * 40) + height/2 + this.modifier);
+      this.t += this.tInc;
+    }
+  };
+
+  this.display = function(){
+    image(this.noteChosen, this.x, this.y);
+  };
+}
+
+
+var stopButtonImage;
+var playButtonImage;
 
 function preload(){
-  fontRegular = loadFont('assets/ProggySquare.ttf')
+  coolFont = loadFont('assets/ProggySquare.ttf')
+  eighthNote = loadImage("assets/eighth_note.png");
+  tiedNote = loadImage("assets/tied_note.png");
+  snareDrumCharacter = loadImage("assets/snare_drum.png");
+  kickDrumCharacter = loadImage("assets/kick_drum.png");
+  eighthNoteCharacter = loadImage("assets/eighth_note_character.png");
+  stopButtonImage = loadImage("assets/stop_button.png");
+  playButtonImage = loadImage("assets/play_button.png");
 }
+
+
 
 function setup() {
   redValue = random(0,255);
   blueValue = random(0,255);
   greenValue = random(0,255);
-  textFont(fontRegular);
+  textFont(coolFont);
   Tone.Transport.bpm.value = 90;
 
   createCanvas(screenWidth, screenHeight);
@@ -139,25 +315,85 @@ function setup() {
   video.size(320, 240);
   video.hide();
 
-  playButton = createButton(buttonLabel);
-  playButton.position(width/2, height/2 + 50);
-  playButton.mouseClicked(playSong);
+  // playButton = createButton(buttonLabel);
+  // playButton.position(width/2, height/2 + 50);
+  // playButton.mouseClicked(playSong);
+
 }
 
 
+
+var videoWidth = 320;
+var videoHeight = 240;
+
+
+var o = 0;
+
+
+
+function mouseClicked(){
+  if (mouseX < width/2 + 75 && mouseX > width/2 -75 && mouseY < height/2 + 75 && mouseY > height/2 -75){
+    playSong();
+  }
+}
+
+var tester;
 
 function draw() {
   background(redValue, greenValue, blueValue);
+
+  imageMode(CORNER);
+
   var xPos = 0;
   var yPos = 0;
-  for(var i = 0; i < videoAmount; i++){
-    image(video, xPos += 160, yPos, 160, 120);
-  }
+
+
   textAlign(CENTER);
   rectMode(CENTER);
   textSize(32);
-  text("You look very " + chordType + " today ;)", width/2, height/2);
+  text("You look very " + chordType + " today ;)", width/2, height/2 -50);
+  for(var i = 0; i < videoAmount; i++){
+    tester = image(video, xPos - o, yPos, videoWidth/4, videoHeight/4);
+    image(video, xPos - o, yPos, videoWidth, videoHeight);
+    if(videoAmount >= 2){
+      image(video, width - videoWidth - o, yPos, videoWidth, videoHeight);
+    }
+    if(videoAmount >= 3){
+      image(video, 0 - o, height - videoHeight, videoWidth, videoHeight);
+    }
+    if(videoAmount >= 4){
+      image(video, width - videoWidth - o, height - videoHeight, videoWidth, videoHeight);
+    }
+    
+  }
+  // o += 1;
+  for (var i = 0; i < notes.length; i++){
+    notes[i].move();
+    notes[i].display();
+    if (notes[i].x > width){
+      notes.splice(i, 1);
+    }
+  }
+
+  imageMode(CENTER);
+  if(!isPlaying){
+    video.loadPixels();
+    if (mouseX < width/2 + 75 && mouseX > width/2 -75 && mouseY < height/2 + 75 && mouseY > height/2 -75){
+      image(playButtonImage, width/2, height/2  + 50, 150, 150);
+    }
+    else{
+      image(playButtonImage, width/2, height/2  + 50, 100, 100);
+    }
+  }
+  else{
+    if (mouseX < width/2 + 75 && mouseX > width/2 -75 && mouseY < height/2 + 75 && mouseY > height/2 -75){
+      image(stopButtonImage, width/2, height/2  + 50, 150, 150);
+    }else{
+      image(stopButtonImage, width/2, height/2  + 50, 100, 100);
+    }
+  }
 }
+
 
 
 function getAverageBrightness(){
@@ -179,12 +415,9 @@ function getAverageBrightness(){
 }
 
 
+
 function playSong(){
-
-  console.log("HIT");
-
   if (!isPlaying){
-    playButton.value = "Stop";
     isPlaying = true;
     averageBrightness = getAverageBrightness();
 
@@ -237,61 +470,13 @@ function playSong(){
       lydianSeq.start();
       chordType = "Lydian";
     }
-    Tone.Transport.start();
+    Tone.Transport.start("+0.1");
   }
 
   else{
-    playButton.value = "Play";
+    videoAmount = 1;
     isPlaying = false;
     Tone.Transport.stop();
   }
-  console.log(averageBrightness);
 }
 
-
-// function keyReleased(){
-//   if(keyCode === LEFT_ARROW){
-//     averageBrightness = getAverageBrightness();
-//     console.log(averageBrightness);
-//     if (averageBrightness >= 0.0 && averageBrightness <= 36.4) {
-//       Tone.Transport.start();
-//       locrianSeq.start();
-//       chordType = "Locrian";
-//     }
-//     else if (averageBrightness > 36.4 && averageBrightness <= 72.8) {
-//       Tone.Transport.start();
-//       phrygianSeq.start();
-//       chordType = "Phrygian";
-//     }
-//     else if (averageBrightness > 72.8 && averageBrightness <= 109.2) {
-//       Tone.Transport.start();
-//       aeolianSeq.start();
-//       chordType = "Aeolian";
-//     }
-//     else if (averageBrightness > 109.2 && averageBrightness <= 145.6) {
-//       Tone.Transport.start();
-//       dorianSeq.start();
-//       chordType = "Dorian";
-//     }
-//     else if (averageBrightness > 145.6 && averageBrightness <= 182) {
-//       Tone.Transport.start();
-//       mixolydianSeq.start();
-//       chordType = "Mixolydian";
-//     }
-//     else if (averageBrightness > 182.0 && averageBrightness <= 218.4) {
-//       Tone.Transport.start();
-//       ionianSeq.start();
-//       chordType = "Ionian";
-//     }
-//     else if (averageBrightness > 218.4 && averageBrightness <= 254.8) {
-//       Tone.Transport.start();
-//       lydianSeq.start();
-//       chordType = "Lydian";
-//     }
-//   }
-
-//   if (keyCode == RIGHT_ARROW){
-//     Tone.Transport.stop();
-//   }
-//   return false;
-// }
