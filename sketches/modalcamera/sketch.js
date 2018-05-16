@@ -1,4 +1,3 @@
-
 /* This is needed after the new Chrome update, start the audio context manually*/
 if (Tone.context.state !== "running"){
   Tone.context.resume();
@@ -223,8 +222,6 @@ var redValue;
 var greenValue;
 var blueValue;
 
-var buttonLabel = "Play";
-
 screenWidth = window.innerWidth;
 screenHeight = window.innerHeight;
 
@@ -317,11 +314,6 @@ function setup() {
   pixelDensity(1);
   video.size(320, 240);
   video.hide();
-
-  // playButton = createButton(buttonLabel);
-  // playButton.position(width/2, height/2 + 50);
-  // playButton.mouseClicked(playSong);
-
 }
 
 
@@ -545,10 +537,8 @@ function keyTyped(){
 
 
   }
-
   if (key === 'p'){
     notes.push(new Note("snare"));
     snare.triggerAttack();
   }
-
 }
