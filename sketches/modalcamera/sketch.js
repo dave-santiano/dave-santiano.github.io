@@ -73,7 +73,6 @@ var bassPart = new Tone.Loop(function(time){
 }, "2n").start();
 
 
-
 /* Modal Scales, in C*/
 var locrianScale = ['C4', 'Db4', 'Eb4', 'F4', 'Gb4', 'Ab4', 'Bb4', 'C5'];
 var phrygianScale = ['C4', 'D4', 'Eb4', 'F4', 'Gb4', 'Ab4', 'Bb4', 'C5'];
@@ -168,6 +167,7 @@ var mixolydianSeq = new Tone.Sequence(function(time, note){
 }, mixolydianScale, "8n").start(0);
 
 
+
 var ionianSeq = new Tone.Sequence(function(time, note){
   synth.triggerAttackRelease(note, "8n", time);
   Tone.Draw.schedule(function(){
@@ -200,23 +200,15 @@ var lydianSeq = new Tone.Sequence(function(time, note){
 }, lydianScale, "8n").start(0);
 
 var modalSequences = [locrianSeq, phrygianSeq, aeolianSeq, dorianSeq, mixolydianSeq, ionianSeq, lydianSeq];
-
 var loadedScale;
 
-locrianSeq.loop = true;
-phrygianSeq.loop = true;
-aeolianSeq.loop = true;
-dorianSeq.loop = true;
-mixolydianSeq.loop = true;
-ionianSeq.loop = true;
-lydianSeq.loop = true;
+for (var i = 0; i < modalSequences.length; i++){modalSequences[i].loop = true;}
+for (var i = 0; i < modalSequences.length; i++){modalSequences[i].probability = .5;}
 /* End modal sequence shtuff*/
 
-for (var i = 0; i < modalSequences.length; i++){
-  modalSequences[i].probability = .5;
-}
 
-var chordType = "BAD (haha kidding)";
+
+var chordType = "good";
 var averageBrightness = 0.0;
 var redValue;
 var greenValue;
@@ -253,7 +245,6 @@ function Note(noteName){
   this.tInc = TWO_PI/980;
   this.modifier = 0;
   
-
   if (noteName == "snare"){
     this.noteChosen = this.snareDrumCharacter;
     this.modifier = 100;
@@ -298,6 +289,9 @@ function preload(){
   eighthNoteCharacter = loadImage("assets/eighth_note_character.png");
   stopButtonImage = loadImage("assets/stop_button.png");
   playButtonImage = loadImage("assets/play_button.png");
+  keyBoardImage = loadImage("assets/keyboard.png");
+  questionIcon = loadImage("assets/question_mark.png");
+
 }
 
 
@@ -322,17 +316,12 @@ var videoWidth = 320;
 var videoHeight = 240;
 
 
-var o = 0;
-
-
-
 function mouseClicked(){
-  if (mouseX < width/2 + 75 && mouseX > width/2 -75 && mouseY < height/2 + 75 && mouseY > height/2 -75){
+  if (mouseX < width/2 + 75 && mouseX > width/2 - 75 && mouseY < 300 + 75 && mouseY > 300 -75){
     playSong();
   }
 }
 
-var tester;
 
 function draw() {
   background(redValue, greenValue, blueValue);
@@ -342,26 +331,30 @@ function draw() {
   var xPos = 0;
   var yPos = 0;
 
-
   textAlign(CENTER);
   rectMode(CENTER);
   textSize(42);
-  text("You look very " + chordType + " today ;)", width/2, + 200);
+  text("You look very " + chordType + " today ;)", width/2, 200);
+  
+
+  image(keyBoardImage, width/2 - 300,  height - 400, 600, 300);
+  textAlign(CENTER);
+  textSize(30);
+  text("Try pressing A -> K to play the notes of the scale! Press O for a kick and P for a snare.", width/2, height - 400);
+
   for(var i = 0; i < videoAmount; i++){
-    tester = image(video, xPos - o, yPos, videoWidth/4, videoHeight/4);
-    image(video, xPos - o, yPos, videoWidth, videoHeight);
+    image(video, xPos, yPos, videoWidth, videoHeight);
     if(videoAmount >= 2){
-      image(video, width - videoWidth - o, yPos, videoWidth, videoHeight);
+      image(video, width - videoWidth, yPos, videoWidth, videoHeight);
     }
     if(videoAmount >= 3){
-      image(video, 0 - o, height - videoHeight, videoWidth, videoHeight);
+      image(video, 0, height - videoHeight, videoWidth, videoHeight);
     }
     if(videoAmount >= 4){
-      image(video, width - videoWidth - o, height - videoHeight, videoWidth, videoHeight);
+      image(video, width - videoWidth, height - videoHeight, videoWidth, videoHeight);
     }
-    
   }
-  // o += 1;
+  
   for (var i = 0; i < notes.length; i++){
     notes[i].move();
     notes[i].display();
@@ -373,18 +366,18 @@ function draw() {
   imageMode(CENTER);
   if(!isPlaying){
     video.loadPixels();
-    if (mouseX < width/2 + 75 && mouseX > width/2 -75 && mouseY < height/2 + 75 && mouseY > height/2 -75){
-      image(playButtonImage, width/2, + 300, 150, 150);
+    if (mouseX < width/2 + 75 && mouseX > width/2 - 75 && mouseY < 300 + 75 && mouseY > 300 - 75){
+      image(playButtonImage, width/2, 300, 150, 150);
     }
     else{
-      image(playButtonImage, width/2, + 300, 100, 100);
+      image(playButtonImage, width/2, 300, 100, 100);
     }
   }
   else{
-    if (mouseX < width/2 + 75 && mouseX > width/2 -75 && mouseY < height/2 + 75 && mouseY > height/2 -75){
-      image(stopButtonImage, width/2, + 300, 150, 150);
+    if (mouseX < width/2 + 75 && mouseX > width/2 - 75 && mouseY < 300 + 75 && mouseY > 300 - 75){
+      image(stopButtonImage, width/2, 300, 150, 150);
     }else{
-      image(stopButtonImage, width/2, + 300, 100, 100);
+      image(stopButtonImage, width/2, 300, 100, 100);
     }
   }
 }
@@ -439,7 +432,6 @@ function playSong(){
       }
       aeolianSeq.start();
       loadedScale = aeolianScale;
-
       chordType = "Aeolian";
     }
     else if (averageBrightness > 109.2 && averageBrightness <= 145.6) {
@@ -448,7 +440,6 @@ function playSong(){
       }
       dorianSeq.start();
       loadedScale = dorianScale;
-
       chordType = "Dorian";
     }
     else if (averageBrightness > 145.6 && averageBrightness <= 182) {
@@ -457,7 +448,6 @@ function playSong(){
       }
       mixolydianSeq.start();
       loadedScale = mixolydianScale;
-
       chordType = "Mixolydian";
     }
     else if (averageBrightness > 182.0 && averageBrightness <= 218.4) {
@@ -466,7 +456,6 @@ function playSong(){
       }
       ionianSeq.start();
       loadedScale = ionianScale;
-
       chordType = "Ionian";
     }
     else if (averageBrightness > 218.4 && averageBrightness <= 254.8) {
@@ -475,12 +464,10 @@ function playSong(){
       }
       lydianSeq.start();
       loadedScale = lydianScale;
-
       chordType = "Lydian";
     }
     Tone.Transport.start("+0.1");
   }
-
   else{
     videoAmount = 1;
     isPlaying = false;
@@ -493,49 +480,38 @@ function keyTyped(){
   if (key === 'a'){
     notes.push(new Note("eighthNote"));
     playedSynth.triggerAttackRelease(loadedScale[0], '8n');
-    
   }
   if (key === 's'){
     notes.push(new Note("eighthNote"));
     playedSynth.triggerAttackRelease(loadedScale[1], '8n');
-    
   }
   if (key === 'd'){
     notes.push(new Note("eighthNote"));
     playedSynth.triggerAttackRelease(loadedScale[2], '8n');
-    
   }
   if (key === 'f'){
     notes.push(new Note("eighthNote"));
     playedSynth.triggerAttackRelease(loadedScale[3], '8n');
-    
   }
   if (key === 'g'){
     notes.push(new Note("eighthNote"));
     playedSynth.triggerAttackRelease(loadedScale[4], '8n');
-    
   }
   if (key === 'h'){
     notes.push(new Note("eighthNote"));
     playedSynth.triggerAttackRelease(loadedScale[5], '8n');
-    
   }
   if (key === 'j'){
     notes.push(new Note("eighthNote"));
     playedSynth.triggerAttackRelease(loadedScale[6], '8n');
-    
   }
   if (key === 'k'){
     notes.push(new Note("eighthNote"));
     playedSynth.triggerAttackRelease(loadedScale[7], '8n');
-    
   }
-
   if (key === 'o'){
     notes.push(new Note("kick"));
     kick.triggerAttack("C2");
-
-
   }
   if (key === 'p'){
     notes.push(new Note("snare"));
