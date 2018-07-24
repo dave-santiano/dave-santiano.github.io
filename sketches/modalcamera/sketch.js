@@ -232,6 +232,8 @@ var kickDrum;
 var eighthNoteCharacter;
 var noteName;
 
+var firstPlay = false;
+
 function Note(noteName){
   this.x = -10;
   this.y = height/2;
@@ -319,6 +321,9 @@ var videoHeight = 240;
 function mouseClicked(){
   if (mouseX < width/2 + 75 && mouseX > width/2 - 75 && mouseY < 300 + 75 && mouseY > 300 -75){
     playSong();
+    if(!firstPlay){
+      firstPlay = true;
+    }
   }
 }
 
@@ -326,7 +331,6 @@ function mouseClicked(){
 function draw() {
   background(redValue, greenValue, blueValue);
 
-  imageMode(CORNER);
 
   var xPos = 0;
   var yPos = 0;
@@ -336,11 +340,16 @@ function draw() {
   textSize(42);
   text("You look very " + chordType + " today ;)", width/2, 200);
   
-
-  image(keyBoardImage, width/2 - 300,  height - 400, 600, 300);
-  textAlign(CENTER);
-  textSize(30);
-  text("Try pressing A -> K to play the notes of the scale! Press O for a kick and P for a snare.", width/2, height - 400);
+  
+  if(firstPlay){
+    imageMode(CENTER);
+    image(keyBoardImage, width/2,  height - 200, 400, 200);
+    textAlign(CENTER);
+    textSize(24);
+    text("Try pressing A -> K to play the notes of the scale! Press O for a kick and P for a snare.", width/2, height - 300);
+  }
+  
+  imageMode(CORNER);
 
   for(var i = 0; i < videoAmount; i++){
     image(video, xPos, yPos, videoWidth, videoHeight);
