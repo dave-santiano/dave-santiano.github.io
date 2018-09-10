@@ -11,7 +11,6 @@ document.documentElement.addEventListener(
 }})
 /* ----------------------------*/
 
-
 var video;
 var synth = new Tone.Synth().toMaster();
 var playedSynth = new Tone.Synth().toMaster();
