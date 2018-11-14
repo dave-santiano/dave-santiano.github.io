@@ -1,15 +1,18 @@
-@import url('https://fonts.googleapis.com/css?family=Inconsolata|Libre+Barcode+39+Text|Quicksand|');
+@import url('https://fonts.googleapis.com/css?family=Inconsolata|Libre+Barcode+39+Text|Quicksand|Source+Sans+Pro');
 
 * {
     margin: 0;
     padding: 0;
 }
 
+
+
 body {
-    width: 1200px;
-    padding: 100px 0 0 0;
-    /* height: auto; */
+    width: 70%;
+    padding: 100px 0 100px 0;
+    height: auto;
     margin: 0 auto;
+    display: flex;
     font-family: 'Roboto Mono', monospace;
 }
 
@@ -25,7 +28,7 @@ img.project_image {
 }
 
 img.thumbnail {
-    width: 250px;
+    width: 200px;
     display: inline-block;
     opacity: 1;
     transition: .3s ease-in-out;
@@ -38,7 +41,7 @@ img.thumbnail:hover {
 
 h1 {
     font-family: "Inconsolata";
-    padding: 40px 0 20px 0;
+    /* padding: 40px 0 20px 0; */
 }
 
 a {
@@ -46,46 +49,57 @@ a {
     color: black;
 }
 
+a.obvious-link{
+    text-decoration: underline;
+    color: black;
+}
+
 iframe{
     padding: 10px;
+    display: block;
+    margin: 0 auto;
 }
 
 p{
-    margin: 0 auto;
+    margin: 5px auto;
 }
+
 .sidebar {
     display: inline-block;
     font-family: "Input";
-    position: fixed;
     width: 150px;
-    height: 100vh;
 }
 
 .project {
-    width: 250px;
-    padding: 10px;
     display: inline-block;
+    width: 200px;
+    padding: 15px;
 }
 
 .content {
-    float: right;
-    width: 1000px;
-    padding: 0 0 150px 0;
+    /* float: left; */
+    display: inline-block;
+    margin: 0 0 100px 50px;
+    width: 900px;
 }
 
 .project_name {
     text-align: center;
+    width: 200px;
 }
 
 .flex-container{
-    display:flex;
+    display: inline-flex;
     flex-wrap: wrap;
-    float: right;
-    width: 1000px;
+    /* align-content: center; */
+    /* float: left; */
+    /* padding: 0 0 150px 0; */
+    width: 80%;
+    height: 100%;
+    max-width: 1000px;
 }
 
 /* sidebar links */
-
 #projects {
     display: block;
     text-decoration: underline;
@@ -98,8 +112,73 @@ p{
     font-size: 18px;
 }
 
+
 #sketches {
     display: block;
     text-decoration: underline;
     font-size: 18px;
+}
+
+#side_bar_logo{
+    width: 150px;
+}
+
+@media only screen and (max-width: 1000px){
+    img.project_image{
+        width: 80%;
+    }
+    
+    body{
+        flex-direction: column;
+    }
+
+    .content{
+        width: 80%;
+    }
+
+    .sidebar{
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .project{
+        width: 40%;
+    }
+
+    .flex-container{
+        margin: 0 auto;
+        justify-content: space-around;
+    }
+
+    #projects {
+        display: inline-block;
+        text-decoration: underline;
+        font-size: 18px;
+    }
+
+    #about {
+        display: inline-block;
+        text-decoration: underline;
+        font-size: 18px;
+    }
+
+    #sketches {
+        display: inline-block;
+        text-decoration: underline;
+        font-size: 18px;
+    }
+
+    #nav_links{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        margin: 0 auto;
+        padding: 20px 0 20px 0;
+    }
+
+    #side_bar_logo{
+        display: block;
+        margin: 0 auto;
+    }
 }

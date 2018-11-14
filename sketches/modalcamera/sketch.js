@@ -431,7 +431,6 @@ function playSong(){
       }
       phrygianSeq.start();
       loadedScale = phrygianScale;
-
       chordType = "Phrygian";
     }
     else if (averageBrightness > 72.8 && averageBrightness <= 109.2) {
