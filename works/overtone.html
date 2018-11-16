@@ -7,27 +7,45 @@
 	<link rel="icon" href="../techimg/logo_icon_2.0.gif">
 	<title>David Santiano</title>
 </head>
-
-<body>
+<body onload = "setRainbowElementColors()">
 	<nav class="sidebar">
 		<img id = "side_bar_logo" src="../techimg/rainbowdropdave_opacity_down.png" alt="logo_name">
 		<div id = "nav_links">
-			<a href="../about/index.html" id="about">About</a>
-			<a href="../" id="projects">Projects</a>
-			<a href="../sketches/index.html" id = "sketches">Sketches</a>
+			<a href="../about/index.html" id="about" class = "rainbow_element">/About/</a>
+			<a href="../" id="projects" class = "rainbow_element">/Projects/</a>
+			<a href="../sketches/index.html" id = "sketches"class = "rainbow_element">/Sketches/</a>
 		</div>
 	</nav>
 	<article class="content">
 		<h1>Overtone Music Generator</h1>
 		2018/Tool/Music
 		<img class="project_image" src="../techimg/overtone-scale-1.gif">
-		<h1>The Project:</h1>
+		<!-- <h1>:</h1> -->
 		<p>
-			This project aims to use the Fast Fourier Transform(FFT) to analyze sound in real-time and then present users with a musical scale that could be used to hear the sound of the overtones in their own voice. Other sound sources could be used as well, as long as they are harmonic.
+			This tool extracts the most prominent overtones within a singular sound source and then plays back the tones as a musical scale. The motivation behind doing this was due to an increased fascination with <span class = "rainbow_element">overtonal music</span>, Ben Johnston's absolutely huge work with creating micro-tonal musical scales for his string quartet arrangements, throat singing, <span class = "rainbow_element">alternative/experimental musical scales</span>, and the <span class = "rainbow_element">fundamental building blocks</span> of the sonic soundscape around us.
+		</p>
+		<h1>: :</h1>
+		<p>
+			The framework of this project circles around two ideas: 
+			<div class = "rainbow_element">
+				1. Harmonic/Musical sounds are the sum of many different frequencies that give that sound its identity.
+			</div> 
+			<div class = "rainbow_element">
+				2. This set of summable frequencies contain pitches that are harmonic with the sound source that created them.
+			</div>
+		</p>
+		<h1>: :</h1>
+		<p>
+			Knowing this, I figured that digitally analyzing and capturing these harmonic pitches would produce a scale that could be played in tandem with the acoustic source that created them. In order to do this, I utilized the <span class = "rainbow_element">Fast Fourier Transform(FFT)</span>, a tool often used in digital signal processing, to find the most prominent overtones/harmonics within a sound and them mapped them to my keyboard for playback. Usually the FFT is used in music synthesis, primarily in additive synthesis, but here I am using it to break down a sound into its parts and then turn it into scales.
+		</p>
+		<h1>: :</h1>
+		<p>
+			Even though one can actually mathematically calculate these scales, as they are just integer multiples of the fundamental, I chose to utilize this method for what I think is a good reason. There are many sounds that can be called <span class = "rainbow_element">inharmonic</span>, meaning that their primary overtone frequencies stray from the numerical location of the harmonics. Even though these inharmonic frequencies may introduce dissonance into the captured scale, they are still fundamentally a part of the sound that created them. Instead of focusing on a clean and calculated scale that utilizes the accuracy of a mathematical formula, I am creating a <span class = "rainbow_element">musical scale from components</span>.
 		</p>
 		<p>
-			Single tones, besides pure sine waves, are made of a composition of tones, called partials. The lowest pitched partial is called the fundamental, which could be the name of a note in a musical context. Partials above, or, over the fundamental are called overtones. Some of these overtones are actually positive integer multiples of the fundamental frequency, which are given the name of harmonics. The sum of all the partials, or parts, of the tone produce that same tone. So, extracting the harmonics and building a scale from them should produce a scale that's harmonic with the original source.
+			
 		</p>
 	</article>
+	<script type = "text/javascript" src = "../js/script.js"></script>
 </body>
 </html>
