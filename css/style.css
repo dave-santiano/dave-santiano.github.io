@@ -28,7 +28,7 @@ header {
 
 img.project_image {
     margin: 0 auto;
-    width: 900px;
+    max-width: 900px;
     padding: 8 0 8 0;
     display: block;
 }
