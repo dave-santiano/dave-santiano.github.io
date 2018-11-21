@@ -140,6 +140,10 @@ p{
         width: 80%;
     }
 
+    img.project_gif{
+        width: 300px;
+    }
+
     iframe{
         display: block;
         margin: 0 auto;
