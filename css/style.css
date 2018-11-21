@@ -168,7 +168,8 @@ p{
     }
     
     .project_name{
-        width: 150px;
+        width: auto;
+        font-size: 12;
     }
 
     .flex-container{
