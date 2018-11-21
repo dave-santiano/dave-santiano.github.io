@@ -67,7 +67,7 @@ iframe{
 
 p{
     margin: 10px auto;
-    width: 900px;
+    /* width: 900px; */
 }
 
 .sidebar {
@@ -138,6 +138,12 @@ p{
 @media only screen and (max-width: 1000px){
     img.project_image{
         width: 80%;
+    }
+
+    iframe{
+        display: block;
+        margin: 0 auto;
+        width:  auto;
     }
     
     body{
