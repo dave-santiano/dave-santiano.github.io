@@ -33,6 +33,13 @@ img.project_image {
     display: block;
 }
 
+img.project_gif{
+    margin: 0 auto;
+    width: auto;
+    padding: 8 0 8 0;
+    display: block;
+}
+
 img.thumbnail {
     width: 270px;
     display: inline-block;

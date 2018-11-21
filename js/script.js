@@ -1,6 +1,8 @@
-var rainbowElements = document.getElementsByClassName("rainbow_element");
-var colorIncrement = 360 / rainbowElements.length;
-var color = Math.random() * 360;
+let rainbowElements = document.getElementsByClassName("rainbow_element");
+
+const circleDegrees = 360;
+let colorIncrement = circleDegrees / rainbowElements.length;
+let color = Math.random() * circleDegrees;
 
 function setRainbowElementColors(){
     for (var i = 0; i < rainbowElements.length; i++){
