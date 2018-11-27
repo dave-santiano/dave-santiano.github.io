@@ -337,7 +337,7 @@ function draw() {
   textAlign(CENTER);
   rectMode(CENTER);
   textSize(42);
-  text("You look very " + chordType + " today ;)", width/2, 200);
+  text("You look very " + chordType + " today :)", width/2, 200);
   
   
   if(firstPlay){

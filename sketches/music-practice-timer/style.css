@@ -1,0 +1,10 @@
+html{
+    font-family: "Fira Code";
+}
+
+#prompt{
+    position: absolute;
+    margin: 10px 0 0 20px;
+    /* overflow: hidden; */
+    white-space: nowrap;
+}

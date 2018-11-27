@@ -13,6 +13,7 @@ var redValue, greenValue, blueValue;
 var canvas;
 var synth = new Tone.Synth().toMaster();
 var chromaticScale = ["C4", "Db4", "D4", "Eb4", "E4", "F4", "Gb4", "G4", "Ab4", "A4", "Bb4", "B4"];
+var font;
 
 var taskChangeJingle = new Tone.Sequence(function(time, note){
   synth.triggerAttackRelease(note, "8n", time);
@@ -83,6 +84,10 @@ function Task(taskName, time, isFinished){
 }
 
 
+function preload(){
+  font = loadFont("FiraCode-Regular.ttf")
+}
+
 function setup(){
   canvas = createCanvas(screenWidth, screenHeight);
 
@@ -90,6 +95,7 @@ function setup(){
   greenValue = 120;
   blueValue  = 120;
 
+  textFont(font);
   taskInput = createInput();
   taskInput.position(20, 65);
 
@@ -123,9 +129,9 @@ function setup(){
   clearButton.position(20, taskInput.y + 150);
   clearButton.mousePressed(clearList);
 
-  taskPrompt = createElement('h1', "Enter in a practice task! Time in the drop down HH:MM:SS");
-  taskPrompt.addClass("prompt");
-  taskPrompt.position(20, 5);
+  // taskPrompt = createElement('h1', "Enter in a practice task! Time in the drop down HH:MM:SS");
+  // taskPrompt.addClass("prompt");
+  // taskPrompt.position(20, 5);
   
 }
 
@@ -160,7 +166,7 @@ function calculateLongestTaskName(){
     for(var i = 0; i < practiceList.length; i++){
       if(practiceList[i].taskName.length > longestName.taskName.length){
         longestName = practiceList[i];
-        console.log(longestName.taskName);
+        // console.log(longestName.taskName);
       }
     }
   }
