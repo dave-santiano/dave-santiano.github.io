@@ -4,8 +4,6 @@
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Rubik|Fira+Mono');
 
-
-
 * {
     margin: 0;
     padding: 0;
@@ -96,8 +94,8 @@ p{
     width: auto;
 }
 
-.rainbowElement{
-} 
+/* .rainbowElement{
+}  */
 
 .flex-container{
     display: inline-flex;

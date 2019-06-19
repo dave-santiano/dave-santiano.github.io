@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="icon" href="../techimg/logo_icon_2.0.gif">
+	<title>David Santiano</title>
+</head>
+
+<body onload = "setRainbowElementColors()">
+	<nav class="sidebar">
+		<img id = "side_bar_logo" src="../techimg/rainbowdropdave_opacity_down.png" alt="logo_name">
+		<div id = "nav_links">
+			<a href="../about/index.html" id="about" class = "rainbow_element">/About/</a>
+			<a href="../" id="projects" class = "rainbow_element">/Projects/</a>
+			<a href="../sketches/index.html" id = "sketches"class = "rainbow_element">/Sketches/</a>
+		</div>
+	</nav>
+	<article class="content">
+		<h1>TeleWindow</h1>
+		2018/Tool/Research
+		<img class="project_image" src="../techimg/tele-1.gif">
+		<h1>The Project:</h1>
+		<p>
+			TeleWindow is an ongoing telepresence research project being
+			conducted under the guidance of <a class = "obvious-link" href =
+			"http://www.naimark.net/">Michael Naimark</a>. The aim is to explore
+			how a two-way, one to one, "telepresence window", can be achieved
+			with pre-existing and emerging technology and computational power.
+			Utilizing these different ingredients, we can prototype a device
+			that can offer features such as two-way eye contact, stereoscopic
+			3D, and presence.
+		</p>
+		<img class = "project_image" src = "../techimg/tele-2.jpg">
+		<h1>How it works:</h1>
+		<p>			
+			Currently, we are using four Intel RealSense depth cameras in order
+			to create a volumetric pointcloud representation of a person, and
+			then we correct perspective based on the head/eye positions of the
+			user. At the moment, the recreation is only geared towards
+			monoscopic viewing, but future implementations that use lenticular
+			sheets would allow for stereoscopic and headset-less viewing. 
+		</p>
+		<p>
+			My involvement with the project focused on:
+			<div class = "rainbow_element">
+				1. Implementing a pre-trained neural net based face tracker, and a haar
+				cascade based eye tracker.
+			</div> 
+			<div class = "rainbow_element">
+				2. The off-axis viewing frustum OpenGL shader, so that correct
+				perspectives can be given to a user when viewing the display
+				off-axis
+			</div>
+			<div class = "rainbow_element">
+				3. Stereo sound routing implemented using the JUCE audio
+				programming framework
+			</div>
+		</p>
+	</article>
+	<script type = "text/javascript" src = "../js/script.js"></script>
+</body>
+</html>
