@@ -2,7 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c|Roboto'); */
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Rubik|Fira+Mono');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Rubik|Fira+Mono|Roboto|Roboto');
 
 * {
     margin: 0;
@@ -16,7 +16,7 @@ body {
     height: auto;
     margin: 0 auto;
     display: flex;
-    font-family: "Fira Code";
+    font-family: "Roboto";
     font-size: 15px;
 }
 
@@ -70,7 +70,7 @@ p{
 
 .sidebar {
     display: inline-block;
-    font-family: "Fira Code";
+    font-family: "Roboto";
     margin: 0 20px 0 0;
     font-size: 60px;
     width: 150px;
@@ -90,7 +90,7 @@ p{
 
 .project_name {
     text-align: center;
-    font-family: "Fira Code";
+    font-family: "Roboto";
     width: auto;
 }
 
