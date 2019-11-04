@@ -14,40 +14,56 @@
 		<div id = "nav_links">
 			<a href="../about/index.html" id="about" class = "rainbow_element">/About/</a>
 			<a href="../" id="projects" class = "rainbow_element">/Projects/</a>
-			<a href="../sketches/index.html" id = "sketches"class = "rainbow_element">/Sketches/</a>
 		</div>
 	</nav>
 	<article class="content">
 		<h1>TeleWindow</h1>
-		2018-Ongoing/Tool/Research
+		2018->ongoing/Tool/Research
 		<p>
-			Collaborators: Michael Naimark (Principal Investigator), Cameron Ballard, Barak Chamo,
-			Ivy Huang, Grace Huang, Mateo Juvera Molina, Ada Zhao, and Bruce Luo
+			Collaborators: 
+			<a class = "obvious-link" href = "http://www.naimark.net/">Michael Naimark</a> (Principal Investigator), 
+			<a class = "obvious-link" href = "https://cameronballard.space/">Cameron Ballard</a>, 
+			<a class = "obvious-link" href = "https://barakchamo.com/">Barak Chamo</a>,
+			<a class = "obvious-link" href = "https://www.ivydhuang.com/">Ivy Huang</a>, 
+			Grace Huang, Mateo Juvera Molina, 
+			<a class = "obvious-link" href = "http://www.adazhao.com/">Ada Zhao</a>
+			, and 
+			<a class = "obvious-link" href = "http://bruce-luo.me/">Bruce Luo</a>
 		</p>
 
 		<img class="project_image" src="../techimg/tele-1.gif">
 		<p style = "text-align: center;">
-			Early one camera prototype
+			Early single camera prototype
 		</p>
 		<p>
 			TeleWindow is an ongoing telepresence research project being
 			conducted under the guidance of <a class = "obvious-link" href =
 			"http://www.naimark.net/">Michael Naimark</a>. The aim is to explore
-			how a two-way, one to one, "telepresence window", can be achieved
-			with pre-existing and emerging technology and computational power.
+			how a two-way, one to one communication, "telepresence window", system can be
+			developed and how this system can aid communication in the digital age.
 			Utilizing these different ingredients, we can prototype a device
-			that can offer features such as <span class = "rainbow_element">two-way eye contact</span>, 
-			<span class = "rainbow_element">stereoscopic
-			3D</span>, and <span class = "rainbow_element">presence</span>. All done in <span class = "rainbow_element">
-				realtime</span>.
+			that can offer features such as 
+			<span class = "rainbow_element">two-way eye contact</span>, 
+			<span class = "rainbow_element">stereoscopic 3D</span>, and 
+			<span class = "rainbow_element">presence</span>. 
+			All done in 
+			<span class = "rainbow_element">realtime</span>.
 		</p>
-		<img class = "project_image" src = "../techimg/tele-2.jpg">
+		<img class = "project_image" style = "width: 500px;" src = "../techimg/tele-2.jpg">
 		<p>			
-			Currently, we are using four Intel RealSense cameras in order
+			Currently, we are using four <span class = "rainbow_element">Intel RealSense</span> cameras in order
 			to create a volumetric pointcloud representation of a person, and
 			then we correct perspective based on the head/eye positions of the
 			user. The stereoscopic eye-tracked volumetric display was acquired through
 			SeeFront.
+		</p>
+		<p>
+			My general involvement in the project included/includes refinement of the system through prototyping
+			and debugging. The specific components I worked on were 
+			integrating the 
+			<span class = "rainbow_element">initial off-axis perspective rendering algorithm</span>, 
+			<span class = "rainbow_element">used the SeeFront API to integrate I/O between the SeeFront display and the software environment</span>, 
+			and am also writing a <span class = "rainbow_element">synchronized multi-cam record/playback system for RealSense pointclouds</span>. 
 		</p>
 		<img class = "project_image" src = "../techimg/tele-multisplat.png">
 		<p style = "text-align: center;">
@@ -59,7 +75,7 @@
 		</p>
 		<img class = "project_image" src = "../techimg/tele-realcapture.gif">
 		<p style = "text-align: center;">
-			Rough real life environment capture.
+			Rough real life environment capture. Monoscopic view for demonstration.
 		</p>
 		<img class = "project_image" src = "../techimg/tele-realtime.gif">
 		<p style = "text-align: center;">
