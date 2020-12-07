@@ -27,7 +27,7 @@ header {
 img.project_image {
     margin: 0 auto;
     max-width: 900px;
-    padding: 8 0 8 0;
+    /* padding: 8 0 8 0; */
     display: block;
 }
 
@@ -42,6 +42,11 @@ img.thumbnail {
     width: 270px;
     display: inline-block;
     opacity: 1;
+}
+
+p.project_caption{
+    margin: 10px auto;
+    text-align: center;
 }
 
 h1 {
