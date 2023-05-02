@@ -90,6 +90,7 @@ p{
 .content {
     display: inline-block;
     /* margin: 0 0 100px 0px; */
+    margin: 25px auto;
     width: 900px;
 }
 
