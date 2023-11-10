@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<link href="https://vjs.zencdn.net/7.11.4/video-js.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="icon" href="../techimg/logo_icon_2.0.gif">
+	<title>David Santiano</title>
+</head>
+
+<body onload = "setRainbowElementColors()">
+	<nav class="sidebar">
+		<img id = "side_bar_logo" src="../techimg/rainbowdropdave_opacity_down.png" alt="logo_name">
+		<div id = "nav_links">
+			<a href="../about/index.html" id="about" class = "rainbow_element">/About/</a>
+			<a href="../" id="projects" class = "rainbow_element">/Projects/</a>
+			<!-- <a href="../sketches/index.html" id = "sketches"class = "rainbow_element">/Sketches/</a> -->
+		</div>
+	</nav>
+	<article class="content">
+		<h1>HP Customer Welcome Center</h1>
+		<p>
+			propelland was tasked with updating HP's Customer Welcome Center to
+			showcase <span class = "rainbow_element">a more in-context user
+			experience, where customers can see HP hardware within the context
+			of a real user interfacing with HP products within different work
+			environments.</span> As you walk through the new HP Customer Welcome
+			Center you can see these environments sorted into different areas
+			such as an "Office", a "Home", or a "Gaming" environment. In
+			"Office", you'll see printers or videoconferencing hardware, and for
+			"Gaming", you can experience streaming setups, gaming hardware, and
+			even musical instruments. 
+		</p>
+		<p>
+			The new Customer Welcome Center was updated with different activations
+			powered by <span class = "rainbow_element">Home Assistant</span>, an
+			open-source home automation software that integrates with a variety
+			of appliances and IoT devices. For one called "Choose Your Persona",
+			<span class = "rainbow_element">we used differently colored Philips
+			Hue Lights to highlight sets of products according to which work
+			persona would use them.</span> Additionally, <span class =
+			"rainbow_element">we added controllable sounds and smells throughout
+			the entire space to make a more immersive and interactive
+			experience.</span>
+		</p>
+		
+
+		<div style = "margin: 8px 0px">
+			<video class = " video-js vjs-big-play-centered vjs-fluid project_image" controls
+			preload = "auto" width="900px" data-setup="{}">
+				<source src="/techimg/hp-1.webm" type="video/webm">
+			</video>
+		</div>
+		<p>
+			In this particular interaction, "Choose Your Persona", <span class =
+			"rainbow_element">personas were identified and created to represent
+			users that would benefit from the products that exist within the
+			model co-working space.</span> Examples of some of the personas that
+			were created are "Tech Experts", "Creative Experts", "Office
+			Collaborators", etc. <span class = "rainbow_element">We had the
+			lights and personas activated by custom ID cards, each one
+			representing a different persona to be highlighted.</span>
+		</p>
+		<div style = "margin: 8px 0px">
+			<video class = " video-js vjs-big-play-centered vjs-fluid project_image" controls
+			preload = "auto" width="900px" data-setup="{}">
+				<source src="/techimg/hp-2.webm" type="video/webm">
+			</video>
+		</div>
+		<p>
+			The cards are scanned by a <span class = "rainbow_element">NFC tag
+			reader</span> and we also added control cards to turn them all on or
+			off and to reset them. The primary user for these cards would be a
+			tour guide that would guide customers through the space.
+		</p>
+		<img class="project_image" src="../techimg/hp-3.jpg">
+		<p>
+			Everything was built to be easily customizable and accessible, so
+			that the system can be modified when different needs arise.
+		</p>
+
+		<img class="project_image" src="../techimg/hp-4.jpg">
+		<p>
+			<span class = "rainbow_element">Sounds and smells</span> were added
+			and placed throughout the space as well. Sounds were
+			controlled by Sonos speakers attached to Home Assistant, where local
+			sound files were being hosted. Smells were controlled by a smart
+			plug attached to a Wi-Fi connected aroma diffusers from Pura. 
+		</p>
+		<img class="project_image" width= "800px" src="../techimg/hp-5.jpg">
+		<p>
+			Overall, the new Customer Welcome Center has been augmented with a
+			multi-sensory experience, sights, sounds, and smells that <span
+			class = "rainbow_element">enable HP customers to look at HP products
+			within a context that they will actually be used in. This allows
+			customers to get closer to how real users will use HP
+			products.</span>
+		</p>
+	</article>
+	<script type = "text/javascript" src = "../js/script.js"></script>
+	<script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
+</body>
+
+</html>
