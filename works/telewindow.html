@@ -3,6 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<link rel="icon" href="../techimg/logo_icon_2.0.gif">
 	<title>David Santiano</title>
@@ -17,63 +18,121 @@
 		</div>
 	</nav>
 	<article class="content">
-		<h1>TeleWindow</h1>
-		2018->2021/Tool/Research
-		<p>
-			Collaborators: 
-			<a class = "rainbow_element" class = "obvious-link" href = "http://www.naimark.net/">Michael Naimark</a> (Principal Investigator), 
-			<a class = "rainbow_element" class = "obvious-link" href = "https://cameronballard.space/">Cameron Ballard</a>, 
-			<a class = "rainbow_element" class = "obvious-link" href = "https://barakchamo.com/">Barak Chamo</a>,
-			<a class = "rainbow_element" class = "obvious-link" href = "https://www.ivydhuang.com/">Ivy Huang</a>, 
-			<span class = "rainbow_element">Grace Huang</span>, <span class = "rainbow_element">Mateo Juvera Molina</span>, 
-			<a class = "rainbow_element" class = "obvious-link" href = "http://www.adazhao.com/">Ada Zhao</a>
-			, and 
-			<a class = "rainbow_element" class = "obvious-link" href = "http://bruce-luo.me/">Bruce Luo</a>
-		</p>
+		<!-- Breadcrumb -->
+		<div class="breadcrumb">
+			└── <a href="../index.html">Projects</a> / TeleWindow
+		</div>
 
-		<img class="project_image" src="../techimg/tele-1.gif">
-		<p style = "text-align: center;">
-			Early single camera prototype
-		</p>
-		<p>
-			TeleWindow is a finished experimental telepresence research project
-			conducted under the guidance of <a class = "obvious-link" href =
-			"http://www.naimark.net/">Michael Naimark</a>. The aim was to explore
-			how a two-way, one to one communication, "telepresence window", system can be
-			developed and how this system can aid communication in the digital age.
-			Utilizing these different ingredients, we can prototype a device
-			that can offer features such as 
-			<span class = "rainbow_element">two-way eye contact</span>, 
-			<span class = "rainbow_element">stereoscopy</span>, and 
-			<span class = "rainbow_element">telepresence</span>. 
-			All done in 
-			<span class = "rainbow_element">realtime</span>.
-		</p>
-		<img class = "project_image" style = "width: 500px;" src = "../techimg/tele-2.jpg">
-		<p>			
-			Currently, we are using four <span class = "rainbow_element">Intel RealSense</span> cameras in order
-			to create a volumetric pointcloud representation of a person, and
-			then we correct perspective based on the head/eye positions of the
-			user. The stereoscopic eye-tracked volumetric display was acquired through
-			SeeFront.
-		</p>
-		<img class = "project_image" src = "../techimg/tele-multisplat.png">
-		<p style = "text-align: center;">
-			Four camera coverage demonstrated through multicolor splat.
-		</p>
-		<img class = "project_image" src = "../techimg/tele-multicam.gif">
-		<p style = "text-align: center;">
-			Diminishing occlusions through multi-cam coverage.
-		</p>
-		<img class = "project_image" src = "../techimg/tele-realcapture.gif">
-		<p style = "text-align: center;">
-			Rough real life environment capture. Monoscopic view for demonstration.
-		</p>
-		<img class = "project_image" src = "../techimg/tele-realtime.gif">
-		<p style = "text-align: center;">
-			Demonstration of realtime movement and capture in the rendered
-			virtual environment.
-		</p>
+		<!-- Title & Core Metadata -->
+		<h1>TeleWindow</h1>
+		<div class="project-meta">
+			2018->2021 / Research / Tool / C++ / OpenGL / RealSense
+			<br>
+			Role -> <span class="rainbow_element">Research Associate</span>
+			<br>
+			Status -> Completed
+		</div>
+
+		<!-- Technical Stack -->
+		<div class="tech-stack">
+			├── Hardware -> <span class="rainbow_element">Intel RealSense</span>
+			<br>
+			├── Software -> <span class="rainbow_element">C++</span> / <span class="rainbow_element">Unity</span> / <span class="rainbow_element">Python</span> / <span class="rainbow_element">OpenCV</span>
+			<br>
+			└── Display -> <span class="rainbow_element">SeeFront Stereoscopic</span> / <span class="rainbow_element">Eye-tracking</span>
+			<br>
+		</div>
+
+		<!-- Collaborators -->
+		<div class="collaborators">
+			>>> Collaborators
+			<br>
+			• Principal Investigator: <a class = "rainbow_element obvious-link" href = "http://www.naimark.net/">Michael Naimark</a>
+			<br>
+			• Team: <a class = "rainbow_element obvious-link" href = "https://cameronballard.space/">Cameron Ballard</a>, 
+			<a class = "rainbow_element obvious-link" href = "https://barakchamo.com/">Barak Chamo</a>,
+			<a class = "rainbow_element obvious-link" href = "https://www.ivydhuang.com/">Ivy Huang</a>, 
+			<span class = "rainbow_element">Grace Huang</span>, <span class = "rainbow_element">Mateo Juvera Molina</span>, 
+			<a class = "rainbow_element obvious-link" href = "http://www.adazhao.com/">Ada Zhao</a>, 
+			<a class = "rainbow_element obvious-link" href = "http://bruce-luo.me/">Bruce Luo</a>
+		</div>
+
+		<!-- Key Contributions/Achievements -->
+		<div class="achievements">
+			>>> Key Features
+			<br>
+			• <span class="rainbow_element">Four-camera array</span> for complete volumetric coverage
+			<br>
+			• <span class="rainbow_element">Real-time point cloud fusion</span> and perspective correction
+			<br>
+			• <span class="rainbow_element">Eye-tracked stereoscopic output</span> supported via SeeFront volumetric display
+		</div>
+
+		<!-- Links Section -->
+		<div class="project-links">
+			[Paper] -> <a class = "rainbow_element obvious-link" href = "https://www.isea-symposium-archives.org/wp-content/uploads/2023/02/ISEA2022-Proceedings_.pdf"><span class="rainbow_element">ISEA 2022</span>, page 664</a>
+			<br>
+			[Patent] -> <a class = "rainbow_element obvious-link" href = "https://patents.google.com/patent/US12069408B2/en"><span class="rainbow_element">Patent</span></a>
+		</div>
+
+		<!-- Project Details -->
+		<div class="project-content">
+			<img class="project_image" src="../techimg/tele-1.gif">
+			<p class="image-caption">
+				Early single camera prototype
+			</p>
+			<p class="project-description">
+				TeleWindow is a finished experimental <span class="rainbow_element">telepresence research project</span>
+				conducted under the guidance of <a class = "rainbow_element obvious-link" href =
+				"http://www.naimark.net/">Michael Naimark</a>. The aim was to explore
+				how a <span class="rainbow_element">two-way, one to one communication</span> system can be
+				developed and how this system can aid communication in the digital age.
+				Utilizing these different ingredients, we can prototype a device
+				that can offer features such as 
+				<span class = "rainbow_element">two-way eye contact</span>, 
+				<span class = "rainbow_element">stereoscopy</span>, and 
+				<span class = "rainbow_element">telepresence</span>. 
+				All done in 
+				<span class = "rainbow_element">realtime</span>.
+			</p>
+			<img class = "project_image" style = "width: 500px;" src = "../techimg/tele-2.jpg">
+			<p class="project-description">
+				Currently, we are using <span class = "rainbow_element">four Intel RealSense cameras</span> in order
+				to create a <span class="rainbow_element">volumetric pointcloud representation</span> of a person, and
+				then we correct perspective based on the <span class="rainbow_element">head/eye positions</span> of the
+				user. The <span class="rainbow_element">stereoscopic eye-tracked volumetric display</span> was acquired through
+				SeeFront.
+			</p>
+		</div>
+		<!-- Technical Demonstrations -->
+		<div class="demo-section">
+			<img class = "project_image" src = "../techimg/tele-multisplat.png">
+			<p class="image-caption">
+				<span class="rainbow_element">Four camera coverage</span> demonstrated through multicolor splat.
+			</p>
+		</div>
+
+		<div class="demo-section">
+			<img class = "project_image" src = "../techimg/tele-multicam.gif">
+			<p class="image-caption">
+				Diminishing occlusions through <span class="rainbow_element">multi-cam coverage</span>.
+			</p>
+		</div>
+
+		<div class="demo-section">
+			<img class = "project_image" src = "../techimg/tele-realcapture.gif">
+			<p class="image-caption">
+				Rough real life environment capture. <span class="rainbow_element">Monoscopic view</span> for demonstration.
+			</p>
+		</div>
+
+		<div class="demo-section">
+			<img class = "project_image" src = "../techimg/tele-realtime.gif">
+			<p class="image-caption">
+				Demonstration of <span class="rainbow_element">realtime movement</span> and capture in the rendered
+				virtual environment.
+			</p>
+		</div>
 
 
 	</article>
