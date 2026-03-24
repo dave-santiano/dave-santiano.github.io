@@ -1,8 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<link rel="icon" href="../techimg/logo_icon_2.0.gif">
 	<title>David Santiano</title>
@@ -10,56 +11,68 @@
 
 <body onload = "setRainbowElementColors()">
 	<nav class="sidebar">
-		<img id = "side_bar_logo" src="../techimg/rainbowdropdave_opacity_down.png" alt="logo_name">
+		<div id="side_bar_logo"><span class="lv-a"><span class="lv-char rainbow_element">d</span><span class="lv-char rainbow_element">a</span><span class="lv-char rainbow_element">v</span><span class="lv-char rainbow_element">i</span><span class="lv-char rainbow_element">d</span></span><span class="lv-a"><span class="lv-char rainbow_element">s</span><span class="lv-char rainbow_element">a</span><span class="lv-char rainbow_element">n</span><span class="lv-char rainbow_element">t</span><span class="lv-char rainbow_element">i</span><span class="lv-char rainbow_element">a</span><span class="lv-char rainbow_element">n</span><span class="lv-char rainbow_element">o</span></span></div>
 		<div id = "nav_links">
-			<a href="../about/index.html" id="about" class = "rainbow_element">/About/</a>
-			<a href="../" id="projects" class = "rainbow_element">/Projects/</a>
-			<!-- <a href="../sketches/index.html" id = "sketches"class = "rainbow_element">/Sketches/</a> -->
+			<a href="../about/index.html" id="about" class="rainbow_element">/about</a>
+			<a href="../" id="projects" class="rainbow_element">/projects</a>
+		</div>
+		<div id="nav_palette_btns">
+			<button class="nav-pal-btn" id="nav-btn-off" title="No highlight">- - -</button>
+			<button class="nav-pal-btn" id="nav-btn-rainbow" title="Rainbow highlight">∿∿∿</button>
+			<div style="display:flex;align-items:center;gap:5px;">
+				<button class="nav-pal-btn" id="nav-btn-time" title="Time of day palette">◑ · · ·</button>
+				<span id="nav-time-indicator" style="display:none;font-size:11px;white-space:nowrap;font-family:inherit;">&lt;---(<span id="nav-time-hhmm" class="rainbow_element"></span>)</span>
+			</div>
+			<button class="nav-pal-btn" id="nav-btn-darkmode" title="Toggle light / dark" style="margin-top:14px;font-size:15px;">☀ · ·</button>
 		</div>
 	</nav>
 	<article class="content">
 		<!-- Breadcrumb -->
 		<div class="breadcrumb">
-			└── <a href="../index.html">Projects</a> / Stack
+			└── <a href="../index.html">projects</a> / Stack
 		</div>
 
 		<!-- Title & Core Metadata -->
 		<h1>stack.</h1>
+
+		<div class="hp-intro" id="hp-intro-block">
 		<div class="project-meta">
-			2016 / Assistive Tech / OpenCV / Unity3D / OSC
+			2016 <span class="hp-intro-punct">/</span> Assistive Tech <span class="hp-intro-punct">/</span> OpenCV <span class="hp-intro-punct">/</span> Unity3D <span class="hp-intro-punct">/</span> OSC
 			<br>
-			Role -> <span class="rainbow_element">Developer & UX Designer</span>
+			Role <span class="hp-intro-punct">-&gt;</span> <span class="rainbow_element">Developer &amp; UX Designer</span>
 			<br>
-			Status -> Working Prototype
+			Status <span class="hp-intro-punct">-&gt;</span> Working Prototype
 		</div>
 
 		<!-- Technical Stack -->
 		<div class="tech-stack">
-			├── Vision -> <span class="rainbow_element">OpenCV</span> / <span class="rainbow_element">Color Detection</span>
+			<span class="hp-intro-punct">├──</span> Vision <span class="hp-intro-punct">-&gt;</span> <span class="rainbow_element">OpenCV</span> <span class="hp-intro-punct">/</span> <span class="rainbow_element">Color Detection</span>
 			<br>
-			├── Engine -> <span class="rainbow_element">Unity3D</span> / <span class="rainbow_element">3D Modeling</span>
+			<span class="hp-intro-punct">├──</span> Engine <span class="hp-intro-punct">-&gt;</span> <span class="rainbow_element">Unity3D</span> <span class="hp-intro-punct">/</span> <span class="rainbow_element">3D Modeling</span>
 			<br>
-			└── Interface -> <span class="rainbow_element">Physical Lego Board</span> / <span class="rainbow_element">OSC Communication</span>
+			<span class="hp-intro-punct">└──</span> Interface <span class="hp-intro-punct">-&gt;</span> <span class="rainbow_element">Physical Lego Board</span> <span class="hp-intro-punct">/</span> <span class="rainbow_element">OSC Communication</span>
 			<br>
 		</div>
 
 		<!-- Collaborators -->
 		<div class="collaborators">
-			>>> Collaborators
+			<span class="hp-intro-punct">&gt;&gt;&gt;</span> Collaborators
 			<br>
-			• Team: <span class = "rainbow_element">Dylan J. Crow</span>, <span class = "rainbow_element">Baaria Chaudhary</span>
+			<span class="hp-intro-punct">•</span> Team: <span class="rainbow_element">Dylan J. Crow</span>, <span class="rainbow_element">Baaria Chaudhary</span>
 		</div>
 
-		<!-- Key Contributions/Achievements -->
+		<!-- Key Features -->
 		<div class="achievements">
-			>>> Key Features
+			<span class="hp-intro-punct">&gt;&gt;&gt;</span> Key Features
 			<br>
-			• <span class="rainbow_element">Tactile 3D modeling</span> for visual disabilities
+			<span class="hp-intro-punct">•</span> <span class="rainbow_element">Tactile 3D modeling</span> for visual disabilities
 			<br>
-			• <span class="rainbow_element">Physical-to-digital translation</span>
+			<span class="hp-intro-punct">•</span> <span class="rainbow_element">Physical-to-digital translation</span>
 			<br>
-			• <span class="rainbow_element">Layer-based construction</span> workflow
+			<span class="hp-intro-punct">•</span> <span class="rainbow_element">Layer-based construction</span> workflow
 		</div>
+		</div><!-- /.hp-intro -->
+
 		<!-- Project Details -->
 		<div class="project-content">
 			<div class="demo-section">
@@ -68,8 +81,7 @@
 					<span class="rainbow_element">Physical Lego interface</span> setup
 				</p>
 				<p class="project-description">
-					stack. is a working prototype for a device that can <span class =
-					"rainbow_element">help people with visual disabilities</span> to
+					stack. is a working prototype for a device that can <span class="rainbow_element">help people with visual disabilities</span> to
 					create simple 3D models using the <span class="rainbow_element">tactility of Legoes</span>. Utilizing
 					<span class="rainbow_element">OpenCV, Unity3D, and a Lego board</span>, the user can prototype simple
 					<span class="rainbow_element">cube-based models</span> that they create layer by layer.
@@ -95,17 +107,17 @@
 			</div>
 
 			<div class="demo-section">
-				<img class = "project_image" src = "../techimg/stack-7.gif">
+				<img class="project_image" src="../techimg/stack-7.gif">
 				<p class="image-caption">The <span class="rainbow_element">lego board</span> interface</p>
 			</div>
 
 			<div class="demo-section">
-				<img class = "project_image" src = "../techimg/stack-5.gif">
+				<img class="project_image" src="../techimg/stack-5.gif">
 				<p class="image-caption">What the <span class="rainbow_element">computer vision</span> sees</p>
 			</div>
 
 			<div class="demo-section">
-				<img class = "project_image" src = "../techimg/stack-6.gif">
+				<img class="project_image" src="../techimg/stack-6.gif">
 				<p class="image-caption">The resulting <span class="rainbow_element">3D model</span></p>
 				<p class="project-description">
 					We used simple controls, with a button to <span class="rainbow_element">go up a layer</span>, and another
@@ -117,5 +129,6 @@
 
 	</article>
 	<script type = "text/javascript" src = "../js/script.js"></script>
+	<script type="text/javascript" src="../js/time-palette.js"></script>
 </body>
 </html>

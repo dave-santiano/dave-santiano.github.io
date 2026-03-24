@@ -1,0 +1,5 @@
+# Unencrypted source — encrypt with: npx staticrypt works/propelland.html -p PASSWORD -d works/encrypted
+works/propelland.html
+
+# Sample/dev page — not for production
+works/hp-sample.html

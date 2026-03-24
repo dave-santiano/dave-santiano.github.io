@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 
 <head>
@@ -11,71 +11,82 @@
 
 <body onload = "setRainbowElementColors()">
 	<nav class="sidebar">
-		<img id = "side_bar_logo" src="../techimg/rainbowdropdave_opacity_down.png" alt="logo_name">
+		<div id="side_bar_logo"><span class="lv-a"><span class="lv-char rainbow_element">d</span><span class="lv-char rainbow_element">a</span><span class="lv-char rainbow_element">v</span><span class="lv-char rainbow_element">i</span><span class="lv-char rainbow_element">d</span></span><span class="lv-a"><span class="lv-char rainbow_element">s</span><span class="lv-char rainbow_element">a</span><span class="lv-char rainbow_element">n</span><span class="lv-char rainbow_element">t</span><span class="lv-char rainbow_element">i</span><span class="lv-char rainbow_element">a</span><span class="lv-char rainbow_element">n</span><span class="lv-char rainbow_element">o</span></span></div>
 		<div id = "nav_links">
-			<a href="../about/index.html" id="about" class = "rainbow_element">/About/</a>
-			<a href="../" id="projects" class = "rainbow_element">/Projects/</a>
-			<!-- <a href="../sketches/index.html" id = "sketches"class = "rainbow_element">/Sketches/</a> -->
+			<a href="../about/index.html" id="about" class="rainbow_element">/about</a>
+			<a href="../" id="projects" class="rainbow_element">/projects</a>
+		</div>
+		<div id="nav_palette_btns">
+			<button class="nav-pal-btn" id="nav-btn-off" title="No highlight">- - -</button>
+			<button class="nav-pal-btn" id="nav-btn-rainbow" title="Rainbow highlight">∿∿∿</button>
+			<div style="display:flex;align-items:center;gap:5px;">
+				<button class="nav-pal-btn" id="nav-btn-time" title="Time of day palette">◑ · · ·</button>
+				<span id="nav-time-indicator" style="display:none;font-size:11px;white-space:nowrap;font-family:inherit;">&lt;---(<span id="nav-time-hhmm" class="rainbow_element"></span>)</span>
+			</div>
+			<button class="nav-pal-btn" id="nav-btn-darkmode" title="Toggle light / dark" style="margin-top:14px;font-size:15px;">☀ · ·</button>
 		</div>
 	</nav>
 	<article class="content">
 		<!-- Breadcrumb -->
 		<div class="breadcrumb">
-			└── <a href="../index.html">Projects</a> / VR/AR Fundamentals
+			└── <a href="../index.html">projects</a> / VR/AR Fundamentals
 		</div>
 
 		<!-- Title & Core Metadata -->
 		<h1>VR/AR Fundamentals</h1>
+
+		<div class="hp-intro" id="hp-intro-block">
 		<div class="project-meta">
-			2017-2021 / Education / <span class="rainbow_element">Teaching Assistant</span>
+			2017-2021 <span class="hp-intro-punct">/</span> Education <span class="hp-intro-punct">/</span> Teaching <span class="hp-intro-punct">/</span> Immersive Media
 			<br>
-			Role -> <span class="rainbow_element">Teaching Assistant</span> & <span class="rainbow_element">Technical Instructor</span>
+			Role <span class="hp-intro-punct">-&gt;</span> <span class="rainbow_element">Teaching Assistant</span> &amp; <span class="rainbow_element">Technical Instructor</span>
 			<br>
-			Status -> Multi-year Course (Completed)
+			Status <span class="hp-intro-punct">-&gt;</span> Multi-year Course (Completed)
 		</div>
 
 		<!-- Technical Stack -->
 		<div class="tech-stack">
-			├── Hardware -> <span class="rainbow_element">VR video cameras</span> / <span class="rainbow_element">3D projection systems</span>
+			<span class="hp-intro-punct">├──</span> Hardware <span class="hp-intro-punct">-&gt;</span> <span class="rainbow_element">VR video cameras</span> <span class="hp-intro-punct">/</span> <span class="rainbow_element">3D projection systems</span>
 			<br>
-			├── Software -> <span class="rainbow_element">Real-time graphics engines</span> / <span class="rainbow_element">Photogrammetry tools</span>
+			<span class="hp-intro-punct">├──</span> Software <span class="hp-intro-punct">-&gt;</span> <span class="rainbow_element">Real-time graphics engines</span> <span class="hp-intro-punct">/</span> <span class="rainbow_element">Photogrammetry tools</span>
 			<br>
-			└── Focus -> <span class="rainbow_element">Immersive Media Education</span> / <span class="rainbow_element">Student Project Mentoring</span>
+			<span class="hp-intro-punct">└──</span> Focus <span class="hp-intro-punct">-&gt;</span> <span class="rainbow_element">Immersive Media Education</span> <span class="hp-intro-punct">/</span> <span class="rainbow_element">Student Project Mentoring</span>
 			<br>
 		</div>
 
 		<!-- Collaborators -->
 		<div class="collaborators">
-			>>> Teaching Team
+			<span class="hp-intro-punct">&gt;&gt;&gt;</span> Teaching Team
 			<br>
-			• Lead Professor: <a class = "obvious-link rainbow_element" href = "http://www.naimark.net/">Michael Naimark</a>
+			<span class="hp-intro-punct">•</span> Lead Professor: <a class="obvious-link rainbow_element" href="http://www.naimark.net/">Michael Naimark</a>
 			<br>
-			• Institution: <span class="rainbow_element">NYU Shanghai Interactive Media Arts</span>
+			<span class="hp-intro-punct">•</span> Institution: <span class="rainbow_element">NYU Shanghai Interactive Media Arts</span>
 		</div>
 
-		<!-- Key Contributions/Achievements -->
+		<!-- Key Features -->
 		<div class="achievements">
-			>>> Key Features
+			<span class="hp-intro-punct">&gt;&gt;&gt;</span> Key Features
 			<br>
-			• <span class="rainbow_element">Hands-on VR/AR curriculum development</span>
+			<span class="hp-intro-punct">•</span> <span class="rainbow_element">Hands-on VR/AR curriculum development</span>
 			<br>
-			• <span class="rainbow_element">Student project guidance</span> and technical mentoring
+			<span class="hp-intro-punct">•</span> <span class="rainbow_element">Student project guidance</span> and technical mentoring
 			<br>
-			• <span class="rainbow_element">Multi-semester teaching experience</span>
+			<span class="hp-intro-punct">•</span> <span class="rainbow_element">Multi-semester teaching experience</span>
 			<br>
-			• <span class="rainbow_element">Immersive media fundamentals</span> instruction
+			<span class="hp-intro-punct">•</span> <span class="rainbow_element">Immersive media fundamentals</span> instruction
 		</div>
+		</div><!-- /.hp-intro -->
 
 		<!-- Project Details -->
 		<div class="project-content">
 			<div class="demo-section">
-				<img class = "project_image" src = "../techimg/vrar-1.jpg">
+				<img class="project_image" src="../techimg/vrar-1.jpg">
 				<p class="image-caption">
 					<span class="rainbow_element">VR/AR Fundamentals</span> classroom and equipment setup
 				</p>
 				<p class="project-description">
-					I've had the pleasure of helping professor <a class = "obvious-link
-					rainbow_element" href = "http://www.naimark.net/">Michael
+					I've had the pleasure of helping professor <a class="obvious-link
+					rainbow_element" href="http://www.naimark.net/">Michael
 					Naimark</a> teach a class called <span class="rainbow_element">VR/AR Fundamentals</span>. We've utilized
 					<span class="rainbow_element">VR video cameras</span>, <span class="rainbow_element">real-time graphics engines</span>, <span class="rainbow_element">3D projection</span>, and
 					<span class="rainbow_element">photogrammetry</span> to teach students the fundamentals of <span class="rainbow_element">immersive
@@ -86,7 +97,7 @@
 
 			<!-- Student Project Gallery -->
 			<div class="demo-section">
-				<h3 style="font-family: 'Fira Mono', monospace; color: #444; margin: 20px 0 15px 0;">>>> Student Projects (2017-2021)</h3>
+				<h3 style="font-family: 'Fira Mono', monospace; color: #444; margin: 20px 0 15px 0;">&gt;&gt;&gt; Student Projects (2017-2021)</h3>
 				
 				<iframe style = "padding:20px" width="560" height="315"
 				src="https://www.youtube.com/embed/fsTDEu3shnM" title="YouTube video
@@ -166,6 +177,7 @@
 		</div>
 	</article>
 	<script type = "text/javascript" src = "../js/script.js"></script>
+	<script type="text/javascript" src="../js/time-palette.js"></script>
 </body>
 
 </html>

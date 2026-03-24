@@ -5,6 +5,9 @@ let colorIncrement;
 let baseColor;
 
 function setRainbowElementColors() {
+    // Yield to time-palette.js when it is managing the page
+    if (window.__timePaletteActive) return;
+
     // Cache the elements and recalculate in case new elements were added
     rainbowElements = document.getElementsByClassName("rainbow_element");
     
@@ -48,7 +51,7 @@ function animateRainbowColors() {
             currentColor += increment;
         }
         
-        startColor += 0.2; // Slow color rotation
+        startColor += 0.08; // ← animation speed: degrees/frame (~60fps). Lower = slower.
         if (startColor >= CIRCLE_DEGREES) startColor = 0;
         
         animationFrame = requestAnimationFrame(animate);
@@ -68,7 +71,8 @@ window.setRainbowElementColors = setRainbowElementColors;
 window.startRainbowAnimation = animateRainbowColors;
 window.stopRainbowAnimation = null; // Will be set when animation starts
 
-// Auto-start animation on every page load
+// Auto-start animation on every page load — skip when time-palette.js is in charge
 window.addEventListener('load', () => {
+    if (window.__timePaletteActive) return;
     window.stopRainbowAnimation = animateRainbowColors();
 });

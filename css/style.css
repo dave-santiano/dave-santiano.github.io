@@ -1,8 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css?family=Inconsolata|Libre+Barcode+39+Text|Quicksand|Source+Sans+Pro');
-
-@import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c|Roboto'); */
-
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Rubik|Fira+Mono|Roboto|Roboto');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&family=Fira+Mono:wght@400;500&family=Rubik:wght@400;700&display=swap');
 
 * {
     margin: 0;
@@ -17,7 +13,7 @@ body {
     height: auto;
     margin: 0 auto;
     display: flex;
-    font-family: "Roboto";
+    font-family: "Instrument Sans", system-ui, sans-serif;
     font-size: 15px;
     box-sizing: border-box;
 }
@@ -55,7 +51,8 @@ p.project_caption{
 }
 
 h1 {
-    font-family: Rubik;
+    font-family: "Instrument Sans", system-ui, sans-serif;
+    font-weight: 600;
 }
 
 a {
@@ -80,17 +77,18 @@ p{
 
 .sidebar {
     display: inline-block;
-    font-family: "Roboto";
+    font-family: "Instrument Sans", system-ui, sans-serif;
     margin: 0 20px 0 0;
     font-size: 60px;
-    width: 150px;
-    min-width: 150px;
+    width: 120px;
+    min-width: 120px;
 }
 
 .project {
-    display: inline-block;
+    display: block;
     width: 270px;
     padding: 15px;
+    box-sizing: border-box;
 }
 
 .content {
@@ -105,35 +103,43 @@ p{
 
 .project_name {
     text-align: center;
-    font-family: "Roboto";
+    font-family: "Instrument Sans", system-ui, sans-serif;
     width: auto;
 }
 
 /* .rainbowElement{
 }  */
 
-.flex-container{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    max-width: 1200px;
-    height: 100%;
-    gap: 15px;
-    justify-content: flex-start;
+/* Highlight spans: script.js only sets backgroundColor — keep blocks rectangular, no pill rounding */
+.rainbow_element {
+    border-radius: 0;
+    padding: 0;
 }
 
-/* sidebar links */
+.flex-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 25px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* sidebar links — block so they stack, fit-content so highlight hugs text width only */
 #about {
     display: block;
-    /* background-color: rgb(255, 209, 209); */
+    width: fit-content;
     margin: 2px;
     font-size: 18px;
 }
 
 #projects {
     display: block;
+    width: fit-content;
     margin: 2px;
-    /* background-color: rgb(185, 250, 255); */
     font-size: 18px;
 }
 
@@ -146,15 +152,49 @@ p{
     font-size: 18px;
 }
 
-#side_bar_logo{
-    width: 150px;
-    opacity: .9;
+/* CSS text logo — replaces image logo */
+#side_bar_logo {
+    width: auto;
     margin: 0 0 30px 0;
-    transition: opacity 0.3s ease;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    min-width: 0;
 }
 
-#side_bar_logo:hover {
-    opacity: 1;
+#side_bar_logo .lv-a {
+    display: block;
+    font-family: "Syne", system-ui, sans-serif;
+    font-size: 26px;
+    letter-spacing: 2px;
+    text-transform: none;
+    color: #333;
+    line-height: 1.5;
+}
+
+#side_bar_logo .lv-char {
+    display: inline;
+}
+
+#side_bar_logo .lv-char.rainbow_element {
+    display: inline-block;
+    width: fit-content;
+}
+
+/* ── Intro block: Space Mono + suppress rainbow highlights ── */
+.hp-intro,
+.hp-intro .project-meta,
+.hp-intro .tech-stack,
+.hp-intro .collaborators,
+.hp-intro .achievements,
+.hp-intro .about-section,
+.hp-intro .project-links {
+    font-family: "Space Mono", "Fira Mono", monospace;
+}
+
+/* Intro rainbow_element spans show as plain text — only hp-intro-punct chars get colored */
+.hp-intro .rainbow_element {
+    background-color: transparent !important;
+    color: inherit !important;
 }
 
 /* New metadata styling */
@@ -226,12 +266,6 @@ p{
     border: none;
 }
 
-/* Current page indicator */
-.current-page {
-    opacity: 0.7;
-    cursor: default;
-}
-
 /* Enhanced project content styling */
 .project-content {
     margin: 30px 0;
@@ -270,25 +304,21 @@ p{
     body {
         padding: 20px 15px 60px 15px;
     }
-    .flex-container {
-        justify-content: center;
-    }
 }
 
 /* Tablet Landscape - force 3 columns */
 @media (max-width: 1023px) {
+    .flex-container {
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+    }
+
     .project {
-        width: calc(33.333% - 20px);
-        min-width: 200px;
-        max-width: 250px;
+        width: 100%;
     }
     
     img.thumbnail {
         width: 100%;
-    }
-    
-    .flex-container {
-        justify-content: space-evenly;
     }
 }
 
@@ -307,15 +337,13 @@ p{
     }
     
     .flex-container {
-        width: 100%;
-        justify-content: space-evenly;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
         max-width: none;
     }
     
     .project {
-        width: calc(50% - 15px);
-        min-width: 160px;
-        max-width: 200px;
+        width: 100%;
     }
     
     img.thumbnail {
@@ -351,24 +379,24 @@ p{
     }
 }
 
-/* Enhanced Navigation Styling */
+/* Enhanced Navigation Styling — same weight & opacity for all nav items */
 #nav_links a, #nav_links span {
-    color: #888;
+    color: #333;
     font-weight: 400;
     transition: color 0.2s ease;
-    opacity: 0.6;
+    opacity: 1;
 }
 
 #nav_links a:hover {
-    color: #555;
-    opacity: 0.8;
+    color: #000;
 }
 
+/* Current page: non-link span — same look as links, no dimming */
 .current-page {
     color: #333 !important;
     cursor: default;
     opacity: 1 !important;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 /* Softer Project Names */
@@ -435,22 +463,45 @@ p{
     
     #nav_links {
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
+        gap: 28px;
         width: 100%;
         margin: 0 auto;
-        padding: 20px 0;
+        padding: 16px 0;
     }
     
     #projects, #about, #sketches {
         display: inline-block;
-        text-decoration: underline;
         font-size: 18px;
+        min-height: 44px;
+        line-height: 44px;
+        padding: 0 8px;
     }
     
     #side_bar_logo {
         display: block;
         margin: 0 auto;
-        width: 120px;
+        width: fit-content;
+        text-align: center;
+    }
+
+    #nav_palette_btns {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        margin-top: 8px;
+    }
+
+    .nav-pal-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 44px;
+        min-height: 44px;
+        padding: 0 10px;
+        margin-top: 0 !important;
     }
 }
 
@@ -461,9 +512,7 @@ p{
     }
     
     .project {
-        width: calc(50% - 10px);
-        min-width: 140px;
-        max-width: 160px;
+        width: 100%;
         padding: 8px;
     }
     
@@ -497,9 +546,7 @@ p{
     }
     
     .project {
-        width: calc(50% - 5px);
-        min-width: 120px;
-        max-width: 140px;
+        width: 100%;
         padding: 5px;
     }
     
@@ -511,3 +558,112 @@ p{
         gap: 5px;
     }
 }
+
+/* ═══════════════════════════════════════════════
+   TIME-PALETTE SYSTEM — shared across all pages
+   ═══════════════════════════════════════════════ */
+
+/* Opacity variable default */
+:root { --hl-opacity: 0.5; }
+
+/* ── Punctuation-only highlight (colored text, no bg block) ── */
+.hp-intro-punct {
+    display: inline;
+    padding: 0;
+    background: none;
+}
+
+/* ── Highlight variants ── */
+body.v-none .rainbow_element {
+    background: none !important;
+    color: inherit !important;
+}
+body.v-dark-static .rainbow_element {
+    background-color: rgba(26, 26, 26, var(--hl-opacity)) !important;
+    color: white !important;
+}
+body.v-gray-static .rainbow_element {
+    background-color: rgba(136, 136, 136, var(--hl-opacity)) !important;
+    color: white !important;
+}
+body.v-dark-anim .rainbow_element,
+body.v-gray-anim  .rainbow_element { color: white; }
+
+/* Rainbow-punct: intro rainbow_elements show as plain text */
+body.v-rainbow-punct .hp-intro .rainbow_element {
+    background: none !important;
+    color: inherit !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+}
+
+/* ── Nav palette buttons ── */
+#nav_palette_btns {
+    margin-top: 18px;
+}
+.nav-pal-btn {
+    display: block;
+    background: none;
+    border: none;
+    padding: 2px 0;
+    margin: 2px 2px;
+    font-size: 14px;
+    font-family: inherit;
+    color: #999;
+    cursor: pointer;
+    letter-spacing: 1px;
+    text-align: left;
+    transition: color 0.15s;
+}
+.nav-pal-btn:hover  { color: #444; }
+.nav-pal-btn.active { color: #111; font-weight: 600; }
+
+#nav-time-indicator {
+    font-size: 11px;
+    font-family: inherit;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+/* ── Dark mode ── */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #ccc;
+}
+body.dark-mode nav.sidebar {
+    background-color: #1a1a1a;
+}
+body.dark-mode #side_bar_logo .lv-a {
+    color: #888;
+}
+body.dark-mode a {
+    color: #aaa;
+}
+body.dark-mode .breadcrumb,
+body.dark-mode .breadcrumb a {
+    color: #666;
+}
+body.dark-mode h1 {
+    color: #e8e8e8;
+}
+body.dark-mode .project-meta,
+body.dark-mode .tech-stack,
+body.dark-mode .collaborators,
+body.dark-mode .achievements,
+body.dark-mode .about-section {
+    color: #aaa;
+}
+body.dark-mode .project-description,
+body.dark-mode .about-description,
+body.dark-mode .image-caption {
+    color: #bbb;
+}
+body.dark-mode .project_name {
+    color: #ccc;
+}
+body.dark-mode .thumbnail {
+    opacity: 0.8;
+}
+body.dark-mode .nav-pal-btn          { color: #555; }
+body.dark-mode .nav-pal-btn:hover    { color: #bbb; }
+body.dark-mode .nav-pal-btn.active   { color: #ddd; font-weight: 600; }

@@ -1,56 +1,69 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
-<head>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+<head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<link rel="icon" href="../techimg/logo_icon_2.0.gif">
 	<title>David Santiano</title>
 </head>
 <body onload = "setRainbowElementColors()">
 	<nav class="sidebar">
-		<img id = "side_bar_logo" src="../techimg/rainbowdropdave_opacity_down.png" alt="logo_name">
+		<div id="side_bar_logo"><span class="lv-a"><span class="lv-char rainbow_element">d</span><span class="lv-char rainbow_element">a</span><span class="lv-char rainbow_element">v</span><span class="lv-char rainbow_element">i</span><span class="lv-char rainbow_element">d</span></span><span class="lv-a"><span class="lv-char rainbow_element">s</span><span class="lv-char rainbow_element">a</span><span class="lv-char rainbow_element">n</span><span class="lv-char rainbow_element">t</span><span class="lv-char rainbow_element">i</span><span class="lv-char rainbow_element">a</span><span class="lv-char rainbow_element">n</span><span class="lv-char rainbow_element">o</span></span></div>
 		<div id = "nav_links">
-			<a href="../about/index.html" id="about" class = "rainbow_element">/About/</a>
-			<a href="../" id="projects" class = "rainbow_element">/Projects/</a>
-			<!-- <a href="../sketches/index.html" id = "sketches"class = "rainbow_element">/Sketches/</a> -->
+			<a href="../about/index.html" id="about" class="rainbow_element">/about</a>
+			<a href="../" id="projects" class="rainbow_element">/projects</a>
+		</div>
+		<div id="nav_palette_btns">
+			<button class="nav-pal-btn" id="nav-btn-off" title="No highlight">- - -</button>
+			<button class="nav-pal-btn" id="nav-btn-rainbow" title="Rainbow highlight">∿∿∿</button>
+			<div style="display:flex;align-items:center;gap:5px;">
+				<button class="nav-pal-btn" id="nav-btn-time" title="Time of day palette">◑ · · ·</button>
+				<span id="nav-time-indicator" style="display:none;font-size:11px;white-space:nowrap;font-family:inherit;">&lt;---(<span id="nav-time-hhmm" class="rainbow_element"></span>)</span>
+			</div>
+			<button class="nav-pal-btn" id="nav-btn-darkmode" title="Toggle light / dark" style="margin-top:14px;font-size:15px;">☀ · ·</button>
 		</div>
 	</nav>
 	<article class="content">
 		<!-- Breadcrumb -->
 		<div class="breadcrumb">
-			└── <a href="../index.html">Projects</a> / Microprint Experiments
+			└── <a href="../index.html">projects</a> / Microprint Experiments
 		</div>
 
 		<!-- Title & Core Metadata -->
 		<h1>Microprint Experiments</h1>
+
+		<div class="hp-intro" id="hp-intro-block">
 		<div class="project-meta">
-			2020 / Generative Art/Printing / High-Resolution / Microscopy / Security Patterns
+			2020 <span class="hp-intro-punct">/</span> Generative Art <span class="hp-intro-punct">/</span> Printing <span class="hp-intro-punct">/</span> High-Resolution <span class="hp-intro-punct">/</span> Microscopy <span class="hp-intro-punct">/</span> Security Patterns
 			<br>
-			Role -> <span class="rainbow_element">Generative Artist & Researcher</span>
+			Role <span class="hp-intro-punct">-&gt;</span> <span class="rainbow_element">Generative Artist &amp; Researcher</span>
 			<br>
-			Status -> Ongoing Series
+			Status <span class="hp-intro-punct">-&gt;</span> Ongoing Series
 		</div>
 
 		<!-- Technical Stack -->
 		<div class="tech-stack">
-			├── Resolution -> <span class="rainbow_element">10k+ Digital Generation</span>
+			<span class="hp-intro-punct">├──</span> Resolution <span class="hp-intro-punct">-&gt;</span> <span class="rainbow_element">10k+ Digital Generation</span>
 			<br>
-			├── Hardware -> <span class="rainbow_element">Digital Microscope</span> / <span class="rainbow_element">High-Resolution Printing</span>
+			<span class="hp-intro-punct">├──</span> Hardware <span class="hp-intro-punct">-&gt;</span> <span class="rainbow_element">Digital Microscope</span> <span class="hp-intro-punct">/</span> <span class="rainbow_element">High-Resolution Printing</span>
 			<br>
-			└── Inspiration -> <span class="rainbow_element">Currency Security Features</span> / <span class="rainbow_element">Geometric Patterns</span>
+			<span class="hp-intro-punct">└──</span> Inspiration <span class="hp-intro-punct">-&gt;</span> <span class="rainbow_element">Currency Security Features</span> <span class="hp-intro-punct">/</span> <span class="rainbow_element">Geometric Patterns</span>
 			<br>
 		</div>
 
-		<!-- Key Contributions/Achievements -->
+		<!-- Key Features -->
 		<div class="achievements">
-			>>> Key Features
+			<span class="hp-intro-punct">&gt;&gt;&gt;</span> Key Features
 			<br>
-			• <span class="rainbow_element">Microscopic-scale digital art</span>
+			<span class="hp-intro-punct">•</span> <span class="rainbow_element">Microscopic-scale digital art</span>
 			<br>
-			• <span class="rainbow_element">Currency-inspired patterns</span>
+			<span class="hp-intro-punct">•</span> <span class="rainbow_element">Currency-inspired patterns</span>
 			<br>
-			• <span class="rainbow_element">Multi-scale visual experience</span>
+			<span class="hp-intro-punct">•</span> <span class="rainbow_element">Multi-scale visual experience</span>
 		</div>
+		</div><!-- /.hp-intro -->
+
 		<!-- Project Details -->
 		<div class="project-content">
 			<div class="demo-section">
@@ -112,5 +125,6 @@
 		</div>
 	</article>
 	<script type = "text/javascript" src = "../js/script.js"></script>
+	<script type="text/javascript" src="../js/time-palette.js"></script>
 </body>
 </html>

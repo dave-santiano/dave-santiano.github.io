@@ -1,8 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<link rel="icon" href="../techimg/logo_icon_2.0.gif">
 	<title>David Santiano</title>
@@ -10,59 +11,71 @@
 
 <body onload = "setRainbowElementColors()">
 	<nav class="sidebar">
-		<img id = "side_bar_logo" src="../techimg/rainbowdropdave_opacity_down.png" alt="logo_name">
+		<div id="side_bar_logo"><span class="lv-a"><span class="lv-char rainbow_element">d</span><span class="lv-char rainbow_element">a</span><span class="lv-char rainbow_element">v</span><span class="lv-char rainbow_element">i</span><span class="lv-char rainbow_element">d</span></span><span class="lv-a"><span class="lv-char rainbow_element">s</span><span class="lv-char rainbow_element">a</span><span class="lv-char rainbow_element">n</span><span class="lv-char rainbow_element">t</span><span class="lv-char rainbow_element">i</span><span class="lv-char rainbow_element">a</span><span class="lv-char rainbow_element">n</span><span class="lv-char rainbow_element">o</span></span></div>
 		<div id = "nav_links">
-			<a href="../about/index.html" id="about" class = "rainbow_element">/About/</a>
-			<a href="../" id="projects" class = "rainbow_element">/Projects/</a>
-			<!-- <a href="../sketches/index.html" id = "sketches"class = "rainbow_element">/Sketches/</a> -->
+			<a href="../about/index.html" id="about" class="rainbow_element">/about</a>
+			<a href="../" id="projects" class="rainbow_element">/projects</a>
+		</div>
+		<div id="nav_palette_btns">
+			<button class="nav-pal-btn" id="nav-btn-off" title="No highlight">- - -</button>
+			<button class="nav-pal-btn" id="nav-btn-rainbow" title="Rainbow highlight">∿∿∿</button>
+			<div style="display:flex;align-items:center;gap:5px;">
+				<button class="nav-pal-btn" id="nav-btn-time" title="Time of day palette">◑ · · ·</button>
+				<span id="nav-time-indicator" style="display:none;font-size:11px;white-space:nowrap;font-family:inherit;">&lt;---(<span id="nav-time-hhmm" class="rainbow_element"></span>)</span>
+			</div>
+			<button class="nav-pal-btn" id="nav-btn-darkmode" title="Toggle light / dark" style="margin-top:14px;font-size:15px;">☀ · ·</button>
 		</div>
 	</nav>
 	<article class="content">
 		<!-- Breadcrumb -->
 		<div class="breadcrumb">
-			└── <a href="../index.html">Projects</a> / Assistive Robotic Arm
+			└── <a href="../index.html">projects</a> / Assistive Robotic Arm
 		</div>
 
 		<!-- Title & Core Metadata -->
 		<h1>Seeing Assistive Robotic Arm</h1>
+
+		<div class="hp-intro" id="hp-intro-block">
 		<div class="project-meta">
-			2016 / Assistive Tech / Computer Vision / Arduino / Robotics
+			2016 <span class="hp-intro-punct">/</span> Assistive Tech <span class="hp-intro-punct">/</span> Computer Vision <span class="hp-intro-punct">/</span> Arduino <span class="hp-intro-punct">/</span> Robotics
 			<br>
-			Role -> <span class="rainbow_element">Hardware Developer</span>
+			Role <span class="hp-intro-punct">-&gt;</span> <span class="rainbow_element">Hardware Developer</span>
 			<br>
-			Status -> Working Prototype
+			Status <span class="hp-intro-punct">-&gt;</span> Working Prototype
 		</div>
 
 		<!-- Technical Stack -->
 		<div class="tech-stack">
-			├── Hardware -> <span class="rainbow_element">Robotic Arm</span> / <span class="rainbow_element">Arduino</span> / <span class="rainbow_element">Webcam</span>
+			<span class="hp-intro-punct">├──</span> Hardware <span class="hp-intro-punct">-&gt;</span> <span class="rainbow_element">Robotic Arm</span> <span class="hp-intro-punct">/</span> <span class="rainbow_element">Arduino</span> <span class="hp-intro-punct">/</span> <span class="rainbow_element">Webcam</span>
 			<br>
-			├── Vision -> <span class="rainbow_element">Computer Vision</span> / <span class="rainbow_element">Color Detection</span>
+			<span class="hp-intro-punct">├──</span> Vision <span class="hp-intro-punct">-&gt;</span> <span class="rainbow_element">Computer Vision</span> <span class="hp-intro-punct">/</span> <span class="rainbow_element">Color Detection</span>
 			<br>
-			└── Control -> <span class="rainbow_element">Head Mouse</span> / <span class="rainbow_element">Head Tracking</span>
+			<span class="hp-intro-punct">└──</span> Control <span class="hp-intro-punct">-&gt;</span> <span class="rainbow_element">Head Mouse</span> <span class="hp-intro-punct">/</span> <span class="rainbow_element">Head Tracking</span>
 			<br>
 		</div>
 
 		<!-- Collaborators -->
 		<div class="collaborators">
-			>>> Collaborators
+			<span class="hp-intro-punct">&gt;&gt;&gt;</span> Collaborators
 			<br>
-			• Advisor: <a href = "http://www.mariannepetit.com/" class = "rainbow_element obvious-link">Marianne Petit</a>
+			<span class="hp-intro-punct">•</span> Advisor: <a href="http://www.mariannepetit.com/" class="rainbow_element obvious-link">Marianne Petit</a>
 			<br>
-			• Team: <a href = "https://www.nicksanchez.rocks/" class = "rainbow_element obvious-link">Nicholas Sanchez</a>, <span class = "rainbow_element">Sevi Reyes</span>, <span class = "rainbow_element">Jennifer Huang</span>
+			<span class="hp-intro-punct">•</span> Team: <a href="https://www.nicksanchez.rocks/" class="rainbow_element obvious-link">Nicholas Sanchez</a>, <span class="rainbow_element">Sevi Reyes</span>, <span class="rainbow_element">Jennifer Huang</span>
 		</div>
 
-		<!-- Key Contributions/Achievements -->
+		<!-- Key Features -->
 		<div class="achievements">
-			>>> Key Features
+			<span class="hp-intro-punct">&gt;&gt;&gt;</span> Key Features
 			<br>
-			• <span class="rainbow_element">Head-controlled robotics</span>
+			<span class="hp-intro-punct">•</span> <span class="rainbow_element">Head-controlled robotics</span>
 			<br>
-			• <span class="rainbow_element">Computer vision object detection</span>
+			<span class="hp-intro-punct">•</span> <span class="rainbow_element">Computer vision object detection</span>
 			<br>
-			• <span class="rainbow_element">Accessibility-focused design</span>
+			<span class="hp-intro-punct">•</span> <span class="rainbow_element">Accessibility-focused design</span>
 		</div>
-				<!-- Project Details -->
+		</div><!-- /.hp-intro -->
+
+		<!-- Project Details -->
 		<div class="project-content">
 			<div class="demo-section">
 				<img class="project_image" src="../techimg/durf_photo_1.jpg">
@@ -72,8 +85,7 @@
 				<p class="project-description">
 					The assistive robotic arm was an exploration into finding new and
 					simple ways for <span class="rainbow_element">robotics to be used in assistive tech</span>. This is both
-					a working prototype and a proof of concept, just a <span class =
-					"rainbow_element">simple robotic arm with a webcam attached to it,
+					a working prototype and a proof of concept, just a <span class="rainbow_element">simple robotic arm with a webcam attached to it,
 					using computer vision, an arduino, and software called head mouse to
 					find and then grab certain objects.</span> With this you can <span class="rainbow_element">control
 					and move the robotic arm with just the use of your head</span>.
@@ -88,7 +100,7 @@
 			</div>
 
 			<div class="demo-section">
-				<img class = "project_image" src = "../techimg/durf_photo_6.jpg">
+				<img class="project_image" src="../techimg/durf_photo_6.jpg">
 				<p class="image-caption">
 					<span class="rainbow_element">Computer vision processing</span> with crosshair overlay
 				</p>
@@ -102,7 +114,7 @@
 			</div>
 
 			<div class="demo-section">
-				<img class = "project_image" src = "../techimg/durf_photo_3.jpg">
+				<img class="project_image" src="../techimg/durf_photo_3.jpg">
 				<p class="image-caption">
 					Final <span class="rainbow_element">hardware assembly</span>
 				</p>
@@ -110,6 +122,7 @@
 		</div>
 	</article>
 	<script type = "text/javascript" src = "../js/script.js"></script>
+	<script type="text/javascript" src="../js/time-palette.js"></script>
 </body>
 
 </html>

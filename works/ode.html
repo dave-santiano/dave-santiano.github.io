@@ -1,65 +1,78 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
-<head>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+<head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<link rel="icon" href="../techimg/logo_icon_2.0.gif">
 	<title>David Santiano</title>
 </head>
 <body onload = "setRainbowElementColors()">
 	<nav class="sidebar">
-		<img id = "side_bar_logo" src="../techimg/rainbowdropdave_opacity_down.png" alt="logo_name">
+		<div id="side_bar_logo"><span class="lv-a"><span class="lv-char rainbow_element">d</span><span class="lv-char rainbow_element">a</span><span class="lv-char rainbow_element">v</span><span class="lv-char rainbow_element">i</span><span class="lv-char rainbow_element">d</span></span><span class="lv-a"><span class="lv-char rainbow_element">s</span><span class="lv-char rainbow_element">a</span><span class="lv-char rainbow_element">n</span><span class="lv-char rainbow_element">t</span><span class="lv-char rainbow_element">i</span><span class="lv-char rainbow_element">a</span><span class="lv-char rainbow_element">n</span><span class="lv-char rainbow_element">o</span></span></div>
 		<div id = "nav_links">
-			<a href="../about/index.html" id="about" class = "rainbow_element">/About/</a>
-			<a href="../" id="projects" class = "rainbow_element">/Projects/</a>
-			<!-- <a href="../sketches/index.html" id = "sketches"class = "rainbow_element">/Sketches/</a> -->
+			<a href="../about/index.html" id="about" class="rainbow_element">/about</a>
+			<a href="../" id="projects" class="rainbow_element">/projects</a>
+		</div>
+		<div id="nav_palette_btns">
+			<button class="nav-pal-btn" id="nav-btn-off" title="No highlight">- - -</button>
+			<button class="nav-pal-btn" id="nav-btn-rainbow" title="Rainbow highlight">∿∿∿</button>
+			<div style="display:flex;align-items:center;gap:5px;">
+				<button class="nav-pal-btn" id="nav-btn-time" title="Time of day palette">◑ · · ·</button>
+				<span id="nav-time-indicator" style="display:none;font-size:11px;white-space:nowrap;font-family:inherit;">&lt;---(<span id="nav-time-hhmm" class="rainbow_element"></span>)</span>
+			</div>
+			<button class="nav-pal-btn" id="nav-btn-darkmode" title="Toggle light / dark" style="margin-top:14px;font-size:15px;">☀ · ·</button>
 		</div>
 	</nav>
 	<article class="content">
 		<!-- Breadcrumb -->
 		<div class="breadcrumb">
-			└── <a href="../index.html">Projects</a> / Ode to Joy VR
+			└── <a href="../index.html">projects</a> / Ode to Joy VR
 		</div>
 
 		<!-- Title & Core Metadata -->
 		<h1>Ode to Joy VR</h1>
+
+		<div class="hp-intro" id="hp-intro-block">
 		<div class="project-meta">
-			2018 / VR / Music / Stereoscopic Video / Audio Production / Acapella
+			2018 <span class="hp-intro-punct">/</span> VR <span class="hp-intro-punct">/</span> Music <span class="hp-intro-punct">/</span> Stereoscopic Video <span class="hp-intro-punct">/</span> Audio Production <span class="hp-intro-punct">/</span> Acapella
 			<br>
-			Role -> <span class="rainbow_element">Audio Engineer & VR Producer</span>
+			Role <span class="hp-intro-punct">-&gt;</span> <span class="rainbow_element">Audio Engineer &amp; VR Producer</span>
 			<br>
-			Status -> Completed / Exhibited
+			Status <span class="hp-intro-punct">-&gt;</span> Completed <span class="hp-intro-punct">/</span> Exhibited
 		</div>
 
 		<!-- Technical Stack -->
 		<div class="tech-stack">
-			├── Video -> <span class="rainbow_element">180° Stereoscopic VR</span>
+			<span class="hp-intro-punct">├──</span> Video <span class="hp-intro-punct">-&gt;</span> <span class="rainbow_element">180° Stereoscopic VR</span>
 			<br>
-			├── Audio -> <span class="rainbow_element">47-part Acapella</span> / <span class="rainbow_element">Multi-track Recording</span>
+			<span class="hp-intro-punct">├──</span> Audio <span class="hp-intro-punct">-&gt;</span> <span class="rainbow_element">47-part Acapella</span> <span class="hp-intro-punct">/</span> <span class="rainbow_element">Multi-track Recording</span>
 			<br>
-			└── Display -> <span class="rainbow_element">3D Vertical Displays</span>
+			<span class="hp-intro-punct">└──</span> Display <span class="hp-intro-punct">-&gt;</span> <span class="rainbow_element">3D Vertical Displays</span>
 			<br>
 		</div>
 
 		<!-- Collaborators -->
 		<div class="collaborators">
-			>>> Collaborators
+			<span class="hp-intro-punct">&gt;&gt;&gt;</span> Collaborators
 			<br>
-			• Project Lead: <a class = "rainbow_element obvious-link" href = "http://www.naimark.net/">Michael Naimark</a>
+			<span class="hp-intro-punct">•</span> Project Lead: <a class="rainbow_element obvious-link" href="http://www.naimark.net/">Michael Naimark</a>
 			<br>
-			• Team: <a class = "rainbow_element obvious-link" href = "http://bruce-luo.me/">Bruce Luo</a>, <a class = "rainbow_element obvious-link" href = "http://www.adazhao.com/">Ada Zhao</a>
+			<span class="hp-intro-punct">•</span> Team: <a class="rainbow_element obvious-link" href="http://bruce-luo.me/">Bruce Luo</a>, <a class="rainbow_element obvious-link" href="http://www.adazhao.com/">Ada Zhao</a>
 		</div>
 
-		<!-- Key Contributions/Achievements -->
+		<!-- Key Features -->
 		<div class="achievements">
-			>>> Key Features
+			<span class="hp-intro-punct">&gt;&gt;&gt;</span> Key Features
 			<br>
-			• <span class="rainbow_element">47-part acapella orchestra</span> recreation
+			<span class="hp-intro-punct">•</span> <span class="rainbow_element">47-part acapella orchestra</span> recreation
 			<br>
-			• <span class="rainbow_element">Stereoscopic VR compositing</span>
+			<span class="hp-intro-punct">•</span> <span class="rainbow_element">Stereoscopic VR compositing</span>
 			<br>
-			• <span class="rainbow_element">Multi-track audio production</span> and mastering
+			<span class="hp-intro-punct">•</span> <span class="rainbow_element">Multi-track audio production</span> and mastering
 		</div>
+		</div><!-- /.hp-intro -->
+
 		<!-- Project Details -->
 		<div class="project-content">
 			<div class="demo-section">
@@ -68,8 +81,8 @@
 					<span class="rainbow_element">VR interface</span> showing acapella arrangement
 				</p>
 				<p class="project-description">
-					Ode is an immersive media experience which consists of a <span class
-					= "rainbow_element">47 part acapella</span> rendition of an
+					Ode is an immersive media experience which consists of a <span
+					class="rainbow_element">47 part acapella</span> rendition of an
 					orchestra performing <span class="rainbow_element">Ode to Joy</span>. Filmed and recorded on a Sunday and
 					a half, we composited <span class="rainbow_element">student volunteers</span> singing their different
 					parts onto a <span class="rainbow_element">180 degree stereoscopic VR video</span>. I <span class="rainbow_element">recorded, mixed,
@@ -79,7 +92,7 @@
 			</div>
 
 			<div class="demo-section">
-				<img class="project_image" src = "../techimg/ode-to-joy-2.jpg">
+				<img class="project_image" src="../techimg/ode-to-joy-2.jpg">
 				<p class="image-caption">
 					Installation on <span class="rainbow_element">three vertically-oriented 3D displays</span>
 				</p>
@@ -88,6 +101,7 @@
 
 	</article>
 	<script type = "text/javascript" src = "../js/script.js"></script>
+	<script type="text/javascript" src="../js/time-palette.js"></script>
 </body>
 
-</html> 
+</html>

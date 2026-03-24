@@ -1,8 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<link rel="icon" href="../techimg/logo_icon_2.0.gif">
 	<title>David Santiano</title>
@@ -10,56 +11,68 @@
 
 <body onload = "setRainbowElementColors()">
 	<nav class="sidebar">
-		<img id = "side_bar_logo" src="../techimg/rainbowdropdave_opacity_down.png" alt="logo_name">
+		<div id="side_bar_logo"><span class="lv-a"><span class="lv-char rainbow_element">d</span><span class="lv-char rainbow_element">a</span><span class="lv-char rainbow_element">v</span><span class="lv-char rainbow_element">i</span><span class="lv-char rainbow_element">d</span></span><span class="lv-a"><span class="lv-char rainbow_element">s</span><span class="lv-char rainbow_element">a</span><span class="lv-char rainbow_element">n</span><span class="lv-char rainbow_element">t</span><span class="lv-char rainbow_element">i</span><span class="lv-char rainbow_element">a</span><span class="lv-char rainbow_element">n</span><span class="lv-char rainbow_element">o</span></span></div>
 		<div id = "nav_links">
-			<a href="../about/index.html" id="about" class = "rainbow_element">/About/</a>
-			<a href="../" id="projects" class = "rainbow_element">/Projects/</a>
-			<!-- <a href="../sketches/index.html" id = "sketches"class = "rainbow_element">/Sketches/</a> -->
+			<a href="../about/index.html" id="about" class="rainbow_element">/about</a>
+			<a href="../" id="projects" class="rainbow_element">/projects</a>
+		</div>
+		<div id="nav_palette_btns">
+			<button class="nav-pal-btn" id="nav-btn-off" title="No highlight">- - -</button>
+			<button class="nav-pal-btn" id="nav-btn-rainbow" title="Rainbow highlight">∿∿∿</button>
+			<div style="display:flex;align-items:center;gap:5px;">
+				<button class="nav-pal-btn" id="nav-btn-time" title="Time of day palette">◑ · · ·</button>
+				<span id="nav-time-indicator" style="display:none;font-size:11px;white-space:nowrap;font-family:inherit;">&lt;---(<span id="nav-time-hhmm" class="rainbow_element"></span>)</span>
+			</div>
+			<button class="nav-pal-btn" id="nav-btn-darkmode" title="Toggle light / dark" style="margin-top:14px;font-size:15px;">☀ · ·</button>
 		</div>
 	</nav>
 	<article class="content">
 		<!-- Breadcrumb -->
 		<div class="breadcrumb">
-			└── <a href="../index.html">Projects</a> / Animations
+			└── <a href="../index.html">projects</a> / Animations
 		</div>
 
 		<!-- Title & Core Metadata -->
 		<h1>Animations</h1>
+
+		<div class="hp-intro" id="hp-intro-block">
 		<div class="project-meta">
-			2016-2017 / Animation / After Effects / Stop Motion
+			2016-2017 <span class="hp-intro-punct">/</span> Animation <span class="hp-intro-punct">/</span> After Effects <span class="hp-intro-punct">/</span> Stop Motion
 			<br>
-			Role -> <span class="rainbow_element">Animator</span>
+			Role <span class="hp-intro-punct">-&gt;</span> <span class="rainbow_element">Animator</span>
 			<br>
-			Status -> Completed Series
+			Status <span class="hp-intro-punct">-&gt;</span> Completed Series
 		</div>
 
 		<!-- Technical Stack -->
 		<div class="tech-stack">
-			├── Software -> <span class="rainbow_element">After Effects</span>
+			<span class="hp-intro-punct">├──</span> Software <span class="hp-intro-punct">-&gt;</span> <span class="rainbow_element">After Effects</span>
 			<br>
-			├── Technique -> <span class="rainbow_element">Stop Motion</span>
+			<span class="hp-intro-punct">├──</span> Technique <span class="hp-intro-punct">-&gt;</span> <span class="rainbow_element">Stop Motion</span>
 			<br>
-			└── Output -> <span class="rainbow_element">Short Films</span> / <span class="rainbow_element">YouTube</span>
+			<span class="hp-intro-punct">└──</span> Output <span class="hp-intro-punct">-&gt;</span> <span class="rainbow_element">Short Films</span> <span class="hp-intro-punct">/</span> <span class="rainbow_element">YouTube</span>
 			<br>
 		</div>
 
 		<!-- Collaborators -->
 		<div class="collaborators">
-			>>> Collaborators
+			<span class="hp-intro-punct">&gt;&gt;&gt;</span> Collaborators
 			<br>
-			• Co-animator: <a class = "rainbow_element obvious-link" href = "https://www.nicksanchez.rocks/">Nicholas Sanchez</a>
+			<span class="hp-intro-punct">•</span> Co-animator: <a class="rainbow_element obvious-link" href="https://www.nicksanchez.rocks/">Nicholas Sanchez</a>
 		</div>
 
-		<!-- Key Contributions/Achievements -->
+		<!-- Key Features -->
 		<div class="achievements">
-			>>> Key Features
+			<span class="hp-intro-punct">&gt;&gt;&gt;</span> Key Features
 			<br>
-			• <span class="rainbow_element">Hand-crafted stop motion</span>
+			<span class="hp-intro-punct">•</span> <span class="rainbow_element">Hand-crafted stop motion</span>
 			<br>
-			• <span class="rainbow_element">Digital compositing</span>
+			<span class="hp-intro-punct">•</span> <span class="rainbow_element">Digital compositing</span>
 			<br>
-			• <span class="rainbow_element">Character animation</span>
+			<span class="hp-intro-punct">•</span> <span class="rainbow_element">Character animation</span>
 		</div>
+		</div><!-- /.hp-intro -->
+
 		<!-- Project Details -->
 		<div class="project-content">
 			<p class="project-description">
@@ -91,6 +104,7 @@
 
 	</article>
 	<script type = "text/javascript" src = "../js/script.js"></script>
+	<script type="text/javascript" src="../js/time-palette.js"></script>
 </body>
 
 </html>

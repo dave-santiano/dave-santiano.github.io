@@ -11,65 +11,73 @@
 
 <body onload = "setRainbowElementColors()">
 	<nav class="sidebar">
-		<img id = "side_bar_logo" src="../techimg/rainbowdropdave_opacity_down.png" alt="logo_name">
+		<div id="side_bar_logo"><span class="lv-a"><span class="lv-char rainbow_element">d</span><span class="lv-char rainbow_element">a</span><span class="lv-char rainbow_element">v</span><span class="lv-char rainbow_element">i</span><span class="lv-char rainbow_element">d</span></span><span class="lv-a"><span class="lv-char rainbow_element">s</span><span class="lv-char rainbow_element">a</span><span class="lv-char rainbow_element">n</span><span class="lv-char rainbow_element">t</span><span class="lv-char rainbow_element">i</span><span class="lv-char rainbow_element">a</span><span class="lv-char rainbow_element">n</span><span class="lv-char rainbow_element">o</span></span></div>
 		<div id = "nav_links">
-			<span id="about" class = "rainbow_element current-page">/About/</span>
-			<a href="../" id="projects" class = "rainbow_element">/Projects/</a>
-			<!-- <a href="../sketches/index.html" id = "sketches"class = "rainbow_element">/Sketches/</a> -->
+			<span id="about" class="rainbow_element current-page" aria-current="page">/about *</span>
+			<a href="../" id="projects" class="rainbow_element">/projects</a>
+		</div>
+		<div id="nav_palette_btns">
+			<button class="nav-pal-btn" id="nav-btn-off" title="No highlight">- - -</button>
+			<button class="nav-pal-btn" id="nav-btn-rainbow" title="Rainbow highlight">∿∿∿</button>
+			<div style="display:flex;align-items:center;gap:5px;">
+				<button class="nav-pal-btn" id="nav-btn-time" title="Time of day palette">◑ · · ·</button>
+				<span id="nav-time-indicator" style="display:none;font-size:11px;white-space:nowrap;font-family:inherit;">&lt;---(<span id="nav-time-hhmm" class="rainbow_element"></span>)</span>
+			</div>
+			<button class="nav-pal-btn" id="nav-btn-darkmode" title="Toggle light / dark" style="margin-top:14px;font-size:15px;">☀ · ·</button>
 		</div>
 	</nav>
 	<article class="content" id = "aboutme">
 		<!-- Breadcrumb -->
 		<div class="breadcrumb">
-			└── <a href="../index.html">Projects</a> / About
+			└── <a href="../index.html">projects</a> / About
 		</div>
 
 		<!-- Title -->
 		<h1>About me</h1>
 
-		<!-- Core Bio -->
-		<div class="about-section">
-			>>> Background
+	<!-- Core Bio — full highlights kept -->
+	<div class="about-section">
+		<span class="hp-intro-punct">&gt;&gt;&gt;</span> Background
+		<br>
+		<p class="about-description">
+			Hi! My name is <span class = "rainbow_element">David
+			Santiano</span>. I was working for a design/strategy/engineering
+			firm named <a style = "text-decoration: underline" href =
+			"https://propelland.com/"><span class =
+			"rainbow_element">propelland</span></a> as their in-house <span
+			class = "rainbow_element">design technologist</span>, and before
+			that as a research associate for <span class="rainbow_element">telepresence</span> at New York University
+			Shanghai's
+			<span class = "rainbow_element">Interactive Media Arts</span>
+			department. Along with that I helped teach a class called <a href =
+			"../works/vrar_fund.html" class = "obvious-link
+			rainbow_element">VR/AR Fundamentals</a>, where students learned
+			about the fundamentals of <span class="rainbow_element">immersive media</span>.
+		</p>
+		<p class="about-description">
+			Now, most of my time is taken up by scrappy, artsy, and explorative <span class="rainbow_element">research and
+			experimentation</span>. I also make and produce <span class="rainbow_element">music</span> on the side. If you
+			want to contact me in any way please feel free to reach out.
+		</p>
+	</div>
+
+		<!-- Core Expertise — punctuation-only highlight -->
+		<div class="about-section hp-intro" id="hp-intro-block-expertise">
+			<span class="hp-intro-punct">&gt;&gt;&gt;</span> Core Expertise
 			<br>
-			<p class="about-description">
-				Hi! My name is <span class = "rainbow_element">David
-				Santiano</span>. I was working for a design/strategy/engineering
-				firm named <a style = "text-decoration: underline" href =
-				"https://propelland.com/"><span class =
-				"rainbow_element">propelland</span></a> as their in-house <span
-				class = "rainbow_element">design technologist</span>, and before
-				that as a research associate for <span class="rainbow_element">telepresence</span> at New York University
-				Shanghai's
-				<span class = "rainbow_element">Interactive Media Arts</span>
-				department. Along with that I helped teach a class called <a href =
-				"../works/vrar_fund.html" class = "obvious-link
-				rainbow_element">VR/AR Fundamentals</a>, where students learned
-				about the fundamentals of <span class="rainbow_element">immersive media</span>.
-			</p>
-			<p class="about-description">
-				Now, most of my time is taken up by scrappy, artsy, and explorative <span class="rainbow_element">research and
-				experimentation</span>. I also make and produce <span class="rainbow_element">music</span> on the side. If you
-				want to contact me in any way please feel free to reach out.
-			</p>
+			<span class="hp-intro-punct">•</span> Creative Technology - Interactive installations, VR/AR, real-time systems
+			<br>
+			<span class="hp-intro-punct">•</span> Design Technology - Prototyping, user research, technical implementation
+			<br>
+			<span class="hp-intro-punct">•</span> Research &amp; Development - Emerging tech evaluation, concept development
+			<br>
+			<span class="hp-intro-punct">•</span> Music Production - Composition, sound design, audio programming
 		</div>
 
-		<!-- Skills/Expertise -->
-		<div class="about-section">
-			>>> Core Expertise
-			<br>
-			• <span class="rainbow_element">Creative Technology</span> - Interactive installations, VR/AR, real-time systems
-			<br>
-			• <span class="rainbow_element">Design Technology</span> - Prototyping, user research, technical implementation
-			<br>
-			• <span class="rainbow_element">Research & Development</span> - Emerging tech evaluation, concept development
-			<br>
-			• <span class="rainbow_element">Music Production</span> - Composition, sound design, audio programming
-		</div>
-
-		<!-- Current Focus -->
-		<div class="about-section">
-			>>> Current Focus
-			<br>
+	<!-- Current Focus — full highlights kept -->
+	<div class="about-section">
+		<span class="hp-intro-punct">&gt;&gt;&gt;</span> Current Focus
+		<br>
 			<p class="about-description">
 				Exploring the intersection of <span class="rainbow_element">creative technology</span> and <span class="rainbow_element">human interaction</span>, 
 				with particular interest in <span class="rainbow_element">telepresence systems</span>, <span class="rainbow_element">immersive media</span>, 
@@ -78,30 +86,31 @@
 			</p>
 		</div>
 
-		<!-- Contact -->
-		<div class="about-section">
-			>>> Contact
-			<br>
-			• Email: <a class = "obvious-link rainbow_element" href=
-			"mailto:david.j.santiano@gmail.com">david.j.santiano@gmail.com</a>
-			<br>
-			• Resume: <a class="obvious-link rainbow_element" href="Santiano_David_Resume_2025_v1.pdf" target="_blank">Download CV</a>
-		</div>
+	<!-- Contact — full highlights kept -->
+	<div class="about-section">
+		<span class="hp-intro-punct">&gt;&gt;&gt;</span> Contact
+		<br>
+		<span class="hp-intro-punct">•</span> Email: <a class = "obvious-link rainbow_element" href=
+		"mailto:david.j.santiano@gmail.com">david.j.santiano@gmail.com</a>
+		<br>
+		<span class="hp-intro-punct">•</span> Resume: <a class="obvious-link rainbow_element" href="Santiano_David_Resume_2025_v1.pdf" target="_blank">Download CV</a>
+	</div>
 
-		<!-- Tools & Technologies -->
-		<div class="about-section">
-			>>> Technical Skills
+		<!-- Technical Skills — punctuation-only highlight -->
+		<div class="about-section hp-intro" id="hp-intro-block-skills">
+			<span class="hp-intro-punct">&gt;&gt;&gt;</span> Technical Skills
 			<br>
-			├── Languages -> <span class="rainbow_element">C++</span> / <span class="rainbow_element">Python</span> / <span class="rainbow_element">JavaScript</span> / <span class="rainbow_element">TypeScript</span>
+			<span class="hp-intro-punct">├──</span> Languages <span class="hp-intro-punct">-&gt;</span> C++ <span class="hp-intro-punct">/</span> Python <span class="hp-intro-punct">/</span> JavaScript <span class="hp-intro-punct">/</span> TypeScript
 			<br>
-			├── Frameworks -> <span class="rainbow_element">Unity</span> / <span class="rainbow_element">OpenGL</span> / <span class="rainbow_element">React</span> / <span class="rainbow_element">Node.js</span>
+			<span class="hp-intro-punct">├──</span> Frameworks <span class="hp-intro-punct">-&gt;</span> Unity <span class="hp-intro-punct">/</span> OpenGL <span class="hp-intro-punct">/</span> React <span class="hp-intro-punct">/</span> Node.js
 			<br>
-			├── Hardware -> <span class="rainbow_element">Intel RealSense</span> / <span class="rainbow_element">Arduino</span> / <span class="rainbow_element">Raspberry Pi</span>
+			<span class="hp-intro-punct">├──</span> Hardware <span class="hp-intro-punct">-&gt;</span> Intel RealSense <span class="hp-intro-punct">/</span> Arduino <span class="hp-intro-punct">/</span> Raspberry Pi
 			<br>
-			└── Creative -> <span class="rainbow_element">TouchDesigner</span> / <span class="rainbow_element">After Effects</span> / <span class="rainbow_element">Ableton Live</span> / <span class="rainbow_element">Photoshop</span> / <span class="rainbow_element">Premiere</span>
+			<span class="hp-intro-punct">└──</span> Creative <span class="hp-intro-punct">-&gt;</span> TouchDesigner <span class="hp-intro-punct">/</span> After Effects <span class="hp-intro-punct">/</span> Ableton Live <span class="hp-intro-punct">/</span> Photoshop <span class="hp-intro-punct">/</span> Premiere
 		</div>
 	</article>
 	<script type = "text/javascript" src = "../js/script.js"></script>
+	<script type="text/javascript" src="../js/time-palette.js"></script>
 </body>
 
 </html>

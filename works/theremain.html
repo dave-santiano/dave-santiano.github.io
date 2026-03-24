@@ -1,65 +1,78 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<link rel="icon" href="../techimg/logo_icon_2.0.gif">
 	<title>David Santiano</title>
 </head>
 <body onload = "setRainbowElementColors()">
 	<nav class="sidebar">
-		<img id = "side_bar_logo" src="../techimg/rainbowdropdave_opacity_down.png" alt="logo_name">
+		<div id="side_bar_logo"><span class="lv-a"><span class="lv-char rainbow_element">d</span><span class="lv-char rainbow_element">a</span><span class="lv-char rainbow_element">v</span><span class="lv-char rainbow_element">i</span><span class="lv-char rainbow_element">d</span></span><span class="lv-a"><span class="lv-char rainbow_element">s</span><span class="lv-char rainbow_element">a</span><span class="lv-char rainbow_element">n</span><span class="lv-char rainbow_element">t</span><span class="lv-char rainbow_element">i</span><span class="lv-char rainbow_element">a</span><span class="lv-char rainbow_element">n</span><span class="lv-char rainbow_element">o</span></span></div>
 		<div id = "nav_links">
-			<a href="../about/index.html" id="about" class = "rainbow_element">/About/</a>
-			<a href="../" id="projects" class = "rainbow_element">/Projects/</a>
-			<!-- <a href="../sketches/index.html" id = "sketches"class = "rainbow_element">/Sketches/</a> -->
+			<a href="../about/index.html" id="about" class="rainbow_element">/about</a>
+			<a href="../" id="projects" class="rainbow_element">/projects</a>
+		</div>
+		<div id="nav_palette_btns">
+			<button class="nav-pal-btn" id="nav-btn-off" title="No highlight">- - -</button>
+			<button class="nav-pal-btn" id="nav-btn-rainbow" title="Rainbow highlight">∿∿∿</button>
+			<div style="display:flex;align-items:center;gap:5px;">
+				<button class="nav-pal-btn" id="nav-btn-time" title="Time of day palette">◑ · · ·</button>
+				<span id="nav-time-indicator" style="display:none;font-size:11px;white-space:nowrap;font-family:inherit;">&lt;---(<span id="nav-time-hhmm" class="rainbow_element"></span>)</span>
+			</div>
+			<button class="nav-pal-btn" id="nav-btn-darkmode" title="Toggle light / dark" style="margin-top:14px;font-size:15px;">☀ · ·</button>
 		</div>
 	</nav>
 
 	<article class="content">
 		<!-- Breadcrumb -->
 		<div class="breadcrumb">
-			└── <a href="../index.html">Projects</a> / Therem{AI}n
+			└── <a href="../index.html">projects</a> / Therem{AI}n
 		</div>
 
 		<!-- Title & Core Metadata -->
 		<h1>Therem{AI}n</h1>
+
+		<div class="hp-intro" id="hp-intro-block">
 		<div class="project-meta">
-			2018 / AI/Music / Machine Learning / LeapMotion / MIDI
+			2018 <span class="hp-intro-punct">/</span> AI/Music <span class="hp-intro-punct">/</span> Machine Learning <span class="hp-intro-punct">/</span> LeapMotion <span class="hp-intro-punct">/</span> MIDI
 			<br>
-			Role -> <span class="rainbow_element">Developer & Sound Designer</span>
+			Role <span class="hp-intro-punct">-&gt;</span> <span class="rainbow_element">Developer &amp; Sound Designer</span>
 			<br>
-			Status -> Prototype / Demo
+			Status <span class="hp-intro-punct">-&gt;</span> Prototype <span class="hp-intro-punct">/</span> Demo
 		</div>
 
 		<!-- Technical Stack -->
 		<div class="tech-stack">
-			├── Hardware -> <span class="rainbow_element">LeapMotion</span> / <span class="rainbow_element">Hand Tracking</span>
+			<span class="hp-intro-punct">├──</span> Hardware <span class="hp-intro-punct">-&gt;</span> <span class="rainbow_element">LeapMotion</span> <span class="hp-intro-punct">/</span> <span class="rainbow_element">Hand Tracking</span>
 			<br>
-			├── AI -> <span class="rainbow_element">Google Magenta</span> / <span class="rainbow_element">Neural Network</span>
+			<span class="hp-intro-punct">├──</span> AI <span class="hp-intro-punct">-&gt;</span> <span class="rainbow_element">Google Magenta</span> <span class="hp-intro-punct">/</span> <span class="rainbow_element">Neural Network</span>
 			<br>
-			└── Audio -> <span class="rainbow_element">MIDI Generation</span> / <span class="rainbow_element">Theremin Synthesis</span>
+			<span class="hp-intro-punct">└──</span> Audio <span class="hp-intro-punct">-&gt;</span> <span class="rainbow_element">MIDI Generation</span> <span class="hp-intro-punct">/</span> <span class="rainbow_element">Theremin Synthesis</span>
 			<br>
 		</div>
 
 		<!-- Collaborators -->
 		<div class="collaborators">
-			>>> Collaborators
+			<span class="hp-intro-punct">&gt;&gt;&gt;</span> Collaborators
 			<br>
-			• Team: <a class = "rainbow_element obvious-link" href = "http://samjhhu.com/">Sam Hu</a>, <span class = "rainbow_element">Aven Zhou</span>
+			<span class="hp-intro-punct">•</span> Team: <a class="rainbow_element obvious-link" href="http://samjhhu.com/">Sam Hu</a>, <span class="rainbow_element">Aven Zhou</span>
 		</div>
 
-		<!-- Key Contributions/Achievements -->
+		<!-- Key Features -->
 		<div class="achievements">
-			>>> Key Features
+			<span class="hp-intro-punct">&gt;&gt;&gt;</span> Key Features
 			<br>
-			• <span class="rainbow_element">AI-human musical collaboration</span>
+			<span class="hp-intro-punct">•</span> <span class="rainbow_element">AI-human musical collaboration</span>
 			<br>
-			• <span class="rainbow_element">Gesture-based digital theremin</span>
+			<span class="hp-intro-punct">•</span> <span class="rainbow_element">Gesture-based digital theremin</span>
 			<br>
-			• <span class="rainbow_element">Real-time melody generation</span>
+			<span class="hp-intro-punct">•</span> <span class="rainbow_element">Real-time melody generation</span>
 		</div>
+		</div><!-- /.hp-intro -->
+
 		<!-- Project Details -->
 		<div class="project-content">
 			<div class="demo-section">
@@ -86,7 +99,7 @@
 				</p>
 				<p class="project-description">
 					The user simply <span class="rainbow_element">waves their hands above the LeapMotion</span>, and after
-					they stop playing <span class = "rainbow_element">the neural network
+					they stop playing <span class="rainbow_element">the neural network
 					generates a melody to be played back to them with the tone and style
 					of a theremin.</span>
 				</p>
@@ -94,5 +107,6 @@
 		</div>
 	</article>
 	<script type = "text/javascript" src = "../js/script.js"></script>
+	<script type="text/javascript" src="../js/time-palette.js"></script>
 </body>
 </html>

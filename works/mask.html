@@ -1,8 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<link rel="icon" href="../techimg/logo_icon_2.0.gif">
 	<title>David Santiano</title>
@@ -10,56 +11,68 @@
 
 <body onload = "setRainbowElementColors()">
 	<nav class="sidebar">
-		<img id = "side_bar_logo" src="../techimg/rainbowdropdave_opacity_down.png" alt="logo_name">
+		<div id="side_bar_logo"><span class="lv-a"><span class="lv-char rainbow_element">d</span><span class="lv-char rainbow_element">a</span><span class="lv-char rainbow_element">v</span><span class="lv-char rainbow_element">i</span><span class="lv-char rainbow_element">d</span></span><span class="lv-a"><span class="lv-char rainbow_element">s</span><span class="lv-char rainbow_element">a</span><span class="lv-char rainbow_element">n</span><span class="lv-char rainbow_element">t</span><span class="lv-char rainbow_element">i</span><span class="lv-char rainbow_element">a</span><span class="lv-char rainbow_element">n</span><span class="lv-char rainbow_element">o</span></span></div>
 		<div id = "nav_links">
-			<a href="../about/index.html" id="about" class = "rainbow_element">/About/</a>
-			<a href="../" id="projects" class = "rainbow_element">/Projects/</a>
-			<!-- <a href="../sketches/index.html" id = "sketches"class = "rainbow_element">/Sketches/</a> -->
+			<a href="../about/index.html" id="about" class="rainbow_element">/about</a>
+			<a href="../" id="projects" class="rainbow_element">/projects</a>
+		</div>
+		<div id="nav_palette_btns">
+			<button class="nav-pal-btn" id="nav-btn-off" title="No highlight">- - -</button>
+			<button class="nav-pal-btn" id="nav-btn-rainbow" title="Rainbow highlight">∿∿∿</button>
+			<div style="display:flex;align-items:center;gap:5px;">
+				<button class="nav-pal-btn" id="nav-btn-time" title="Time of day palette">◑ · · ·</button>
+				<span id="nav-time-indicator" style="display:none;font-size:11px;white-space:nowrap;font-family:inherit;">&lt;---(<span id="nav-time-hhmm" class="rainbow_element"></span>)</span>
+			</div>
+			<button class="nav-pal-btn" id="nav-btn-darkmode" title="Toggle light / dark" style="margin-top:14px;font-size:15px;">☀ · ·</button>
 		</div>
 	</nav>
 	<article class="content">
 		<!-- Breadcrumb -->
 		<div class="breadcrumb">
-			└── <a href="../index.html">Projects</a> / Anti-Facial Recognition Mask
+			└── <a href="../index.html">projects</a> / Anti-Facial Recognition Mask
 		</div>
 
 		<!-- Title & Core Metadata -->
 		<h1>Anti-Facial Recognition Mask</h1>
+
+		<div class="hp-intro" id="hp-intro-block">
 		<div class="project-meta">
-			2018 / Clothing / Mod / Wearable Tech / Privacy / Critical Design
+			2018 <span class="hp-intro-punct">/</span> Clothing <span class="hp-intro-punct">/</span> Mod <span class="hp-intro-punct">/</span> Wearable Tech <span class="hp-intro-punct">/</span> Privacy <span class="hp-intro-punct">/</span> Critical Design
 			<br>
-			Role -> <span class="rainbow_element">Designer & Researcher</span>
+			Role <span class="hp-intro-punct">-&gt;</span> <span class="rainbow_element">Designer &amp; Researcher</span>
 			<br>
-			Status -> Prototype / Research Project
+			Status <span class="hp-intro-punct">-&gt;</span> Prototype <span class="hp-intro-punct">/</span> Research Project
 		</div>
 
 		<!-- Technical Stack -->
 		<div class="tech-stack">
-			├── Materials -> <span class="rainbow_element">Retro-reflective Fabric</span>
+			<span class="hp-intro-punct">├──</span> Materials <span class="hp-intro-punct">-&gt;</span> <span class="rainbow_element">Retro-reflective Fabric</span>
 			<br>
-			├── Target -> <span class="rainbow_element">Infrared Depth Cameras</span> / <span class="rainbow_element">3D Facial Recognition</span>
+			<span class="hp-intro-punct">├──</span> Target <span class="hp-intro-punct">-&gt;</span> <span class="rainbow_element">Infrared Depth Cameras</span> <span class="hp-intro-punct">/</span> <span class="rainbow_element">3D Facial Recognition</span>
 			<br>
-			└── Method -> <span class="rainbow_element">Infrared Light Disruption</span> / <span class="rainbow_element">Point Cloud Interference</span>
+			<span class="hp-intro-punct">└──</span> Method <span class="hp-intro-punct">-&gt;</span> <span class="rainbow_element">Infrared Light Disruption</span> <span class="hp-intro-punct">/</span> <span class="rainbow_element">Point Cloud Interference</span>
 			<br>
 		</div>
 
 		<!-- Collaborators -->
 		<div class="collaborators">
-			>>> Collaborators
+			<span class="hp-intro-punct">&gt;&gt;&gt;</span> Collaborators
 			<br>
-			• Co-designer: <a class = "rainbow_element obvious-link" href = "https://www.rewantprakash.com/">Rewant Prakash</a>
+			<span class="hp-intro-punct">•</span> Co-designer: <a class="rainbow_element obvious-link" href="https://www.rewantprakash.com/">Rewant Prakash</a>
 		</div>
 
-		<!-- Key Contributions/Achievements -->
+		<!-- Key Features -->
 		<div class="achievements">
-			>>> Key Features
+			<span class="hp-intro-punct">&gt;&gt;&gt;</span> Key Features
 			<br>
-			• <span class="rainbow_element">Dual-layer privacy protection</span> (visual + depth)
+			<span class="hp-intro-punct">•</span> <span class="rainbow_element">Dual-layer privacy protection</span> (visual + depth)
 			<br>
-			• <span class="rainbow_element">Infrared light reflection</span> technique
+			<span class="hp-intro-punct">•</span> <span class="rainbow_element">Infrared light reflection</span> technique
 			<br>
-			• <span class="rainbow_element">Low-tech counter-surveillance</span> approach
+			<span class="hp-intro-punct">•</span> <span class="rainbow_element">Low-tech counter-surveillance</span> approach
 		</div>
+		</div><!-- /.hp-intro -->
+
 		<!-- Project Details -->
 		<div class="project-content">
 			<div class="demo-section">
@@ -68,12 +81,11 @@
 					<span class="rainbow_element">Prototype demonstration</span> showing depth interference
 				</p>
 				<p class="project-description">
-					In many places in the world <span class = "rainbow_element">facial
+					In many places in the world <span class="rainbow_element">facial
 					recognition technology</span> is being used  for a variety of
 					purposes. Catching wrong-doers within a crowd of ten thousand and
 					finding lost children in the giant Shanghai city metro system are
-					all noble pursuits, but it comes at the cost of our <span class =
-					"rainbow_element">biometric data</span> being stored in giant
+					all noble pursuits, but it comes at the cost of our <span class="rainbow_element">biometric data</span> being stored in giant
 					databases. Although this technology advances quite rapidly, there
 					are ways to counteract it using <span class="rainbow_element">cheap and low-tech methods</span>. 
 				</p>
@@ -88,8 +100,7 @@
 					simply finding pixels that match the general features of a face
 					within an image and returning it's position within it. However,
 					these techniques usually yield inconsistent results with many false
-					positives. Now, with advancements in <span class =
-					"rainbow_element">machine learning based image analysis and 3D
+					positives. Now, with advancements in <span class="rainbow_element">machine learning based image analysis and 3D
 					capture systems</span>, facial recognition has become more robust
 					and accurate. Now, <span class="rainbow_element">3D models of faces</span> can be stored and then used to
 					train this technology to become more accurate and robust, with very
@@ -97,22 +108,19 @@
 				</p>
 			</div>
 			<div class="demo-section">
-				<img  src = "../techimg/retro-3.jpg" class = "project_image">
+				<img src = "../techimg/retro-3.jpg" class = "project_image">
 				<p class="image-caption">
 					Technical analysis: <span class="rainbow_element">infrared disruption</span> methodology
 				</p>
 				<p class="project-description">
 					In order to disrupt this technology I came up with the idea of a
-					mask that not only obscures the face, but also <span class =
-					"rainbow_element">disrupts and obscures the depth data</span> being
+					mask that not only obscures the face, but also <span class="rainbow_element">disrupts and obscures the depth data</span> being
 					received by these volumetric facial recognition cameras. Most
 					<span class="rainbow_element">volumetric capture systems</span> utilize
-					<span class = "rainbow_element">infrared light projectors</span> to
+					<span class="rainbow_element">infrared light projectors</span> to
 					calculate depth. Because of this, it is often advised not to have
-					reflective surfaces when conducting volumetric capture. <span class
-					= "rainbow_element">Exploiting this weakness is the idea behind the
-					anti-surveillance mask</span>. <span class =
-					"rainbow_element">Retro-reflective material</span> heavily reflects
+					reflective surfaces when conducting volumetric capture. <span class="rainbow_element">Exploiting this weakness is the idea behind the
+					anti-surveillance mask</span>. <span class="rainbow_element">Retro-reflective material</span> heavily reflects
 					back the infrared patterns emitted by the infrared projector on a
 					depth camera, flooding the camera with inaccurate data. This results in
 					a <span class="rainbow_element">hole being created</span> on the retro-reflective material part of the
@@ -132,5 +140,6 @@
 		</div>
 	</article>
 	<script type = "text/javascript" src = "../js/script.js"></script>
+	<script type="text/javascript" src="../js/time-palette.js"></script>
 </body>
 </html>

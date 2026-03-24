@@ -1,61 +1,74 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
-<head>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+<head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<link rel="icon" href="../techimg/logo_icon_2.0.gif">
 	<title>David Santiano</title>
 </head>
 <body onload = "setRainbowElementColors()">
 	<nav class="sidebar">
-		<img id = "side_bar_logo" src="../techimg/rainbowdropdave_opacity_down.png" alt="logo_name">
+		<div id="side_bar_logo"><span class="lv-a"><span class="lv-char rainbow_element">d</span><span class="lv-char rainbow_element">a</span><span class="lv-char rainbow_element">v</span><span class="lv-char rainbow_element">i</span><span class="lv-char rainbow_element">d</span></span><span class="lv-a"><span class="lv-char rainbow_element">s</span><span class="lv-char rainbow_element">a</span><span class="lv-char rainbow_element">n</span><span class="lv-char rainbow_element">t</span><span class="lv-char rainbow_element">i</span><span class="lv-char rainbow_element">a</span><span class="lv-char rainbow_element">n</span><span class="lv-char rainbow_element">o</span></span></div>
 		<div id = "nav_links">
-			<a href="../about/index.html" id="about" class = "rainbow_element">/About/</a>
-			<a href="../" id="projects" class = "rainbow_element">/Projects/</a>
-			<!-- <a href="../sketches/index.html" id = "sketches"class = "rainbow_element">/Sketches/</a> -->
+			<a href="../about/index.html" id="about" class="rainbow_element">/about</a>
+			<a href="../" id="projects" class="rainbow_element">/projects</a>
+		</div>
+		<div id="nav_palette_btns">
+			<button class="nav-pal-btn" id="nav-btn-off" title="No highlight">- - -</button>
+			<button class="nav-pal-btn" id="nav-btn-rainbow" title="Rainbow highlight">∿∿∿</button>
+			<div style="display:flex;align-items:center;gap:5px;">
+				<button class="nav-pal-btn" id="nav-btn-time" title="Time of day palette">◑ · · ·</button>
+				<span id="nav-time-indicator" style="display:none;font-size:11px;white-space:nowrap;font-family:inherit;">&lt;---(<span id="nav-time-hhmm" class="rainbow_element"></span>)</span>
+			</div>
+			<button class="nav-pal-btn" id="nav-btn-darkmode" title="Toggle light / dark" style="margin-top:14px;font-size:15px;">☀ · ·</button>
 		</div>
 	</nav>
 	<article class="content">
 		<!-- Breadcrumb -->
 		<div class="breadcrumb">
-			└── <a href="../index.html">Projects</a> / Coding APM Tracker
+			└── <a href="../index.html">projects</a> / Coding APM Tracker
 		</div>
 
 		<!-- Title & Core Metadata -->
 		<h1>Coding APM Tracker</h1>
+
+		<div class="hp-intro" id="hp-intro-block">
 		<div class="project-meta">
-			2018 / VS Code Extension / JavaScript / TypeScript / VS Code API
+			2018 <span class="hp-intro-punct">/</span> VS Code Extension <span class="hp-intro-punct">/</span> JavaScript <span class="hp-intro-punct">/</span> TypeScript <span class="hp-intro-punct">/</span> VS Code API
 			<br>
-			Role -> <span class="rainbow_element">Extension Developer</span>
+			Role <span class="hp-intro-punct">-&gt;</span> <span class="rainbow_element">Extension Developer</span>
 			<br>
-			Status -> Published / <span class="rainbow_element">VS Code Marketplace</span>
+			Status <span class="hp-intro-punct">-&gt;</span> Published <span class="hp-intro-punct">/</span> <span class="rainbow_element">VS Code Marketplace</span>
 		</div>
 
 		<!-- Technical Stack -->
 		<div class="tech-stack">
-			├── Platform -> <span class="rainbow_element">Visual Studio Code</span>
+			<span class="hp-intro-punct">├──</span> Platform <span class="hp-intro-punct">-&gt;</span> <span class="rainbow_element">Visual Studio Code</span>
 			<br>
-			├── Languages -> <span class="rainbow_element">JavaScript</span> / <span class="rainbow_element">TypeScript</span>
+			<span class="hp-intro-punct">├──</span> Languages <span class="hp-intro-punct">-&gt;</span> <span class="rainbow_element">JavaScript</span> <span class="hp-intro-punct">/</span> <span class="rainbow_element">TypeScript</span>
 			<br>
-			└── Distribution -> <span class="rainbow_element">VS Code Marketplace</span>
+			<span class="hp-intro-punct">└──</span> Distribution <span class="hp-intro-punct">-&gt;</span> <span class="rainbow_element">VS Code Marketplace</span>
 			<br>
 		</div>
 
-		<!-- Key Contributions/Achievements -->
+		<!-- Key Features -->
 		<div class="achievements">
-			>>> Key Features
+			<span class="hp-intro-punct">&gt;&gt;&gt;</span> Key Features
 			<br>
-			• <span class="rainbow_element">Real-time APM tracking</span>
+			<span class="hp-intro-punct">•</span> <span class="rainbow_element">Real-time APM tracking</span>
 			<br>
-			• <span class="rainbow_element">StarCraft-inspired metrics</span>
+			<span class="hp-intro-punct">•</span> <span class="rainbow_element">StarCraft-inspired metrics</span>
 			<br>
-			• <span class="rainbow_element">Live VS Code integration</span>
+			<span class="hp-intro-punct">•</span> <span class="rainbow_element">Live VS Code integration</span>
 		</div>
 
-		<!-- Links Section -->
+		<!-- Links -->
 		<div class="project-links">
-			[Extension] -> <a href = "https://marketplace.visualstudio.com/items?itemName=dave-santiano.coding-apm-tracker" class = "rainbow_element obvious-link"><span class="rainbow_element">VS Code Marketplace</span></a>
+			[Extension] <span class="hp-intro-punct">-&gt;</span> <a href="https://marketplace.visualstudio.com/items?itemName=dave-santiano.coding-apm-tracker" class="rainbow_element obvious-link">VS Code Marketplace</a>
 		</div>
+		</div><!-- /.hp-intro -->
+
 		<!-- Project Details -->
 		<div class="project-content">
 			<div class="demo-section">
@@ -71,15 +84,16 @@
 					<span class="rainbow_element">Real-time tracking</span> display
 				</p>
 				<p class="project-description">
-					This is an extension for <span class = "rainbow_element">Visual
+					This is an extension for <span class="rainbow_element">Visual
 					Studio Code</span> that tracks your <span class="rainbow_element">actions per minute</span>! I made this for any
 					<span class="rainbow_element">StarCraft fans</span> out there that missed having the one and only metric
-					that accurately indicated your skill level: <span class = "rainbow_element">how
+					that accurately indicated your skill level: <span class="rainbow_element">how
 					many times you mashed your keyboard in a minute.</span>
 				</p>
 			</div>
 		</div>
 	</article>
 	<script type = "text/javascript" src = "../js/script.js"></script>
+	<script type="text/javascript" src="../js/time-palette.js"></script>
 </body>
 </html>

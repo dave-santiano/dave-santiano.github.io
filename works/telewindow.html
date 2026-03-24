@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 
 <head>
@@ -11,69 +11,81 @@
 
 <body onload = "setRainbowElementColors()">
 	<nav class="sidebar">
-		<img id = "side_bar_logo" src="../techimg/rainbowdropdave_opacity_down.png" alt="logo_name">
+		<div id="side_bar_logo"><span class="lv-a"><span class="lv-char rainbow_element">d</span><span class="lv-char rainbow_element">a</span><span class="lv-char rainbow_element">v</span><span class="lv-char rainbow_element">i</span><span class="lv-char rainbow_element">d</span></span><span class="lv-a"><span class="lv-char rainbow_element">s</span><span class="lv-char rainbow_element">a</span><span class="lv-char rainbow_element">n</span><span class="lv-char rainbow_element">t</span><span class="lv-char rainbow_element">i</span><span class="lv-char rainbow_element">a</span><span class="lv-char rainbow_element">n</span><span class="lv-char rainbow_element">o</span></span></div>
 		<div id = "nav_links">
-			<a href="../about/index.html" id="about" class = "rainbow_element">/About/</a>
-			<a href="../" id="projects" class = "rainbow_element">/Projects/</a>
+			<a href="../about/index.html" id="about" class="rainbow_element">/about</a>
+			<a href="../" id="projects" class="rainbow_element">/projects</a>
+		</div>
+		<div id="nav_palette_btns">
+			<button class="nav-pal-btn" id="nav-btn-off" title="No highlight">- - -</button>
+			<button class="nav-pal-btn" id="nav-btn-rainbow" title="Rainbow highlight">∿∿∿</button>
+			<div style="display:flex;align-items:center;gap:5px;">
+				<button class="nav-pal-btn" id="nav-btn-time" title="Time of day palette">◑ · · ·</button>
+				<span id="nav-time-indicator" style="display:none;font-size:11px;white-space:nowrap;font-family:inherit;">&lt;---(<span id="nav-time-hhmm" class="rainbow_element"></span>)</span>
+			</div>
+			<button class="nav-pal-btn" id="nav-btn-darkmode" title="Toggle light / dark" style="margin-top:14px;font-size:15px;">☀ · ·</button>
 		</div>
 	</nav>
 	<article class="content">
 		<!-- Breadcrumb -->
 		<div class="breadcrumb">
-			└── <a href="../index.html">Projects</a> / TeleWindow
+			└── <a href="../index.html">projects</a> / TeleWindow
 		</div>
 
 		<!-- Title & Core Metadata -->
 		<h1>TeleWindow</h1>
+
+		<div class="hp-intro" id="hp-intro-block">
 		<div class="project-meta">
-			2018->2021 / Research / Tool / C++ / OpenGL / RealSense
+			2018<span class="hp-intro-punct">-&gt;</span>2021 <span class="hp-intro-punct">/</span> Research <span class="hp-intro-punct">/</span> Tool <span class="hp-intro-punct">/</span> C++ <span class="hp-intro-punct">/</span> OpenGL <span class="hp-intro-punct">/</span> RealSense
 			<br>
-			Role -> <span class="rainbow_element">Research Associate</span>
+			Role <span class="hp-intro-punct">-&gt;</span> <span class="rainbow_element">Research Associate</span>
 			<br>
-			Status -> Completed
+			Status <span class="hp-intro-punct">-&gt;</span> Completed
 		</div>
 
 		<!-- Technical Stack -->
 		<div class="tech-stack">
-			├── Hardware -> <span class="rainbow_element">Intel RealSense</span>
+			<span class="hp-intro-punct">├──</span> Hardware <span class="hp-intro-punct">-&gt;</span> <span class="rainbow_element">Intel RealSense</span>
 			<br>
-			├── Software -> <span class="rainbow_element">C++</span> / <span class="rainbow_element">Unity</span> / <span class="rainbow_element">Python</span> / <span class="rainbow_element">OpenCV</span>
+			<span class="hp-intro-punct">├──</span> Software <span class="hp-intro-punct">-&gt;</span> <span class="rainbow_element">C++</span> <span class="hp-intro-punct">/</span> <span class="rainbow_element">Unity</span> <span class="hp-intro-punct">/</span> <span class="rainbow_element">Python</span> <span class="hp-intro-punct">/</span> <span class="rainbow_element">OpenCV</span>
 			<br>
-			└── Display -> <span class="rainbow_element">SeeFront Stereoscopic</span> / <span class="rainbow_element">Eye-tracking</span>
+			<span class="hp-intro-punct">└──</span> Display <span class="hp-intro-punct">-&gt;</span> <span class="rainbow_element">SeeFront Stereoscopic</span> <span class="hp-intro-punct">/</span> <span class="rainbow_element">Eye-tracking</span>
 			<br>
 		</div>
 
 		<!-- Collaborators -->
 		<div class="collaborators">
-			>>> Collaborators
+			<span class="hp-intro-punct">&gt;&gt;&gt;</span> Collaborators
 			<br>
-			• Principal Investigator: <a class = "rainbow_element obvious-link" href = "http://www.naimark.net/">Michael Naimark</a>
+			<span class="hp-intro-punct">•</span> Principal Investigator: <a class="rainbow_element obvious-link" href="http://www.naimark.net/">Michael Naimark</a>
 			<br>
-			• Team: <a class = "rainbow_element obvious-link" href = "https://cameronballard.space/">Cameron Ballard</a>, 
-			<a class = "rainbow_element obvious-link" href = "https://barakchamo.com/">Barak Chamo</a>,
-			<a class = "rainbow_element obvious-link" href = "https://www.ivydhuang.com/">Ivy Huang</a>, 
-			<span class = "rainbow_element">Grace Huang</span>, <span class = "rainbow_element">Mateo Juvera Molina</span>, 
-			<a class = "rainbow_element obvious-link" href = "http://www.adazhao.com/">Ada Zhao</a>, 
-			<a class = "rainbow_element obvious-link" href = "http://bruce-luo.me/">Bruce Luo</a>
+			<span class="hp-intro-punct">•</span> Team: <a class="rainbow_element obvious-link" href="https://cameronballard.space/">Cameron Ballard</a>, 
+			<a class="rainbow_element obvious-link" href="https://barakchamo.com/">Barak Chamo</a>,
+			<a class="rainbow_element obvious-link" href="https://www.ivydhuang.com/">Ivy Huang</a>, 
+			<span class="rainbow_element">Grace Huang</span>, <span class="rainbow_element">Mateo Juvera Molina</span>, 
+			<a class="rainbow_element obvious-link" href="http://www.adazhao.com/">Ada Zhao</a>, 
+			<a class="rainbow_element obvious-link" href="http://bruce-luo.me/">Bruce Luo</a>
 		</div>
 
-		<!-- Key Contributions/Achievements -->
+		<!-- Key Features -->
 		<div class="achievements">
-			>>> Key Features
+			<span class="hp-intro-punct">&gt;&gt;&gt;</span> Key Features
 			<br>
-			• <span class="rainbow_element">Four-camera array</span> for complete volumetric coverage
+			<span class="hp-intro-punct">•</span> <span class="rainbow_element">Four-camera array</span> for complete volumetric coverage
 			<br>
-			• <span class="rainbow_element">Real-time point cloud fusion</span> and perspective correction
+			<span class="hp-intro-punct">•</span> <span class="rainbow_element">Real-time point cloud fusion</span> and perspective correction
 			<br>
-			• <span class="rainbow_element">Eye-tracked stereoscopic output</span> supported via SeeFront volumetric display
+			<span class="hp-intro-punct">•</span> <span class="rainbow_element">Eye-tracked stereoscopic output</span> supported via SeeFront volumetric display
 		</div>
 
-		<!-- Links Section -->
+		<!-- Links -->
 		<div class="project-links">
-			[Paper] -> <a class = "rainbow_element obvious-link" href = "https://www.isea-symposium-archives.org/wp-content/uploads/2023/02/ISEA2022-Proceedings_.pdf"><span class="rainbow_element">ISEA 2022</span>, page 664</a>
+			[Paper] <span class="hp-intro-punct">-&gt;</span> <a class="rainbow_element obvious-link" href="https://www.isea-symposium-archives.org/wp-content/uploads/2023/02/ISEA2022-Proceedings_.pdf"><span class="rainbow_element">ISEA 2022</span></a>, page 664
 			<br>
-			[Patent] -> <a class = "rainbow_element obvious-link" href = "https://patents.google.com/patent/US12069408B2/en"><span class="rainbow_element">Patent</span></a>
+			[Patent] <span class="hp-intro-punct">-&gt;</span> <a class="rainbow_element obvious-link" href="https://patents.google.com/patent/US12069408B2/en"><span class="rainbow_element">Patent</span></a>
 		</div>
+		</div><!-- /.hp-intro -->
 
 		<!-- Project Details -->
 		<div class="project-content">
@@ -83,21 +95,20 @@
 			</p>
 			<p class="project-description">
 				TeleWindow is a finished experimental <span class="rainbow_element">telepresence research project</span>
-				conducted under the guidance of <a class = "rainbow_element obvious-link" href =
-				"http://www.naimark.net/">Michael Naimark</a>. The aim was to explore
+				conducted under the guidance of <a class="rainbow_element obvious-link" href="http://www.naimark.net/">Michael Naimark</a>. The aim was to explore
 				how a <span class="rainbow_element">two-way, one to one communication</span> system can be
 				developed and how this system can aid communication in the digital age.
 				Utilizing these different ingredients, we can prototype a device
 				that can offer features such as 
-				<span class = "rainbow_element">two-way eye contact</span>, 
-				<span class = "rainbow_element">stereoscopy</span>, and 
-				<span class = "rainbow_element">telepresence</span>. 
+				<span class="rainbow_element">two-way eye contact</span>, 
+				<span class="rainbow_element">stereoscopy</span>, and 
+				<span class="rainbow_element">telepresence</span>. 
 				All done in 
-				<span class = "rainbow_element">realtime</span>.
+				<span class="rainbow_element">realtime</span>.
 			</p>
-			<img class = "project_image" style = "width: 500px;" src = "../techimg/tele-2.jpg">
+			<img class="project_image" style="width: 500px;" src="../techimg/tele-2.jpg">
 			<p class="project-description">
-				Currently, we are using <span class = "rainbow_element">four Intel RealSense cameras</span> in order
+				Currently, we are using <span class="rainbow_element">four Intel RealSense cameras</span> in order
 				to create a <span class="rainbow_element">volumetric pointcloud representation</span> of a person, and
 				then we correct perspective based on the <span class="rainbow_element">head/eye positions</span> of the
 				user. The <span class="rainbow_element">stereoscopic eye-tracked volumetric display</span> was acquired through
@@ -106,36 +117,36 @@
 		</div>
 		<!-- Technical Demonstrations -->
 		<div class="demo-section">
-			<img class = "project_image" src = "../techimg/tele-multisplat.png">
+			<img class="project_image" src="../techimg/tele-multisplat.png">
 			<p class="image-caption">
 				<span class="rainbow_element">Four camera coverage</span> demonstrated through multicolor splat.
 			</p>
 		</div>
 
 		<div class="demo-section">
-			<img class = "project_image" src = "../techimg/tele-multicam.gif">
+			<img class="project_image" src="../techimg/tele-multicam.gif">
 			<p class="image-caption">
 				Diminishing occlusions through <span class="rainbow_element">multi-cam coverage</span>.
 			</p>
 		</div>
 
 		<div class="demo-section">
-			<img class = "project_image" src = "../techimg/tele-realcapture.gif">
+			<img class="project_image" src="../techimg/tele-realcapture.gif">
 			<p class="image-caption">
 				Rough real life environment capture. <span class="rainbow_element">Monoscopic view</span> for demonstration.
 			</p>
 		</div>
 
 		<div class="demo-section">
-			<img class = "project_image" src = "../techimg/tele-realtime.gif">
+			<img class="project_image" src="../techimg/tele-realtime.gif">
 			<p class="image-caption">
 				Demonstration of <span class="rainbow_element">realtime movement</span> and capture in the rendered
 				virtual environment.
 			</p>
 		</div>
 
-
 	</article>
 	<script type = "text/javascript" src = "../js/script.js"></script>
+	<script type="text/javascript" src="../js/time-palette.js"></script>
 </body>
 </html>
