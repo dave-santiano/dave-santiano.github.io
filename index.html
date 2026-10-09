@@ -11,132 +11,49 @@
 	</script>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<title>David Santiano</title>
-	<link rel="icon" href="techimg/logo_icon_2.0.gif">
-	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<link rel="icon" href="favicon.gif">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500&display=swap">
+	<style>
+		html, body {
+			height: 100%;
+			margin: 0;
+		}
+		body {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background: #fff;
+			color: #111;
+			font-family: "Fira Mono", monospace;
+			text-align: center;
+		}
+		@media (prefers-color-scheme: dark) {
+			body { background: #111; color: #eee; }
+		}
+		h1 {
+			font-size: 18px;
+			font-weight: 500;
+			margin: 0 0 12px;
+		}
+		p {
+			font-size: 13px;
+			margin: 0;
+			opacity: 0.6;
+		}
+		.cursor {
+			animation: blink 1s steps(1) infinite;
+		}
+		@keyframes blink {
+			50% { opacity: 0; }
+		}
+	</style>
 </head>
 
-<body onload = "setRainbowElementColors()">
-	<nav class="sidebar">
-		<div id="side_bar_logo"><span class="lv-a"><span class="lv-char rainbow_element">d</span><span class="lv-char rainbow_element">a</span><span class="lv-char rainbow_element">v</span><span class="lv-char rainbow_element">i</span><span class="lv-char rainbow_element">d</span></span><span class="lv-a"><span class="lv-char rainbow_element">s</span><span class="lv-char rainbow_element">a</span><span class="lv-char rainbow_element">n</span><span class="lv-char rainbow_element">t</span><span class="lv-char rainbow_element">i</span><span class="lv-char rainbow_element">a</span><span class="lv-char rainbow_element">n</span><span class="lv-char rainbow_element">o</span></span></div>
-		<div id = "nav_links">
-			<a href="about/index.html" id="about" class="rainbow_element">/about</a>
-			<span id="projects" class="rainbow_element current-page" aria-current="page">/projects *</span>
-		</div>
-		<div id="nav_palette_btns">
-			<button class="nav-pal-btn" id="nav-btn-off" title="No highlight">- - -</button>
-			<button class="nav-pal-btn" id="nav-btn-rainbow" title="Rainbow highlight">∿∿∿</button>
-			<div style="display:flex;align-items:center;gap:5px;">
-				<button class="nav-pal-btn" id="nav-btn-time" title="Time of day palette">◑ · · ·</button>
-				<span id="nav-time-indicator" style="display:none;font-size:11px;white-space:nowrap;font-family:inherit;">&lt;---(<span id="nav-time-hhmm" class="rainbow_element"></span>)</span>
-			</div>
-			<button class="nav-pal-btn" id="nav-btn-darkmode" title="Toggle light / dark" style="margin-top:14px;font-size:15px;">☀ · ·</button>
-		</div>
-	</nav>
-	<div class="flex-container">
-		<div class = "project">
-			<a href = "works/telewindow.html">
-				<img class = "thumbnail" src ="techimg/tele-thumb.gif">
-				<div class = "project_name rainbow_element">TELEWINDOW</div>
-			</a>
-		</div>
-
-		<div class="project">
-			<a href="/works/encrypted/propelland.html">
-				<img class="thumbnail" src="techimg/previous_company_thumb.png">
-				<div class="project_name rainbow_element">PROPELLAND</div>
-			</a>
-		</div>
-
-		<div class="project"> 
-			<a href = "works/hp.html">
-				<img class = "thumbnail" src="techimg/hp-cwc-thumb.jpg">
-				<div class="project_name rainbow_element">HP CUSTOMER WELCOME CENTER</div>
-			</a>
-		</div>
-		<div class="project"> 
-			<a href = "works/snm.html">
-				<img class="thumbnail" src="techimg/snm-thumb.jpg">
-				<div class="project_name rainbow_element">SLEEP NO MORE</div>
-			</a>
-		</div> 
-
-		<div class="project">
-			<a href="/works/microprint.html">
-				<img class="thumbnail" src="techimg/microprint-thumb.jpg">
-				<div class="project_name rainbow_element">MICROPRINT EXPERIMENTS</div>
-			</a>
-		</div>
-
-		<div class = "project">
-			<a href = "works/theremain.html">
-				<img class = "thumbnail" src ="techimg/there-thumb.gif">
-				<div class = "project_name rainbow_element">THEREM{AI}N</div>
-			</a>
-		</div>
-		<div class = "project">
-			<a href = "works/ode.html">
-				<img class = "thumbnail" src ="techimg/ode-to-joy-thumb.png">
-				<div class = "project_name rainbow_element">ODE TO JOY VR</div>
-			</a>
-		</div>
-		<div class = "project">
-			<a href = "works/mask.html">
-				<img class = "thumbnail" src = "techimg/retro-thumb.gif">
-				<div class = "project_name rainbow_element">ANTI-FACIAL RECOGNITION MASK</div>
-			</a>
-		</div>
-
-		<div class="project"> 
-			<a href = "works/td.html">
-				<img class = "thumbnail" src="techimg/td_thumb.png">
-				<div class="project_name rainbow_element">TOUCH DESIGNER EXPERIMENTS</div>
-			</a>
-		</div>
-
-		
-		<div class="project">
-			<a href ="works/stack.html">
-				<img class="thumbnail" src="techimg/stack_thumb.jpg">
-				<div class="project_name rainbow_element">STACK.</div>
-			</a>
-		</div>
-		<!-- <div class="project">
-			<a href = "works/moodlight.html">
-				<img class="thumbnail" src="techimg/moodlight_thumb.png">
-				<div class="project_name rainbow_element">MOODLIGHT</div>
-			</a>
-		</div> -->
-
-		<div class="project"> 
-			<a href = "works/durf.html">
-				<img class="thumbnail" src="techimg/robot_thumb.jpg">
-				<div class="project_name rainbow_element">ASSISTIVE ROBOTIC ARM</div>
-			</a>
-		</div>
-
-		<div class="project"> 
-			<a href = "works/animations.html">
-				<img class = "thumbnail" src="techimg/animation_thumb-1.png" alt="Placeholder Puppy">
-				<div class="project_name rainbow_element">ANIMATIONS</div>
-			</a>
-		</div>
-
-		<!-- <div class="project">
-			<a href="works/tweet_trash.html">
-				<img class="thumbnail" src="techimg/trump-thumb.gif">
-				<div class="project_name rainbow_element">TRUMP TWITTER TRASHER</div>
-			</a>
-		</div> -->
-		<div class="project">
-			<a href="/works/apm.html">
-				<img class="thumbnail" src="sketches/images/apm-1.png">
-				<div class="project_name rainbow_element">CODING APM TRACKER</div>
-			</a>
-		</div>
-	</div>
-	<script type="text/javascript" src="js/script.js"></script>
-	<script type="text/javascript" src="js/time-palette.js"></script>
+<body>
+	<main>
+		<h1>davidsantiano</h1>
+		<p>under construction<span class="cursor">_</span></p>
+	</main>
 </body>
 </html>

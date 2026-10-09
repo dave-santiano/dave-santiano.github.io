@@ -482,8 +482,10 @@ p{
     #side_bar_logo {
         display: block;
         margin: 0 auto;
-        width: fit-content;
+        width: 100%;
         text-align: center;
+        word-break: normal;
+        overflow-wrap: normal;
     }
 
     #nav_palette_btns {
